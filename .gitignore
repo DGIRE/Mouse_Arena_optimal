@@ -1,0 +1,20 @@
+# Golden fixtures (large binary data) — excluded from Git. See Repos/Guides.
+# The fixtures are present in this folder so the pipeline runs locally, but they
+# exceed GitHub's limits; move them to new machines out-of-band (zip/drive/rsync).
+/Golden Fixtures/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*~
+~$*

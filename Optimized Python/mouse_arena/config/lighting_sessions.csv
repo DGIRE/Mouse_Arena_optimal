@@ -1,0 +1,13 @@
+dataset,session,condition,evidence
+Ethanol Sensor on Head,11-13-2019,infrared,paper: navigation under IR; 2019 series
+Ethanol Sensor on Head,11-15-2019,infrared,video frame R=99 G=64 B=129 (green present) + paper
+Ethanol Sensor on Head,11-19-2019,infrared,paper: navigation under IR; 2019 series
+Ethanol Sensor on Head,11-20-2019,infrared,paper: navigation under IR; 2019 series
+Ethanol Sensor on Head,11-22-2019,infrared,paper: navigation under IR; 2019 series
+Ethanol Sensor on Head,11-23-2019,infrared,paper: navigation under IR; 2019 series
+Ethanol Sensor on Head,11-24-2019,infrared,paper: navigation under IR; 2019 series
+Ethanol Sensor on Head,11-26-2019,infrared,paper: navigation under IR; 2019 series
+Ethanol Sensor on Head,11-27-2019,infrared,paper: navigation under IR; 2019 series
+2018 pilot (Fig7 folder Trial1/2; NOT used in published Fig7),12-15-2018,deep-red,video R=97 G=3.5 B=18 (green~0 red-dominant)
+MouseBehavior,Dec2018,deep-red,video frame R=98 G=3.6 B=18 (green~0 red-dominant)
+MouseBehavior,Sep2019,infrared,video frame R=141 G=97 B=173 (broadband)
