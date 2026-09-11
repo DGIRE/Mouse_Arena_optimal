@@ -1,0 +1,8 @@
+self-check PASS (drift_ts=1.428s, enh_max=0.997)
+processed 114 trials
+H5 guard (after<=before): True  fpr_before=0.4848/s fpr_after=0.4830/s
+thr_before=0.01558 thr_after=0.12281
+Wilcoxon overall: stat=1593.0 p=1.908171884723339e-06
+gain/lose/tie = 25/89/0   total before=46219 after=45331
+top10 Figure-A trial indices: [94, 41, 46, 42, 87, 53, 31, 109, 79, 104]
+median drift timescale = 0.61s   W_used(samples)=10000

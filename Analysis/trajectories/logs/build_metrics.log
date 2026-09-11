@@ -1,0 +1,135 @@
+2026-08-07 21:40:52,597 INFO build_metrics start 2026-08-08T04:40:52Z  seed=1234  traj_common/1.0
+2026-08-07 21:40:53,055 INFO loaded 114 trials from C:\Projects\Repos\Mouse Arena\DATA\Mouse Arena Aggregate Data.h5
+2026-08-07 21:40:53,127 INFO pooled de-jump Q: body=2.2985 px  head=2.8633 px
+2026-08-07 21:40:53,138 DEBUG trial 0 11-15-2019-2-41 PM-Mohammad-207_Trial1_anotherLoc.avi.dat: end_loc=anotherLoc Nh=46582 tort=66.196 body_rm=0.0144 head_rm=0.0003
+2026-08-07 21:40:53,147 DEBUG trial 1 11-15-2019-3-17 PM-Mohammad-201_Trial1_anotherLoc.avi.dat: end_loc=anotherLoc Nh=42876 tort=602.526 body_rm=0.0115 head_rm=0.0005
+2026-08-07 21:40:53,148 DEBUG trial 2 11-15-2019-3-48 PM-Mohammad-204_Trial1_anotherLoc.avi.dat: end_loc=anotherLoc Nh=4363 tort=5.760 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,165 DEBUG trial 3 11-15-2019-3-52 PM-Mohammad-204_Trial1_anotherLoc.avi.dat: end_loc=anotherLoc Nh=67609 tort=133.353 body_rm=0.0006 head_rm=0.0000
+2026-08-07 21:40:53,170 DEBUG trial 4 11-15-2019-4-24 PM-Mohammad-211_Trial1_anotherLoc.avi.dat: end_loc=anotherLoc Nh=26537 tort=213.455 body_rm=0.0082 head_rm=0.0006
+2026-08-07 21:40:53,174 DEBUG trial 5 11-15-2019-4-42 PM-Mohammad-205_Trial1_anotherLoc.avi.dat: end_loc=anotherLoc Nh=19999 tort=48.393 body_rm=0.0015 head_rm=0.0000
+2026-08-07 21:40:53,179 DEBUG trial 6 11-15-2019-4-48 PM-Mohammad-205_Trial2_anotherLoc.avi.dat: end_loc=anotherLoc Nh=26035 tort=15.449 body_rm=0.0008 head_rm=0.0011
+2026-08-07 21:40:53,186 DEBUG trial 7 11-19-2019-12-03 PM-Mohammad-211_Trial2_anotherLoc.avi.dat: end_loc=anotherLoc Nh=32424 tort=15.338 body_rm=0.0005 head_rm=0.0000
+2026-08-07 21:40:53,189 DEBUG trial 8 11-19-2019-12-25 PM-Mohammad-207_Trial1_anotherLoc.avi.dat: end_loc=anotherLoc Nh=17161 tort=31.340 body_rm=0.0009 head_rm=0.0001
+2026-08-07 21:40:53,199 DEBUG trial 9 11-20-2019-10-38 AM-Mohammad-205_Trial1_Loc5.avi.dat: end_loc=Loc5 Nh=43810 tort=30.638 body_rm=0.0006 head_rm=0.0001
+2026-08-07 21:40:53,200 DEBUG trial 10 11-20-2019-10-49 AM-Mohammad-205_Trial1_Loc5.avi.dat: end_loc=Loc5 Nh=4380 tort=1.809 body_rm=0.0000 head_rm=0.2895
+2026-08-07 21:40:53,209 DEBUG trial 11 11-20-2019-11-28 AM-Mohammad-204_Trial1_Loc6.avi.dat: end_loc=Loc6 Nh=42320 tort=26.238 body_rm=0.0042 head_rm=0.0005
+2026-08-07 21:40:53,215 DEBUG trial 12 11-20-2019-12-04 PM-Mohammad-201_Trial1_Loc1.avi.dat: end_loc=Loc1 Nh=29318 tort=23.080 body_rm=0.0001 head_rm=0.0001
+2026-08-07 21:40:53,218 DEBUG trial 13 11-22-2019-10-33 AM-Mohammad-205_Trial1_Loc5.avi.dat: end_loc=Loc5 Nh=17921 tort=15.616 body_rm=0.0032 head_rm=0.0232
+2026-08-07 21:40:53,220 DEBUG trial 14 11-22-2019-10-40 AM-Mohammad-205_Trial2_Loc6.avi.dat: end_loc=Loc6 Nh=4453 tort=3.766 body_rm=0.0026 head_rm=0.0254
+2026-08-07 21:40:53,221 DEBUG trial 15 11-22-2019-10-45 AM-Mohammad-205_Trial3_Loc1.avi.dat: end_loc=Loc1 Nh=5648 tort=6.999 body_rm=0.0044 head_rm=0.0067
+2026-08-07 21:40:53,222 DEBUG trial 16 11-22-2019-10-50 AM-Mohammad-205_Trial4_Loc2.avi.dat: end_loc=Loc2 Nh=7655 tort=5.252 body_rm=0.0183 head_rm=0.0088
+2026-08-07 21:40:53,226 DEBUG trial 17 11-22-2019-10-52 AM-Mohammad-205_Trial4_Loc2.avi.dat: end_loc=Loc2 Nh=17254 tort=70.108 body_rm=0.0092 head_rm=0.0062
+2026-08-07 21:40:53,228 DEBUG trial 18 11-22-2019-10-58 AM-Mohammad-205_Trial5_Loc3.avi.dat: end_loc=Loc3 Nh=10279 tort=3.265 body_rm=0.0001 head_rm=0.0000
+2026-08-07 21:40:53,230 DEBUG trial 19 11-22-2019-11-02 AM-Mohammad-205_Trial6_Loc4.avi.dat: end_loc=Loc4 Nh=12602 tort=10.196 body_rm=0.0029 head_rm=0.0000
+2026-08-07 21:40:53,237 DEBUG trial 20 11-22-2019-11-14 AM-Mohammad-207_Trial1_Loc4.avi.dat: end_loc=Loc4 Nh=30941 tort=23.728 body_rm=0.0038 head_rm=0.0037
+2026-08-07 21:40:53,238 DEBUG trial 21 11-22-2019-11-23 AM-Mohammad-207_Trial2_Loc1.avi.dat: end_loc=Loc1 Nh=3978 tort=3.343 body_rm=0.0000 head_rm=0.0524
+2026-08-07 21:40:53,240 DEBUG trial 22 11-22-2019-11-26 AM-Mohammad-207_Trial3_Loc6.avi.dat: end_loc=Loc6 Nh=13253 tort=10.314 body_rm=0.0040 head_rm=0.0063
+2026-08-07 21:40:53,246 DEBUG trial 23 11-22-2019-11-31 AM-Mohammad-207_Trial4_Loc3.avi.dat: end_loc=Loc3 Nh=27270 tort=25.931 body_rm=0.0298 head_rm=0.0149
+2026-08-07 21:40:53,246 DEBUG trial 24 11-22-2019-11-39 AM-Mohammad-207_Trial5_Loc5.avi.dat: end_loc=Loc5 Nh=2500 tort=2.532 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,247 DEBUG trial 25 11-22-2019-11-43 AM-Mohammad-207_Trial6_Loc2.avi.dat: end_loc=Loc2 Nh=1571 tort=1.553 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,248 DEBUG trial 26 11-22-2019-11-52 AM-Mohammad-211_Trial1_Loc6.avi.dat: end_loc=Loc6 Nh=2384 tort=2.883 body_rm=0.0039 head_rm=0.0000
+2026-08-07 21:40:53,255 DEBUG trial 27 11-22-2019-2-37 PM-Mohammad-211_Trial4_Loc3.avi.dat: end_loc=Loc3 Nh=33470 tort=13.445 body_rm=0.0000 head_rm=0.0029
+2026-08-07 21:40:53,256 DEBUG trial 28 11-22-2019-2-51 PM-Mohammad-211_Trial5_Loc1.avi.dat: end_loc=Loc1 Nh=4006 tort=3.699 body_rm=0.0146 head_rm=0.0236
+2026-08-07 21:40:53,258 DEBUG trial 29 11-22-2019-2-56 PM-Mohammad-211_Trial6_Loc5.avi.dat: end_loc=Loc5 Nh=11409 tort=18.048 body_rm=0.0519 head_rm=0.0002
+2026-08-07 21:40:53,267 DEBUG trial 30 11-22-2019-3-11 PM-Mohammad-201_Trial1_Loc1.avi.dat: end_loc=Loc1 Nh=44626 tort=30.716 body_rm=0.0021 head_rm=0.0020
+2026-08-07 21:40:53,269 DEBUG trial 31 11-22-2019-3-22 PM-Mohammad-201_Trial2_Loc3.avi.dat: end_loc=Loc3 Nh=11308 tort=6.242 body_rm=0.0005 head_rm=0.0330
+2026-08-07 21:40:53,274 DEBUG trial 32 11-22-2019-3-29 PM-Mohammad-201_Trial3_Loc4.avi.dat: end_loc=Loc4 Nh=28098 tort=24.615 body_rm=0.0160 head_rm=0.0000
+2026-08-07 21:40:53,276 DEBUG trial 33 11-22-2019-3-56 PM-Mohammad-204_Trial1_Loc1.avi.dat: end_loc=Loc1 Nh=13984 tort=11.877 body_rm=0.0000 head_rm=0.0001
+2026-08-07 21:40:53,279 DEBUG trial 34 11-22-2019-4-08 PM-Mohammad-204_Trial3_Loc6.avi.dat: end_loc=Loc6 Nh=12949 tort=15.254 body_rm=0.0243 head_rm=0.0002
+2026-08-07 21:40:53,283 DEBUG trial 35 11-23-2019-1-31 PM-Mohammad-204_Trial1_Loc2.avi.dat: end_loc=Loc2 Nh=22581 tort=17.983 body_rm=0.0002 head_rm=0.0035
+2026-08-07 21:40:53,288 DEBUG trial 36 11-23-2019-1-41 PM-Mohammad-204_Trial2_Loc2.avi.dat: end_loc=Loc2 Nh=24247 tort=16.134 body_rm=0.0135 head_rm=0.0006
+2026-08-07 21:40:53,290 DEBUG trial 37 11-23-2019-1-52 PM-Mohammad-204_Trial3_Loc3.avi.dat: end_loc=Loc3 Nh=9365 tort=3.333 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,294 DEBUG trial 38 11-23-2019-1-58 PM-Mohammad-204_Trial4_Loc6.avi.dat: end_loc=Loc6 Nh=20995 tort=9.733 body_rm=0.0015 head_rm=0.0044
+2026-08-07 21:40:53,299 DEBUG trial 39 11-23-2019-2-25 PM-Mohammad-205_Trial1_Loc4.avi.dat: end_loc=Loc4 Nh=22674 tort=16.971 body_rm=0.0010 head_rm=0.0000
+2026-08-07 21:40:53,300 DEBUG trial 40 11-23-2019-2-33 PM-Mohammad-205_Trial2_Loc6.avi.dat: end_loc=Loc6 Nh=6996 tort=4.788 body_rm=0.0051 head_rm=0.0062
+2026-08-07 21:40:53,301 DEBUG trial 41 11-23-2019-2-43 PM-Mohammad-205_Trial4_Loc3.avi.dat: end_loc=Loc3 Nh=6045 tort=2.823 body_rm=0.0003 head_rm=0.0000
+2026-08-07 21:40:53,302 DEBUG trial 42 11-23-2019-2-47 PM-Mohammad-205_Trial5_Loc2.avi.dat: end_loc=Loc2 Nh=2295 tort=1.645 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,303 DEBUG trial 43 11-23-2019-2-52 PM-Mohammad-205_Trial6_Loc1.avi.dat: end_loc=Loc1 Nh=2723 tort=1.728 body_rm=0.0004 head_rm=0.0044
+2026-08-07 21:40:53,306 DEBUG trial 44 11-23-2019-3-38 PM-Mohammad-211_Trial2_Loc2.avi.dat: end_loc=Loc2 Nh=18598 tort=12.039 body_rm=0.0076 head_rm=0.0004
+2026-08-07 21:40:53,308 DEBUG trial 45 11-23-2019-3-54 PM-Mohammad-207_Trial1_Loc3.avi.dat: end_loc=Loc3 Nh=10767 tort=8.600 body_rm=0.0002 head_rm=0.0008
+2026-08-07 21:40:53,309 DEBUG trial 46 11-23-2019-4-00 PM-Mohammad-207_Trial2_Loc1.avi.dat: end_loc=Loc1 Nh=1159 tort=1.556 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,310 DEBUG trial 47 11-23-2019-4-04 PM-Mohammad-207_Trial3_Loc4.avi.dat: end_loc=Loc4 Nh=7702 tort=13.172 body_rm=0.0494 head_rm=0.0003
+2026-08-07 21:40:53,319 DEBUG trial 48 11-23-2019-4-09 PM-Mohammad-207_Trial4_Loc6.avi.dat: end_loc=Loc6 Nh=44890 tort=33.762 body_rm=0.0107 head_rm=0.0047
+2026-08-07 21:40:53,320 DEBUG trial 49 11-23-2019-4-21 PM-Mohammad-207_Trial5_Loc2.avi.dat: end_loc=Loc2 Nh=4437 tort=3.112 body_rm=0.0000 head_rm=0.0031
+2026-08-07 21:40:53,324 DEBUG trial 50 11-23-2019-5-03 PM-Mohammad-201_Trial1_Loc1.avi.dat: end_loc=Loc1 Nh=25939 tort=21.024 body_rm=0.0012 head_rm=0.0001
+2026-08-07 21:40:53,329 DEBUG trial 51 11-23-2019-5-11 PM-Mohammad-201_Trial2_Loc1.avi.dat: end_loc=Loc1 Nh=26420 tort=11.901 body_rm=0.0009 head_rm=0.0072
+2026-08-07 21:40:53,334 DEBUG trial 52 11-23-2019-5-20 PM-Mohammad-201_Trial3_Loc2.avi.dat: end_loc=Loc2 Nh=23199 tort=12.156 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,335 DEBUG trial 53 11-24-2019-2-17 PM-Mohammad-207_Trial1_Loc4.avi.dat: end_loc=Loc4 Nh=6234 tort=6.435 body_rm=0.0000 head_rm=0.0035
+2026-08-07 21:40:53,335 DEBUG trial 54 11-24-2019-2-26 PM-Mohammad-207_Trial2_Loc6.avi.dat: end_loc=Loc6 Nh=1780 tort=1.874 body_rm=0.0017 head_rm=0.0284
+2026-08-07 21:40:53,336 DEBUG trial 55 11-24-2019-2-30 PM-Mohammad-207_Trial3_Loc2.avi.dat: end_loc=Loc2 Nh=1996 tort=1.739 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,338 DEBUG trial 56 11-24-2019-2-34 PM-Mohammad-207_Trial4_Loc5.avi.dat: end_loc=Loc5 Nh=10612 tort=5.512 body_rm=0.0005 head_rm=0.0000
+2026-08-07 21:40:53,339 DEBUG trial 57 11-24-2019-2-39 PM-Mohammad-207_Trial5_Loc1.avi.dat: end_loc=Loc1 Nh=7392 tort=23.761 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,343 DEBUG trial 58 11-24-2019-2-43 PM-Mohammad-207_Trial6_Loc1.avi.dat: end_loc=Loc1 Nh=20578 tort=8.177 body_rm=0.0015 head_rm=0.0098
+2026-08-07 21:40:53,345 DEBUG trial 59 11-24-2019-3-02 PM-Mohammad-205_Trial1_Loc5.avi.dat: end_loc=Loc5 Nh=6470 tort=3.362 body_rm=0.0003 head_rm=0.0000
+2026-08-07 21:40:53,345 DEBUG trial 60 11-24-2019-3-10 PM-Mohammad-205_Trial2_Loc4.avi.dat: end_loc=Loc4 Nh=2516 tort=2.419 body_rm=0.0064 head_rm=0.0000
+2026-08-07 21:40:53,348 DEBUG trial 61 11-24-2019-3-15 PM-Mohammad-205_Trial3_Loc3.avi.dat: end_loc=Loc3 Nh=12406 tort=7.186 body_rm=0.0021 head_rm=0.0000
+2026-08-07 21:40:53,352 DEBUG trial 62 11-24-2019-4-19 PM-Mohammad-204_Trial1_Loc3.avi.dat: end_loc=Loc3 Nh=21994 tort=14.408 body_rm=0.0013 head_rm=0.0000
+2026-08-07 21:40:53,353 DEBUG trial 63 11-24-2019-4-27 PM-Mohammad-204_Trial2_Loc5.avi.dat: end_loc=Loc5 Nh=5729 tort=5.070 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,354 DEBUG trial 64 11-24-2019-4-34 PM-Mohammad-204_Trial3_Loc2.avi.dat: end_loc=Loc2 Nh=7116 tort=4.489 body_rm=0.0000 head_rm=0.0050
+2026-08-07 21:40:53,355 DEBUG trial 65 11-24-2019-4-40 PM-Mohammad-204_Trial4_Loc4.avi.dat: end_loc=Loc4 Nh=3207 tort=2.533 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,356 DEBUG trial 66 11-24-2019-4-45 PM-Mohammad-204_Trial5_Loc6.avi.dat: end_loc=Loc6 Nh=5219 tort=3.206 body_rm=0.0000 head_rm=0.0106
+2026-08-07 21:40:53,357 DEBUG trial 67 11-24-2019-4-51 PM-Mohammad-204_Trial6_Loc1.avi.dat: end_loc=Loc1 Nh=2101 tort=1.554 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,359 DEBUG trial 68 11-24-2019-5-04 PM-Mohammad-201_Trial1_Loc4.avi.dat: end_loc=Loc4 Nh=12329 tort=8.137 body_rm=0.0002 head_rm=0.0000
+2026-08-07 21:40:53,365 DEBUG trial 69 11-24-2019-5-11 PM-Mohammad-201_Trial2_Loc6.avi.dat: end_loc=Loc6 Nh=30975 tort=24.816 body_rm=0.0125 head_rm=0.0002
+2026-08-07 21:40:53,366 DEBUG trial 70 11-24-2019-5-19 PM-Mohammad-201_Trial3_Loc3.avi.dat: end_loc=Loc3 Nh=9217 tort=6.606 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,367 DEBUG trial 71 11-24-2019-5-50 PM-Mohammad-211_Trial1_Loc5.avi.dat: end_loc=Loc5 Nh=2264 tort=471.628 body_rm=0.0355 head_rm=0.0000
+2026-08-07 21:40:53,372 DEBUG trial 72 11-26-2019-10-07 AM-Mohammad-201_Trial4_Loc6.avi.dat: end_loc=Loc6 Nh=26384 tort=14.873 body_rm=0.0016 head_rm=0.0049
+2026-08-07 21:40:53,374 DEBUG trial 73 11-26-2019-10-19 AM-Mohammad-204_Trial1_Loc2.avi.dat: end_loc=Loc2 Nh=10946 tort=4.240 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,374 DEBUG trial 74 11-26-2019-10-24 AM-Mohammad-204_Trial2_Loc5.avi.dat: end_loc=Loc5 Nh=2774 tort=2.314 body_rm=0.0007 head_rm=0.0011
+2026-08-07 21:40:53,376 DEBUG trial 75 11-26-2019-10-37 AM-Mohammad-204_Trial3_Loc5.avi.dat: end_loc=Loc5 Nh=5822 tort=3.176 body_rm=0.0010 head_rm=0.0041
+2026-08-07 21:40:53,377 DEBUG trial 76 11-26-2019-10-41 AM-Mohammad-204_Trial4_Loc1.avi.dat: end_loc=Loc1 Nh=4964 tort=3.071 body_rm=0.0012 head_rm=0.0437
+2026-08-07 21:40:53,377 DEBUG trial 77 11-26-2019-11-03 AM-Mohammad-207_Trial1_Loc1.avi.dat: end_loc=Loc1 Nh=1675 tort=2.309 body_rm=0.0006 head_rm=0.1133
+2026-08-07 21:40:53,378 DEBUG trial 78 11-26-2019-11-07 AM-Mohammad-207_Trial2_Loc3.avi.dat: end_loc=Loc3 Nh=1667 tort=1.877 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,378 DEBUG trial 79 11-26-2019-11-10 AM-Mohammad-207_Trial3_Loc2.avi.dat: end_loc=Loc2 Nh=489 tort=1.310 body_rm=0.0012 head_rm=0.0000
+2026-08-07 21:40:53,379 DEBUG trial 80 11-26-2019-11-14 AM-Mohammad-207_Trial4_Loc6.avi.dat: end_loc=Loc6 Nh=2060 tort=2.044 body_rm=0.0015 head_rm=0.0000
+2026-08-07 21:40:53,384 DEBUG trial 81 11-26-2019-11-17 AM-Mohammad-207_Trial5_Loc5.avi.dat: end_loc=Loc5 Nh=28100 tort=15.478 body_rm=0.0016 head_rm=0.0099
+2026-08-07 21:40:53,384 DEBUG trial 82 11-26-2019-11-25 AM-Mohammad-207_Trial6_Loc4.avi.dat: end_loc=Loc4 Nh=1790 tort=1.731 body_rm=0.0000 head_rm=0.0539
+2026-08-07 21:40:53,385 DEBUG trial 83 11-26-2019-11-44 AM-Mohammad-211_Trial1_Loc3.avi.dat: end_loc=Loc3 Nh=5367 tort=5.406 body_rm=0.0005 head_rm=0.0000
+2026-08-07 21:40:53,386 DEBUG trial 84 11-26-2019-11-47 AM-Mohammad-211_Trial2_Loc6.avi.dat: end_loc=Loc6 Nh=1383 tort=2.014 body_rm=0.0000 head_rm=0.0267
+2026-08-07 21:40:53,388 DEBUG trial 85 11-26-2019-12-04 PM-Mohammad-204_Trial1_Loc6.avi.dat: end_loc=Loc6 Nh=14169 tort=7.590 body_rm=0.0001 head_rm=0.0205
+2026-08-07 21:40:53,390 DEBUG trial 86 11-26-2019-12-09 PM-Mohammad-204_Trial2_Loc2.avi.dat: end_loc=Loc2 Nh=5477 tort=2.559 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,391 DEBUG trial 87 11-26-2019-12-16 PM-Mohammad-204_Trial3_Loc4.avi.dat: end_loc=Loc4 Nh=7222 tort=4.406 body_rm=0.0003 head_rm=0.0001
+2026-08-07 21:40:53,392 DEBUG trial 88 11-26-2019-12-20 PM-Mohammad-204_Trial4_Loc3.avi.dat: end_loc=Loc3 Nh=5832 tort=4.400 body_rm=0.0081 head_rm=0.0335
+2026-08-07 21:40:53,399 DEBUG trial 89 11-26-2019-9-44 AM-Mohammad-201_Trial1_Loc5.avi.dat: end_loc=Loc5 Nh=34728 tort=17.422 body_rm=0.0039 head_rm=0.0003
+2026-08-07 21:40:53,406 DEBUG trial 90 11-26-2019-9-58 AM-Mohammad-201_Trial3_Loc1.avi.dat: end_loc=Loc1 Nh=37223 tort=22.711 body_rm=0.0003 head_rm=0.0031
+2026-08-07 21:40:53,407 DEBUG trial 91 11-27-2019-10-10 AM-Mohammad-204_Trial1_Loc4.avi.dat: end_loc=Loc4 Nh=7065 tort=7.350 body_rm=0.0041 head_rm=0.0000
+2026-08-07 21:40:53,408 DEBUG trial 92 11-27-2019-10-14 AM-Mohammad-204_Trial2_Loc1.avi.dat: end_loc=Loc1 Nh=2726 tort=2.452 body_rm=0.0000 head_rm=0.0268
+2026-08-07 21:40:53,408 DEBUG trial 93 11-27-2019-10-17 AM-Mohammad-204_Trial3_Loc3.avi.dat: end_loc=Loc3 Nh=1578 tort=1.881 body_rm=0.0000 head_rm=0.0187
+2026-08-07 21:40:53,409 DEBUG trial 94 11-27-2019-10-21 AM-Mohammad-204_Trial4_Loc6.avi.dat: end_loc=Loc6 Nh=923 tort=1.230 body_rm=0.0070 head_rm=0.0000
+2026-08-07 21:40:53,411 DEBUG trial 95 11-27-2019-10-25 AM-Mohammad-204_Trial5_Loc2.avi.dat: end_loc=Loc2 Nh=10780 tort=7.232 body_rm=0.0001 head_rm=0.0001
+2026-08-07 21:40:53,412 DEBUG trial 96 11-27-2019-10-29 AM-Mohammad-204_Trial6_Loc5.avi.dat: end_loc=Loc5 Nh=9947 tort=9.398 body_rm=0.0016 head_rm=0.0033
+2026-08-07 21:40:53,413 DEBUG trial 97 11-27-2019-10-37 AM-Mohammad-211_Trial1_Loc1.avi.dat: end_loc=Loc1 Nh=3051 tort=4.055 body_rm=0.0211 head_rm=0.0218
+2026-08-07 21:40:53,414 DEBUG trial 98 11-27-2019-10-45 AM-Mohammad-211_Trial3_Loc6.avi.dat: end_loc=Loc6 Nh=4090 tort=2.165 body_rm=0.0000 head_rm=0.0201
+2026-08-07 21:40:53,415 DEBUG trial 99 11-27-2019-10-48 AM-Mohammad-211_Trial4_Loc3.avi.dat: end_loc=Loc3 Nh=1496 tort=1.680 body_rm=0.0014 head_rm=0.0000
+2026-08-07 21:40:53,415 DEBUG trial 100 11-27-2019-10-52 AM-Mohammad-211_Trial5_Loc2.avi.dat: end_loc=Loc2 Nh=1908 tort=1.577 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,417 DEBUG trial 101 11-27-2019-10-57 AM-Mohammad-211_Trial6_Loc5.avi.dat: end_loc=Loc5 Nh=8747 tort=9.413 body_rm=0.0037 head_rm=0.0053
+2026-08-07 21:40:53,418 DEBUG trial 102 11-27-2019-11-07 AM-Mohammad-205_Trial1_Loc6.avi.dat: end_loc=Loc6 Nh=4523 tort=4.105 body_rm=0.0004 head_rm=0.0000
+2026-08-07 21:40:53,419 DEBUG trial 103 11-27-2019-11-11 AM-Mohammad-205_Trial2_Loc3.avi.dat: end_loc=Loc3 Nh=2853 tort=2.157 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,419 DEBUG trial 104 11-27-2019-11-15 AM-Mohammad-205_Trial3_Loc5.avi.dat: end_loc=Loc5 Nh=2921 tort=2.651 body_rm=0.0017 head_rm=0.0000
+2026-08-07 21:40:53,420 DEBUG trial 105 11-27-2019-11-19 AM-Mohammad-205_Trial4_Loc2.avi.dat: end_loc=Loc2 Nh=1525 tort=1.733 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,421 DEBUG trial 106 11-27-2019-11-22 AM-Mohammad-205_Trial5_Loc4.avi.dat: end_loc=Loc4 Nh=5070 tort=4.472 body_rm=0.0038 head_rm=0.0000
+2026-08-07 21:40:53,422 DEBUG trial 107 11-27-2019-11-26 AM-Mohammad-205_Trial6_Loc1.avi.dat: end_loc=Loc1 Nh=7942 tort=13.984 body_rm=0.0047 head_rm=0.0039
+2026-08-07 21:40:53,423 DEBUG trial 108 11-27-2019-11-34 AM-Mohammad-207_Trial1_Loc3.avi.dat: end_loc=Loc3 Nh=5150 tort=5.528 body_rm=0.0006 head_rm=0.0000
+2026-08-07 21:40:53,424 DEBUG trial 109 11-27-2019-11-38 AM-Mohammad-207_Trial2_Loc1.avi.dat: end_loc=Loc1 Nh=881 tort=1.804 body_rm=0.0082 head_rm=0.1388
+2026-08-07 21:40:53,424 DEBUG trial 110 11-27-2019-11-42 AM-Mohammad-207_Trial3_Loc4.avi.dat: end_loc=Loc4 Nh=1947 tort=1.528 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,425 DEBUG trial 111 11-27-2019-11-45 AM-Mohammad-207_Trial4_Loc2.avi.dat: end_loc=Loc2 Nh=4438 tort=3.563 body_rm=0.0007 head_rm=0.0000
+2026-08-07 21:40:53,426 DEBUG trial 112 11-27-2019-11-48 AM-Mohammad-207_Trial5_Loc5.avi.dat: end_loc=Loc5 Nh=5686 tort=3.626 body_rm=0.0014 head_rm=0.0000
+2026-08-07 21:40:53,427 DEBUG trial 113 11-27-2019-11-53 AM-Mohammad-207_Trial6_Loc6.avi.dat: end_loc=Loc6 Nh=3773 tort=23.588 body_rm=0.0000 head_rm=0.0000
+2026-08-07 21:40:53,449 INFO calibration: k=5 threshold=0.000718 mad_quiet=0.000144 fpr=0.00009/s (target<=0.05) quiet_dur=10552.3s
+2026-08-07 21:40:53,449 INFO   k-scan k=5 thr=0.000718 fpr=0.00009/s n_onsets=1
+2026-08-07 21:40:53,449 INFO   k-scan k=6 thr=0.000862 fpr=0.00000/s n_onsets=0
+2026-08-07 21:40:53,449 INFO   k-scan k=8 thr=0.001149 fpr=0.00000/s n_onsets=0
+2026-08-07 21:40:53,449 INFO   k-scan k=10 thr=0.001436 fpr=0.00000/s n_onsets=0
+2026-08-07 21:40:53,529 INFO slice self-check PASS (theta in [0,180], onsets sane, mean dejump body=0.0041 head=0.0101 <5%)
+2026-08-07 21:40:54,966 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\trajectories\data\stats.json
+2026-08-07 21:40:54,969 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\trajectories\data\trajectory_metrics.json
+2026-08-07 21:40:56,003 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\trajectories\data\trajectory_metrics.h5 (build_complete=1)
+2026-08-07 21:40:56,003 INFO ==== SUMMARY ====
+2026-08-07 21:40:56,003 INFO calibration: k=5 threshold=0.000718 quiet_fpr=0.00009/s (<=0.05 target: True)
+2026-08-07 21:40:56,003 INFO de-jump removed mean: body=0.0041 (0.41%) head=0.0101 (1.01%)
+2026-08-07 21:40:56,003 INFO H1 n_enc vs tort: rho=0.6123 p=3.925e-12 CI=[0.4537136112004512, 0.7356243720384018] (dir=positive; prior +0.176)
+2026-08-07 21:40:56,003 INFO H1 frac_above vs tort: rho=-0.4189 p=8.698e-06 CI=[-0.5619697258511143, -0.2526013626261149] (dir=negative; prior -0.532)
+2026-08-07 21:40:56,003 INFO H2 Wilcoxon slopes>0: stat=3151.0 p=0.11939343011385883 median_slope=0.02020 deg/px n=105
+2026-08-07 21:40:56,003 INFO H3 n_trials_with_encounter=105 n_pairs=105 paired Wilcoxon post<pre: stat=3710.0 p=0.9984867879203349 median pre=70.01 post=69.66 (descriptive_only=False)
+2026-08-07 21:40:56,003 INFO n_encounters median (all)=27.5 pooled=28
+2026-08-07 21:40:56,003 INFO elapsed 3.4s

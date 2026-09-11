@@ -1,0 +1,7 @@
+Figure: field_Loc5
+Location: Loc5 (n=17 trials)
+Panels (top->bottom): max, mean, min, per-bin trial count
+bin L=15 px, coverage=65.1%, total samples=200843
+Source result files:
+  data\odor_fields.h5
+  data\odor_field_stats.json

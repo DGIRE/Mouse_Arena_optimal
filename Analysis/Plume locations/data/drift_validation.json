@@ -1,0 +1,51 @@
+{
+  "generator": "build_enhancement.py/1.0",
+  "created_utc": "2026-08-08T01:24:54.879873+00:00",
+  "description": "m4 drift-window residual validation. The W=20s rolling-10th-percentile baseline is subtracted from raw ethanol. 'before' = raw, 'after' = drift-corrected. slow_trend_slope = OLS slope (per s) of the drift-window smoothed trace vs time (slow trend); it should collapse toward ~0 after baseline subtraction. encounter_band_var = variance of the fast (high-pass) component; it should be preserved (retained_frac ~1) after subtraction.",
+  "drift_window_s": 20.0,
+  "drift_percentile": 10.0,
+  "examples": [
+    {
+      "trial_index": 0,
+      "group": "anotherLoc",
+      "file_name": "11-15-2019-2-41 PM-Mohammad-207_Trial1_anotherLoc.avi.dat",
+      "W_used_samples": 10000,
+      "W_used_s": 20.0,
+      "drift_percentile": 10.0,
+      "slow_trend_slope_per_s_before": 8.68659571605338e-05,
+      "slow_trend_slope_per_s_after": 2.475377551555284e-05,
+      "slow_trend_slope_abs_reduction_factor": 3.509200328085539,
+      "encounter_band_var_before": 0.000656486245564241,
+      "encounter_band_var_after": 0.000656524701925366,
+      "encounter_band_var_retained_frac": 1.0000585790812602
+    },
+    {
+      "trial_index": 1,
+      "group": "anotherLoc",
+      "file_name": "11-15-2019-3-17 PM-Mohammad-201_Trial1_anotherLoc.avi.dat",
+      "W_used_samples": 10000,
+      "W_used_s": 20.0,
+      "drift_percentile": 10.0,
+      "slow_trend_slope_per_s_before": 6.90855650367575e-05,
+      "slow_trend_slope_per_s_after": 1.343874673218174e-05,
+      "slow_trend_slope_abs_reduction_factor": 5.140774390168276,
+      "encounter_band_var_before": 0.00046802514183787516,
+      "encounter_band_var_after": 0.00046802619779276266,
+      "encounter_band_var_retained_frac": 1.0000022561926554
+    },
+    {
+      "trial_index": 2,
+      "group": "anotherLoc",
+      "file_name": "11-15-2019-3-48 PM-Mohammad-204_Trial1_anotherLoc.avi.dat",
+      "W_used_samples": 10000,
+      "W_used_s": 20.0,
+      "drift_percentile": 10.0,
+      "slow_trend_slope_per_s_before": 0.0012875544345779006,
+      "slow_trend_slope_per_s_after": 0.0007675019366610424,
+      "slow_trend_slope_abs_reduction_factor": 1.6775911213713754,
+      "encounter_band_var_before": 0.005957904042965593,
+      "encounter_band_var_after": 0.0059641717946909405,
+      "encounter_band_var_retained_frac": 1.0010520061552095
+    }
+  ]
+}

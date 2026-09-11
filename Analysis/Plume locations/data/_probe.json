@@ -1,0 +1,156 @@
+{
+  "n_trials": 114,
+  "schema_version": "0.1",
+  "Fs": 500.0,
+  "reference": "Tariq et al. (2021), eNeuro 8(1) ENEURO.0285-20.2020",
+  "fields": [
+    "body",
+    "body_time",
+    "duration",
+    "endpoint",
+    "ethanol",
+    "ethanol_time",
+    "ethdeconv",
+    "file_name",
+    "head",
+    "head_time",
+    "lighting",
+    "loc",
+    "threshold",
+    "trial_index"
+  ],
+  "shapes_t0": {
+    "head": [
+      51849,
+      2
+    ],
+    "head_time": [
+      51849
+    ],
+    "body": [
+      53605,
+      2
+    ],
+    "body_time": [
+      53605
+    ],
+    "ethanol": [
+      284230
+    ],
+    "ethanol_time": [
+      284230
+    ],
+    "ethdeconv": [
+      284230
+    ],
+    "endpoint": [
+      2
+    ]
+  },
+  "groups": {
+    "Loc1": {
+      "n": 20,
+      "endpoint_mean": [
+        474.0,
+        61.0
+      ],
+      "endpoint_spread_px": [
+        0.0,
+        0.0
+      ]
+    },
+    "Loc2": {
+      "n": 18,
+      "endpoint_mean": [
+        506.0,
+        114.0
+      ],
+      "endpoint_spread_px": [
+        0.0,
+        0.0
+      ]
+    },
+    "Loc3": {
+      "n": 17,
+      "endpoint_mean": [
+        506.0,
+        191.0
+      ],
+      "endpoint_spread_px": [
+        0.0,
+        0.0
+      ]
+    },
+    "Loc4": {
+      "n": 14,
+      "endpoint_mean": [
+        453.0,
+        164.0
+      ],
+      "endpoint_spread_px": [
+        0.0,
+        0.0
+      ]
+    },
+    "Loc5": {
+      "n": 17,
+      "endpoint_mean": [
+        441.0,
+        129.0
+      ],
+      "endpoint_spread_px": [
+        0.0,
+        0.0
+      ]
+    },
+    "Loc6": {
+      "n": 19,
+      "endpoint_mean": [
+        506.0,
+        61.0
+      ],
+      "endpoint_spread_px": [
+        0.0,
+        0.0
+      ]
+    },
+    "anotherLoc": {
+      "n": 9,
+      "endpoint_mean": [
+        400.4,
+        103.4
+      ],
+      "endpoint_spread_px": [
+        219.0,
+        60.0
+      ]
+    }
+  },
+  "ethanol_range": [
+    -0.28316113352775574,
+    1.0
+  ],
+  "ethdeconv_range": [
+    -0.02158886380493641,
+    0.13797065615653992
+  ],
+  "threshold_range": [
+    0.004,
+    0.2,
+    0.65
+  ],
+  "head_out_of_box_frac": [
+    0.0,
+    0.02089518042053982,
+    0.21150471238219049
+  ],
+  "head_in_sensor_coverage_frac": [
+    0.5966156325543917,
+    0.9822423073967946,
+    1.0
+  ],
+  "median_dt_head_s": 0.01007080078125,
+  "median_dt_eth_s": 0.0019989013671875,
+  "loc_attr_all_nan": true,
+  "duration_attr_all_nan": true
+}

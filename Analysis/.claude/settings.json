@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+
+  "//": "GENERAL AUTONOMOUS DATA-ANALYSIS CONFIG. Lives in the HOME .claude (~/.claude). Safe for unattended `claude --permission-mode auto` runs. Two machine-specific values below (AR_PY and the %USERPROFILE% hook paths) are the only things to change when moving to another computer.",
+
+  "env": {
+    "AR_PY": "C:/Projects/Repos/Agentic Research/Research Setup/vras/Scripts/python.exe",
+    "RW_PY": "C:/Projects/Repos/Agentic Research/Research Setup/vras/Scripts/python.exe",
+    "AR_VENV": "C:/Projects/Repos/Agentic Research/Research Setup/vras",
+    "PYTHONUNBUFFERED": "1",
+    "PYTHONUTF8": "1",
+    "MPLBACKEND": "Agg"
+  },
+
+  "permissions": {
+    "defaultMode": "acceptEdits",
+
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Glob",
+      "TodoWrite",
+      "Task",
+      "Bash(\"$AR_PY\":*)",
+      "Bash($AR_PY:*)",
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(py:*)",
+      "Bash(pytest:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(python -m pyflakes:*)",
+      "Bash(python -m compileall:*)",
+      "Bash(ls:*)",
+      "Bash(dir:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(type:*)",
+      "Bash(where:*)",
+      "Bash(which:*)",
+      "Bash(echo:*)",
+      "Bash(findstr:*)",
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+      "Bash(rmdir:*)",
+      "Bash(del:*)",
+      "Bash(erase:*)",
+      "Bash(rd:*)",
+      "Bash(shred:*)",
+      "Bash(format:*)",
+      "Bash(mkfs:*)",
+      "Bash(dd:*)",
+      "Bash(Remove-Item:*)",
+      "Bash(Clear-Content:*)",
+      "Bash(shutdown:*)",
+      "Bash(reboot:*)",
+      "Bash(halt:*)",
+      "Bash(sudo:*)",
+      "Bash(runas:*)",
+      "Bash(doas:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(Invoke-WebRequest:*)",
+      "Bash(iwr:*)",
+      "Bash(Invoke-RestMethod:*)",
+      "Bash(irm:*)",
+      "Bash(Start-BitsTransfer:*)",
+      "Bash(scp:*)",
+      "Bash(sftp:*)",
+      "Bash(ftp:*)",
+      "Bash(nc:*)",
+      "Bash(ncat:*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python -m pip install:*)",
+      "Bash(conda install:*)",
+      "Bash(conda create:*)",
+      "Bash(conda remove:*)",
+      "Bash(npm install:*)",
+      "Bash(git push:*)",
+      "Bash(git reset --hard:*)",
+      "Bash(git clean:*)",
+      "Bash(git checkout .:*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets/**)",
+      "Read(**/*id_rsa*)",
+      "Read(**/*.pem)",
+      "Read(**/.aws/**)",
+      "Read(**/.ssh/**)",
+      "Edit(**/.env)",
+      "Write(**/.env)",
+      "WebFetch"
+    ]
+  },
+
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"%USERPROFILE%\\.claude\\hooks\\resolve_venv.py\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"%USERPROFILE%\\.claude\\hooks\\guard_bash.py\"",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}

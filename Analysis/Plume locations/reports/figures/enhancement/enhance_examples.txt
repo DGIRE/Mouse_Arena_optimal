@@ -1,0 +1,7 @@
+Figure A - enhance_examples
+Source result files:
+  data\enhanced_ethanol.h5  (/trials/<ttt>: time, drift_corrected, enhanced, contacts_before_time, contacts_after_time, head, endpoint; group attrs n_before/n_after/distal_snr_gain/thresh_before/thresh_after)
+  data\enhancement_stats.json  (top10_figureA_trial_indices, top10_figureA_distal_snr_gain)
+Trials plotted (top10_figureA_trial_indices): [94, 47, 54, 55, 53, 60, 70, 64, 3, 46]
+distal_snr_gain per trial: [3.0132989911027757, 2.7088965679107266, 2.619552243897176, 2.535612085464948, 2.335058889994666, 2.3342384083667347, 2.330795316643775, 2.3224781745376823, 2.3067875720534303, 2.2790763123655333]
+Series: before=drift_corrected (drift-corrected raw amplitude, left y-axis, the trace the BEFORE detector runs on); after=enhanced (matched-filter score, right/twin y-axis). The two are plotted on separate y-scales because they differ in units. Encounter markers: contacts_before_time on the before axis, contacts_after_time on the after axis (distinct markers).

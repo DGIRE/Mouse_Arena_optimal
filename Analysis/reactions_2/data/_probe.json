@@ -1,0 +1,43 @@
+{
+  "n_trials": 114,
+  "schema_version": "0.1",
+  "Fs": 500.0,
+  "groups": {
+    "Loc1": 20,
+    "Loc2": 18,
+    "Loc3": 17,
+    "Loc4": 14,
+    "Loc5": 17,
+    "Loc6": 19,
+    "anotherLoc": 9
+  },
+  "loc_sum_1_6": 105,
+  "v_pause_px_s_25pct": 5.890695868424441,
+  "omega_min_deg_s_90pct": 156.58244449361234,
+  "v_com_med_px_s": 14.19991096140723,
+  "omega_med_deg_s": 41.15771039034519,
+  "omega_p99_deg_s": 461.48638232552617,
+  "default_bout_count_per_trial": {
+    "min": 0,
+    "median": 1.0,
+    "max": 8
+  },
+  "default_bout_rate_per_s": {
+    "min": 0.0,
+    "median": 0.006972470286937335,
+    "max": 0.20314307462123876
+  },
+  "frac_trials_ge1_bout_default": 0.6491228070175439,
+  "frac_trials_0_bout_default": 0.3508771929824561,
+  "rarity_gate_target": "median <= 0.3/s; tighten if >0.5/s (D6)",
+  "v1_baseline_rate_per_s": 1.7,
+  "median_dt_head_s": 0.01007080078125,
+  "body_dejump_removed_frac_mean": 0.004139836609451367,
+  "head_dejump_removed_frac_mean": 0.010088423243970957,
+  "ethanol_range": [
+    -0.28316113352775574,
+    1.0
+  ],
+  "loc_attr_all_nan": true,
+  "odor_fields_h5_present": true
+}

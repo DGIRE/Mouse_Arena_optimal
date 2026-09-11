@@ -1,0 +1,158 @@
+Mouse Arena · Plume Locations
+Odor-Field Mapping & Ethanol-Signal Enhancement
+Agent-ready analysis request — Draft 2
+Gire Lab · Olfactory Research · Prepared 2026-08-08 · Supersedes “Request draft 1.docx” (kept alongside)
+
+0.  How this request is executed (read first)
+Pipeline. This request is written for the autonomous data-analysis pipeline configured in C:\Projects\Repos\Mouse Arena\Analysis\.claude. Launch a Claude CLI with cwd = C:\Projects\Repos\Mouse Arena\Analysis and --permission-mode auto, then hand it this document. The flow is fixed: planning-architect (writes a pre-registered PLAN.md/plan.json with hypotheses, methods, parameters, exclusions, and acceptance criteria) → data-analyst → code-verifier (Gate 1) → figure-builder + report-writer → scientific-auditor (Gate 2, independent) → lesson-archivist.
+Interpreter. Run every Python file with the quoted env var "$AR_PY" (the project venv: numpy, scipy, pandas, scikit-learn, statsmodels, h5py, matplotlib, python-docx). Never use bare python/py/Anaconda. No pip install mid-run — the guard blocks it; if a package is missing, record it and proceed with what is available.
+Prior lessons. Before planning, read Analysis\Plume locations\learning\LESSONS.md if it exists (create it on archive if not). The lesson-archivist appends a dated entry here at the end.
+Two deliverable tasks, independent. Task 1 (odor-field maps) and Task 2 (signal enhancement) do not depend on each other and may be planned and run in parallel Task calls. Both read the same behavior data and both must pass Gate 2 before results are called final.
+Data is read-only. Treat everything under DATA\ as read-only. Write all new outputs only under Analysis\Plume locations\ (data/, reports/, reports/figures/…) at the exact paths in §6.
+1.  Data source and how to access it
+Aggregate file: C:\Projects\Repos\Mouse Arena\DATA\Mouse Arena Aggregate Data.h5  (163 MB; schema 0.1; Fs = 500 Hz; reference: Tariq et al. 2021, eNeuro 8(1) ENEURO.0285-20.2020).
+Access only through the accessor — never walk the HDF5 tree by hand:
+import sys; sys.path.insert(0, r"C:\Projects\Repos\Mouse Arena\DATA\code")
+from mouse_arena_aggregate_io import Aggregate
+agg = Aggregate(r"C:\Projects\Repos\Mouse Arena\DATA\Mouse Arena Aggregate Data.h5")
+trials = agg.behavior()   # list of 114 per-trial dicts (all lighting="infrared")
+Both tasks use the /behavior block only — the head-mounted ethanol sensor recorded along each foraging trajectory. Do not use the sensor-characterization blocks (sensor/pulses, sensor/frequency, sensor/spatial); those are bench stimulus sweeps, not foraging data. Calcium is absent (has_calcium = 0).
+1.1  Per-trial behavior fields (each of the 114 trials)
+Arena extent (fixed): x ∈ [0, 580], y ∈ [0, 280] pixels (arena_px bounding box). Coordinates are pixels, 0-based. There is no pixels-per-cm factor stored; report distances in pixels (state “px”).
+2.  Decisions made explicit (edit here to change the analysis)
+Draft 1 left several choices open. Each is resolved below with a default and a reason. David: if you disagree with any line, change it here before launching — the planning-architect treats this section as binding.
+
+3.  Shared definitions (apply to both tasks)
+3.1  End-location groups (from file_name, validated by endpoint)
+Parse the end location from file_name with the regex _Loc(\d+); a trial with no numbered token but containing “anotherLoc” goes to the anotherLoc group. Confirm the grouping is correct by checking that every trial in a Loc group shares one endpoint coordinate (spread ≈ 0). The observed grouping in the current aggregate is:
+Acceptance: the code must recover exactly these 7 groups summing to 114 trials, and log a warning if any Loc group's endpoint spread exceeds 2 px. If the aggregate is rebuilt and counts change, use whatever the code recovers and report it — do not hard-code the numbers above.
+3.2  Cleaning the head track
+Restrict to the arena. Drop head samples with x∉[0,580] or y∉[0,280], or non-finite coordinates. (Observed head coordinates run far outside the box; these are tracking artifacts and would otherwise create spurious distant bins.)
+De-jump (recommended). Optionally remove isolated large frame-to-frame jumps (e.g. >Q px between consecutive kept samples, Q chosen data-drivenly, e.g. the 99.5th percentile of step size) before binning. Log how many samples each rule removes, per trial and overall.
+Robustness check. Recompute the Loc-pooled odor field once using the BODY track instead of head; report qualitative agreement in the Task-1 report (one sentence + a supplementary correlation of the two mean maps). This guards against the cleaning choice driving the result.
+3.3  Aligning ethanol to position (the two clocks)
+For each trial, to attach an ethanol value to each kept head sample: eth_at_head = np.interp(head_time, ethanol_time, ethdeconv, left=np.nan, right=np.nan). Head samples whose time falls outside the sensor's coverage get NaN and are excluded from binning/statistics. Never resample the position clock onto the sensor clock — always bring the signal to the position samples.
+
+4.  Task 1 — Odor-field statistical maps (per end location)
+For each of the six end locations (Loc1–Loc6), build a spatial “odor field” from the deconvolved ethanol encountered along the animals' head trajectories, and summarize the odor distribution overall and per location. anotherLoc is summarized separately (§4, last paragraph), not turned into one of the six fields.
+4.1  Binning rule (operationalizing “smallest bins with ≥3 observations”)
+Fixed grid. Square bins of edge L px tiling the fixed arena extent x∈[0,580], y∈[0,280]. The SAME grid is used for all four panels of a location.
+Choose L per location. Scan a descending candidate list (default L ∈ {40, 30, 25, 20, 15, 10} px). Pick the SMALLEST L for which at least 60% of visited bins (bins containing ≥1 sample from ≥1 trial) have ≥3 contributing trials. If no L reaches 60%, fall back to the coarsest (40 px) and note it. Record the chosen L and the coverage fraction for each location.
+Mask sparse bins. In the max/mean/min maps, any bin with <3 contributing trials is set to NaN (not plotted / not stored as a value). The count map shows the true per-bin trial count including <3.
+Observation = trial. A trial contributes to a bin if ≥1 of its cleaned, time-aligned head samples falls in the bin. The per-bin trial count is the number of distinct such trials.
+4.2  Per-bin statistics
+For every bin, pool the aligned ethdeconv values of all samples (across all contributing trials) falling in that bin, and compute: 
+Maximal ethdeconv in the bin.
+Mean ethdeconv in the bin.
+Minimal ethdeconv in the bin.
+Count = number of distinct trials contributing to the bin.
+4.3  Figures (one per location)
+One figure per location (6 total; plus one for anotherLoc), four stacked panels top→bottom: (1) maximal map, (2) mean map, (3) minimal map, (4) per-bin observation count. Requirements:
+Colormap jet for all panels (as requested). NaN/masked bins render as blank (set_bad), not as jet's min color.
+Shared arena extent and aspect (x 0–580, y 0–280, equal aspect); mark the endpoint (reward port) with a distinct marker (e.g. white ✕).
+Per-panel colorbar with units (“ethdeconv, a.u.” for maps; “trials” for the count panel). Title each figure with the location and n trials; caption states chosen bin size L, coverage %, and total samples.
+Save PNG (dpi≈200, bbox_inches="tight") and PDF to Analysis\Plume locations\reports\figures\fields, named field_Loc1.png/.pdf … field_Loc6.png/.pdf (+ field_anotherLoc.*). Add a .txt sidecar naming the source result file.
+4.4  Odor-field HDF5 output
+Write ONE well-annotated file Analysis\Plume locations\data\odor_fields.h5 that makes the fields trivially reusable:
+One group per location: /Loc1 … /Loc6 (and /anotherLoc). Each group holds datasets max, mean, min, count (2-D, shape = n_ybins×n_xbins, masked bins = NaN for max/mean/min), plus x_edges, y_edges (bin edges, px) and endpoint (2,).
+Group attrs: bin_size_px (L), coverage_frac, n_trials, trial_indices, samples_total, track="head", signal="ethdeconv".
+Root attrs: source aggregate path + its schema_version, arena_extent [0,580,0,280], masking rule (min_trials=3), cleaning params, created_utc, generator script name/version, and a one-line README attr describing the axis convention (row=y bin, col=x bin; 0-based).
+gzip level 4 + shuffle on numeric datasets ≥256 elements; write to .tmp then os.replace; set a build_complete=1 attr only after a fully successful write.
+4.5  Report (docx)
+Write Analysis\Plume locations\reports\Odor field report.docx describing the odor distribution as a whole and then per location. Every number is injected from the saved result objects (odor_fields.h5 + a stats result file), never hand-typed. Cover explicitly:
+Sparseness. What fraction of visited arena bins carry appreciable odor? Report, per location and pooled: fraction of visited bins with mean ethdeconv above a stated small cutoff; the share of total odor “mass” in the top-k bins (e.g. top 5%); and a concentration index (Gini or normalized entropy) of the mean map. State the cutoff and its justification.
+Distance dependence. Relate per-bin odor (mean and max) to the Euclidean distance from the bin center to that location's endpoint. Fit a monotone model (e.g. exponential decay, or OLS on log-odor vs distance), report slope/decay constant with 95% CI, per location and pooled, and show the trend. State whether odor concentrates near the source and over what spatial scale (px).
+Trajectory types. Classify trajectories by how/where odor is encountered. Per trial compute: path length (sum of cleaned head-step distances, px), tortuosity (path length ÷ straight-line start→endpoint distance), number of odor encounters (§5.2 definition), and the fraction of the path spent above the odor threshold. Summarize the resulting types (e.g. direct-to-source vs. distributed-search) per location, and relate trajectory type to the amount and spatial spread of odor encountered. Replication unit = trial; report per-location distributions, and use animal-aware summaries where trial counts allow.
+Standard sections. Methods (data source, interpreter/venv, seed, bin rule, cleaning params), Results with all field figures embedded + captions, brief Caveats (head-tracking cleaning, masking, single cohort/infrared only, sensor a.u. not calibrated ppm), and a reproducibility footer (exact command + result-file names). Zero leftover placeholder tokens.
+4.6  Task-1 hypotheses / acceptance (for the planner and auditor)
+H1 (sparseness). H1: odor is spatially sparse — a minority of visited bins carry most of the odor mass. H0: odor mass is spread uniformly across visited bins. Test: concentration index vs. a uniform-map null. Accept if the index is reported per location with the null comparison, regardless of direction.
+H2 (distance dependence). H1: mean/max bin odor decreases with distance from the endpoint. H0: no distance relationship (slope = 0). Test: per-location fit + CI; pooled mixed/animal-aware summary. Accept if slope + CI reported per location and pooled; a null/positive slope is a valid reported result.
+H3 (trajectory structure). H1: trajectories fall into distinguishable types differing in odor encountered (e.g. tortuosity correlates with number/spread of encounters). H0: no association. Test: correlation/grouping of trajectory metrics vs. encounter metrics, per location. Accept if the association is quantified with an effect size and CI; direction reported before significance.
+
+5.  Task 2 — Enhance the ethanol signal (recover distal encounters)
+Goal: separate genuine ethanol encounters (brief, stereotyped transients) from the sensor's slow baseline drift, and use the statistical structure and temporal shape of high-SNR encounters near the endpoint to recover small-amplitude encounters far from the source. Operate per trial on the /behavior ethanol trace.
+5.1  Recommended enhancement pipeline (default; substitutable per §5.3)
+Drift removal. Estimate the slow baseline of each raw ethanol trace (e.g. a long rolling low-percentile window, ~10–30 s, or an asymmetric-least-squares baseline / high-pass) and subtract it → a drift-corrected trace. Justify the window from the drift timescale in the data. Keep ethdeconv available as an alternative input.
+Template of a known encounter. Identify high-SNR encounter epochs NEAR the endpoint: head within a stated distance of the endpoint AND drift-corrected signal clearly above baseline (e.g. > per-trial threshold or > k·MAD of a quiet segment). Extract fixed-length windows around each such peak, align to the peak, and average → a canonical encounter template (its temporal shape). Build the template pooled and/or per location; state which.
+Enhancement by matched filtering. Normalized cross-correlation of the drift-corrected trace with the template boosts template-shaped transients and suppresses drift and white noise → the enhanced trace. (A defensible wavelet/optimal-filter variant is acceptable.) The enhanced trace is the primary Task-2 signal product.
+Encounter detection, matched fairly. An encounter = a threshold crossing (with peak prominence and a minimum inter-encounter refractory gap, e.g. 0.1–0.5 s, to avoid double-counting). Detect BEFORE (on the drift-corrected raw or ethdeconv) and AFTER (on the enhanced trace). Calibrate the two detectors so they share a matched false-positive rate on a quiet, far-from-source baseline segment — so the “after” gain reflects real recovery, not a looser threshold. State both thresholds and the calibration.
+5.2  Operational definitions
+Distance / “at a distance.” Distance = Euclidean head-to-endpoint distance (px) at each time. “Distal” = beyond a stated cutoff (default: > median head-to-endpoint distance for that trial, or a fixed px cutoff justified from the data).
+SNR of an encounter. peak amplitude ÷ local baseline noise (MAD of the trace in a nearby quiet window). Define once and apply identically before/after.
+“Most improved SNR at a distance.” For each trial, the mean SNR gain (after − before, or after/before) of its DISTAL encounters. Rank trials by this quantity; the top 10 populate the example figure.
+Encounter count (for the scatter). Per trial, the number of detected encounters before vs. after enhancement, using the §5.1(4) detectors.
+5.3  Deliverables
+Figure A — 10 before/after examples. The 10 trials with the most improved distal SNR. Each panel overlays the before trace and the enhanced (after) trace on a common time axis, marks detected encounters, and annotates the head-to-endpoint distance context and the SNR gain. Save PNG+PDF to Analysis\Plume locations\reports\figures\enhancement as enhance_examples.png/.pdf.
+Figure B — encounter-count scatter. One point per trial: x = # encounters detected BEFORE, y = # AFTER; include the identity line and report how many trials gain/lose/tie. Save as enhance_count_scatter.png/.pdf in the same folder. .txt sidecars name the source result file.
+HDF5 — enhanced data. Write ONE well-annotated file Analysis\Plume locations\data\enhanced_ethanol.h5. Per-trial group /trials/<ttt> (0-padded, matching the aggregate) holding: enhanced (Ne,), its time (Ne,), baseline (Ne,), detected contacts before & after (contacts_before_idx/_time/_amp, contacts_after_…), and the tracked path (head (Nh,2), head_time, body (Nb,2), endpoint (2,)). Group attrs: n encounters before/after, distal SNR gain, chosen thresholds. Root attrs: method + all params (drift window, template length, refractory gap, distance/SNR definitions), source aggregate path, created_utc, generator, and a README attr. gzip4+shuffle; .tmp→os.replace; build_complete=1 last.
+5.4  Task-2 hypotheses / acceptance
+H4 (recovery). H1: enhancement increases the number of detected encounters, disproportionately for distal encounters. H0: no net increase at matched false-positive rate. Test: paired before/after counts across trials (Wilcoxon), split by distance. Accept if counts are reported with the matched-FPR calibration and the distal-vs-proximal split.
+H5 (no fabrication — guard). The enhancement must not manufacture encounters from noise. Acceptance criterion (auditor checks): on a quiet, far-from-source baseline segment, the AFTER detector's false-positive rate is ≤ the BEFORE detector's. If it is higher, the result FAILS and the threshold must be recalibrated. Report the measured baseline FPRs.
+
+6.  Output locations (write exactly here)
+Note: both .h5 outputs go in data\ per the request. Everything else lands in reports\ or reports\figures\…. Do not write anywhere under DATA\.
+7.  Definition of done
+PLAN.md/plan.json pre-registers both tasks: hypotheses H1–H5, every parameter (bin candidate list + coverage target, cleaning rule, drift window, template length, refractory gap, distance & SNR definitions, thresholds) with a data-derived justification, exclusions (anotherLoc from the six fields; out-of-arena samples; NaN-coverage samples), and the acceptance criteria below.
+Gate 1 (code-verifier) PASSES: static checks + tests + one independent re-derivation of a headline number (e.g. a bin's mean, or a trial's before/after count).
+All 9 figures exist as non-empty PNG+PDF with sidecars; both .h5 files open through a fresh h5py read and expose the documented groups/attrs; both reports contain zero placeholder tokens and every number traces to a saved result.
+Gate 2 (scientific-auditor) PASSES: sparseness/distance/trajectory claims are supported and directionally reported; the Task-2 no-fabrication guard (H5) holds (baseline FPR after ≤ before). REVISE/FAIL → one scoped re-plan (≤2 iterations) then STOP with SESSION_NOTES.md.
+lesson-archivist appends a dated entry to learning\LESSONS.md (what worked, what failed + root cause, standing rules).
+8.  Notes, gotchas, and things NOT to do
+Do NOT use the trial loc or duration attrs (both NaN). End location = file_name token; duration = time-base span.
+Do NOT feed raw out-of-arena head coordinates into binning — clean to [0,580]×[0,280] first, or bins explode to px like −607/929.
+Do NOT assume threshold applies to ethdeconv — its scale (≤0.65) matches raw ethanol (≤1.0), not ethdeconv (≤0.14). Verify at plan time.
+Do NOT resample the position clock onto the 500 Hz sensor clock — bring the signal to the head samples via np.interp with NaN fill outside coverage.
+Do NOT let Task 2's “after” detector run looser than “before” — match false-positive rate on a quiet baseline, or the count gain is meaningless.
+Sensor values are uncalibrated a.u., single cohort, infrared only (114 trials). State these scope limits in both reports; do not generalize beyond them.
+
+Prepared for the Mouse Arena autonomous analysis pipeline (Analysis\.claude). Draft 1 is retained in the requests folder for provenance. Change any line in §2 or the definitions before launching to steer the analysis.
+
+[TABLE 0]
+Field (accessor key) | Shape / dtype | Meaning & notes
+head | (Nh,2) f32 | Head-marker position in arena pixels, x=col0, y=col1. THE sensor location — use this as the spatial position of an odor encounter. Contains large out-of-arena tracking artifacts (observed x∈[-607,929], y∈[-349,574]); must be cleaned to the arena box before use (see §3.2).
+head_time | (Nh,) f32 | Head tracking clock, seconds. ~99 Hz (median dt≈0.0101 s). Often starts several seconds after t=0 (e.g. 17.9 s) and spans less than the sensor clock.
+body | (Nb,2) f32 | Body-marker position, arena pixels. Secondary; sensor is on the head. Use only for the robustness check in §3.2.
+body_time | (Nb,) f32 | Body tracking clock, seconds (~99 Hz).
+ethanol | (Ne,) f32 | Raw head-mounted ethanol-sensor trace (a.u., observed ~[-0.28, 1.0]). Carries slow baseline drift — the target of Task 2.
+ethanol_time | (Ne,) f32 | Sensor clock, seconds. 500 Hz (median dt≈0.002 s). Same seconds origin as the tracking clocks but a different rate and span.
+ethdeconv | (Ne,) f32 | Deconvolved ethanol (difference-of-exponentials kernel τ=0.02/2.0 s), a.u., observed ~[-0.02, 0.14]. USE THIS as the “deconvolved ethanol sensor data” for the Task-1 odor field.
+endpoint | (2,) f32 | Reward location (target odor port) for the trial, arena pixels. Non-NaN for all 114 trials.
+file_name | str | Source recording name; carries date, animal, trial#, and the end-location token (e.g. “…207_Trial1_Loc5.avi.dat”). The ONLY reliable source of end-location identity (see §3.1).
+lighting | str | Illumination tag — “infrared” for all 114 trials, so it does not partition this dataset.
+threshold | f32 | Per-trial data-driven contact threshold (observed 0.004–0.65, median 0.20). Its scale matches the RAW ethanol trace (0–1), not ethdeconv (max 0.14). Verify the trace it applies to at plan time before using it for contact detection (§5).
+loc, duration | f32 | Trial attrs — BOTH are NaN for all 114 trials. Do NOT use them. End location comes from file_name (§3.1); trial duration from the time bases.
+
+[TABLE 1]
+# | Decision | Default adopted (and why)
+D1 | Spatial position of an odor encounter | HEAD track (the ethanol sensor is head-mounted), cleaned to the arena box. Body track used only as a robustness cross-check.
+D2 | End-location grouping | Parse the Loc token from file_name → six groups Loc1–Loc6 (105 trials). Validate against the endpoint coordinate (each Loc has one exact endpoint; see §3.1). The 9 “anotherLoc” trials are heterogeneous (endpoint spread ±67 px) and are reported as a separate group, EXCLUDED from the six per-location odor fields.
+D3 | Signal for the odor field (Task 1) | ethdeconv (deconvolved ethanol), per the request’s “deconvolved ethanol sensor data.”
+D4 | Clock alignment | Interpolate the ethanol/ethdeconv trace onto the HEAD clock with np.interp; samples outside the sensor’s time coverage → NaN and excluded. (The two clocks share a seconds origin but differ in rate/span.)
+D5 | Bin definition (Task 1) | Uniform SQUARE bins over the fixed arena extent. “Smallest bins with ≥3 observations” is operationalized in §4.1: pick the finest bin size (per location) meeting a coverage rule, then MASK bins with <3 contributing trials.
+D6 | “Observation” per bin | One observation = one distinct TRIAL contributing ≥1 (cleaned, time-aligned) head sample to that bin. Not per-sample.
+D7 | Per-bin max/mean/min | Computed over ALL aligned ethdeconv sample values pooled across the trials that enter the bin (not over per-trial means).
+D8 | Enhancement method (Task 2) | Baseline-drift removal + a matched filter built from high-SNR near-endpoint encounter templates (§5.1). This is the recommended default; the analyst may substitute a defensible alternative if it meets the §5.3 acceptance criteria and the plan justifies it.
+
+[TABLE 2]
+Group | n trials | Endpoint (px, x,y) | Use
+Loc1 | 20 | (474, 61) | odor field
+Loc2 | 18 | (506, 114) | odor field
+Loc3 | 17 | (506, 191) | odor field
+Loc4 | 14 | (453, 164) | odor field
+Loc5 | 17 | (441, 129) | odor field
+Loc6 | 19 | (506, 61) | odor field
+anotherLoc | 9 | centroid (400, 103), spread ±(67,16) | report separately; excluded from the 6 per-location fields
+
+[TABLE 3]
+Why this reading of the request
+Draft 1 says “the smallest bins that still contain at least 3 observations per bin, where observations are across trials (≥3 trials have time spent in that bin).” Taken literally, no single fine grid makes EVERY occupied bin reach 3 trials (edge bins never will). The operational rule above keeps bins as small as the data support (finest L meeting a coverage target) and enforces the ≥3-trials floor by masking, so every displayed/stored statistic is backed by ≥3 trials. If you prefer a different coverage target or candidate L list, set it in §2 / here.
+
+[TABLE 4]
+Artifact | Path (under Analysis\Plume locations\) | Task
+Odor-field figures (7) | reports\figures\fields\field_Loc1..6.{png,pdf}, field_anotherLoc.* | 1
+Odor-field data | data\odor_fields.h5 | 1
+Odor-field report | reports\Odor field report.docx | 1
+Enhancement figures (2) | reports\figures\enhancement\enhance_examples.*, enhance_count_scatter.* | 2
+Enhanced data | data\enhanced_ethanol.h5 | 2
+Plan / audit / notes | PLAN.md, plan.json, audit_report.md, SESSION_NOTES.md (Plume locations\) | both
+Lessons | learning\LESSONS.md (append) | both

@@ -1,0 +1,74 @@
+{
+  "plan_version": "1.0",
+  "prepared_utc": "2026-08-07",
+  "request": "requests/request draft 2 (agent-ready).md",
+  "interpreter": "$AR_PY (project venv, resolved from Analysis/.claude/settings.json)",
+  "seed": 1234,
+  "prior_lessons": "Analysis/Plume locations/learning/LESSONS.md (rules 1-7)",
+  "data": {
+    "aggregate": "C:/Projects/Repos/Mouse Arena/DATA/Mouse Arena Aggregate Data.h5",
+    "accessor": "C:/Projects/Repos/Mouse Arena/DATA/code/mouse_arena_aggregate_io.py",
+    "n_trials": 114,
+    "pooled_groups": ["Loc1", "Loc2", "Loc3", "Loc4", "Loc5", "Loc6"],
+    "pooled_n": 105,
+    "anotherLoc_n": 9,
+    "arena_extent": [0, 580, 0, 280],
+    "geometry_track": "body",
+    "clock": "head",
+    "endpoints": {"Loc1": [474, 61], "Loc2": [506, 114], "Loc3": [506, 191],
+                  "Loc4": [453, 164], "Loc5": [441, 129], "Loc6": [506, 61]},
+    "probed_ranges": {"ethanol": [-0.283, 1.0], "ethdeconv": [-0.022, 0.138],
+                      "threshold_median_raw": 0.20},
+    "excluded": ["loc_attr(NaN)", "duration_attr(NaN)", "out_of_arena", "nonfinite",
+                 "dejump_outliers", "headbody_norm_lt_1px", "source_dist_lt_1px",
+                 "out_of_sensor_coverage", "anotherLoc_from_pooled"]
+  },
+  "decisions": {
+    "D1_geometry_track": "body", "D2_body_axis": "unit(head-body) on head clock, drop <1px",
+    "D3_to_source": "unit(endpoint-body)", "D4_angle": "deg(arccos(clip(u.s,-1,1))) in [0,180]",
+    "D5_encounter": "upward crossing of ethdeconv > k*MAD(quiet baseline), refractory 0.20s",
+    "D6_tortuosity": "path_length/straight_line, straight_line>=1px",
+    "D7_pool": "Loc1-6 pooled; anotherLoc separate", "D8_unit": "trial",
+    "D9_F3_bins": "20px, >=30 samples/bin, 95% CI bootstrap over trials",
+    "D10_F4_window": "-1.0..+1.0s, 50ms grid, 95% CI bootstrap over trials",
+    "D11_detect_signal": "ethdeconv (not raw threshold attr)",
+    "D12_F1_line": "dashed red OLS trend + Spearman rho annotation",
+    "D13_F2_examples": "3 most + 3 least tortuous (pooled Loc1-6)"
+  },
+  "encounter_calibration": {
+    "signal": "ethdeconv_on_head_clock",
+    "quiet_baseline": "head-source dist > 80th pctile AND ethdeconv < per-trial median (pooled)",
+    "k_scan": [5, 6, 8, 10], "rule": "smallest k with pooled quiet FPR <= 0.05/s",
+    "refractory_s": 0.20
+  },
+  "dejump_probed": {"Q_body_px": 2.298, "Q_head_px": 2.863,
+                    "removed_frac_body_mean": 0.0041, "removed_frac_head_mean": 0.0101,
+                    "smell_test_stop_if_gt": 0.05},
+  "hypotheses": {
+    "H1": {"test": "spearman(n_encounters, tortuosity) pooled + per-loc; trial bootstrap CI",
+           "accept": "rho<0 and CI excludes 0", "prior_rho": 0.176,
+           "secondary": "spearman(frac_above_threshold, tortuosity) prior rho=-0.532"},
+    "H2": {"test": "per-trial OLS slope theta~d; Wilcoxon slopes>0 pooled",
+           "accept": "slopes significantly>0 AND F3 curve rises with distance"},
+    "H3": {"test": "per-trial mean theta pre(-1..0) vs post(0..+1); paired Wilcoxon post<pre",
+           "accept": "post theta significantly below pre"}
+  },
+  "figures": {
+    "F1": "reports/figures/F1_encounters_vs_tortuosity.{png,pdf,txt}",
+    "F2": "reports/figures/F2_example_paths.{png,pdf,txt}",
+    "F3": "reports/figures/F3_angle_vs_distance.{png,pdf,txt}",
+    "F4": "reports/figures/F4_peri_contact_angle.{png,pdf,txt}"
+  },
+  "outputs": {
+    "metrics": "data/trajectory_metrics.h5", "metrics_json": "data/trajectory_metrics.json",
+    "stats": "data/stats.json",
+    "reports": ["reports/H1 - encounters vs tortuosity.docx",
+                "reports/H2 - alignment vs distance.docx",
+                "reports/H3 - peri-contact reorientation.docx"]
+  },
+  "acceptance": {
+    "gate1": "accessor-only; advancing-ref clean ~0.5%; head-clock interp; FPR<=0.05/s k-scan re-derived; theta in [0,180]; unit=trial; anotherLoc excluded; seed recorded; >=3 numbers/hyp re-derived; zero placeholders",
+    "gate2": "counts interpretable; H1 honest vs prior; H2/H3 robust; angle convention verified; CIs; nulls headlined",
+    "reiteration_cap": 2
+  }
+}

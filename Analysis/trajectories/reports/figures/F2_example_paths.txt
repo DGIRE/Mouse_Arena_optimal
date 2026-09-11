@@ -1,0 +1,17 @@
+F2 - Most/least tortuous example paths
+Source files:
+  data/trajectory_metrics.json  (per-trial tortuosity, n_encounters, in_pooled)
+  data/trajectory_metrics.h5    (/trials/<idx>: body_clean, head_clean, ethd_h,
+                                  head_t, onset_idx, onset_time; root threshold/k/seed)
+
+Root attrs drawn: threshold=0.0007181608994175671  k=5  seed=1234
+Arena box (arena_extent): x[0.0,580.0] y[0.0,280.0]
+Contact colormap: jet, vmin=0.000718189105267089, vmax=0.0026879872435308766 (ethd_h at onset_idx, pooled across 6 examples)
+
+Examples (side, trial_index, end_loc, n_encounters, tortuosity, file_name):
+  MOST 	71	Loc5	6	471.6282	11-24-2019-5-50 PM-Mohammad-211_Trial1_Loc5.avi.dat
+  MOST 	17	Loc2	156	70.1084	11-22-2019-10-52 AM-Mohammad-205_Trial4_Loc2.avi.dat
+  MOST 	48	Loc6	319	33.7617	11-23-2019-4-09 PM-Mohammad-207_Trial4_Loc6.avi.dat
+  LEAST	94	Loc6	11	1.2300	11-27-2019-10-21 AM-Mohammad-204_Trial4_Loc6.avi.dat
+  LEAST	79	Loc2	1	1.3102	11-26-2019-11-10 AM-Mohammad-207_Trial3_Loc2.avi.dat
+  LEAST	110	Loc4	38	1.5280	11-27-2019-11-42 AM-Mohammad-207_Trial3_Loc4.avi.dat

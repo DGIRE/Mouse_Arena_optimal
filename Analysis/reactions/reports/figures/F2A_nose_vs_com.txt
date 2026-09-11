@@ -1,0 +1,13 @@
+F2A Nose speed vs COM speed at sweep peak (pooled Loc1-6 sweeps)
+Source: data/sweeps.h5 /sweeps columns v_nose, v_com, in_pooled
+One point per pooled sweep; x = v_nose@peak (px/s), y = v_com@peak (px/s)
+n_points_plotted=21841 (in_pooled & finite v_nose & finite v_com)
+x range: 4.333 .. 11526.720 px/s (axes trimmed to 99.5pct=1466.7)
+y range: 0.000 .. 343.042 px/s
+
+Spearman of PLOTTED points (describes the scatter; seed 1234, 2000 bootstraps over points):
+  rho=0.459235  p=0.000000e+00  95% CI [0.447428, 0.470722]
+
+NOTE: This annotation describes the plotted cloud only. H2 inference lives in
+data/stats.json (H2 block): primary R-set during-vs-baseline Wilcoxon and the
+non-circular numerator-only (body-frame) headline test.

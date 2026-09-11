@@ -1,0 +1,17 @@
+2026-08-08 17:23:23,223 INFO build_bouts start seed=1234 version=reactions2_common/1.0 slice=None
+2026-08-08 17:23:23,678 INFO loaded 114 trials (schema 0.1, Fs 500.0)
+2026-08-08 17:23:23,750 INFO dejump Q head=2.863 body=2.298
+2026-08-08 17:23:27,335 INFO v_pause(25pct)=5.8907 px/s  omega_min(90pct)=156.5824 deg/s
+2026-08-08 17:23:28,409 INFO D6: pooled median bout rate = 0.00733 /s (params tau=0.30 dphi=40.0 omega_pct=90.0 omega_min=156.58)
+2026-08-08 17:23:28,410 INFO D6 FINAL: rate=0.00733 /s tightened=False params={'tau_pause': 0.3, 'dphi_min': 40.0, 't_merge': 0.5} omega_min=156.582
+2026-08-08 17:23:29,451 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\reactions_2\data\bouts.h5 (build_complete=1)
+2026-08-08 17:23:29,455 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\reactions_2\data\bouts.json (129 bouts, 114 trials)
+2026-08-08 17:23:29,457 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\reactions_2\data\stats.json
+2026-08-08 17:23:29,457 INFO build_bouts done in 6.2s
+2026-08-08 17:23:29,457 INFO === SUMMARY ===
+2026-08-08 17:23:29,457 INFO v_pause=5.891 px/s  omega_min=156.582 deg/s
+2026-08-08 17:23:29,457 INFO pooled median rate=0.00733/s  count med=1 max=6  %>=1 bout=63.8%  D6 pass=True
+2026-08-08 17:23:29,457 INFO H1 bout-vs-null p=0.9998  H1 bout-vs-inc p=0.9948  above_floor=True
+2026-08-08 17:23:29,457 INFO H2 pre>baseline p=0.6493  slope>0 p=0.4324
+2026-08-08 17:23:29,457 INFO H3 f_bout>f_occ p=0.9937  frac enriched=0.25
+2026-08-08 17:23:29,457 INFO example trial=11-23-2019-4-04 PM-Mohammad-207_Trial3_Loc4.avi.dat count=6

@@ -1,0 +1,14 @@
+build_odor_fields: DONE (slice=False)
+  h5   : C:\Projects\Repos\Mouse Arena\Analysis\Plume locations\data\odor_fields.h5
+  stats: C:\Projects\Repos\Mouse Arena\Analysis\Plume locations\data\odor_field_stats.json
+  log  : C:\Projects\Repos\Mouse Arena\Analysis\Plume locations\logs\build_odor_fields.log
+  global MAD=0.00020146  cutoff=0.001  Q_head=2.863
+  Loc1        L=40 cov=0.960 n=20 visited=101
+  Loc2        L=40 cov=0.939 n=18 visited= 99
+  Loc3        L=40 cov=0.960 n=17 visited= 99
+  Loc4        L=40 cov=0.895 n=14 visited= 95
+  Loc5        L=40 cov=0.845 n=17 visited=103
+  Loc6        L=40 cov=0.961 n=19 visited=102
+  anotherLoc  L=40 cov=0.981 n= 9 visited=105
+  pooled      L=40 cov=0.971 n=105
+  head-vs-body Pearson r = 0.8751288193548974

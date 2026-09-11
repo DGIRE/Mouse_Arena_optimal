@@ -1,0 +1,13 @@
+F2B Nose speed vs summed baseline-sub ethanol (pooled Loc1-6 sweeps)
+Source: data/sweeps.h5 /sweeps columns v_nose, summed_eth, in_pooled
+eth_sum window: [-0.5, 0.5] s
+n_points_plotted=21794 (in_pooled & finite v_nose & finite summed_eth)
+x = v_nose@peak (px/s); y = summed baseline-sub ethanol (a.u.)
+x range: 4.333 .. 11526.720 px/s (x-axis clipped to 99.5pct=1460.6 for display)
+y range: -1.3562 .. 13.6003 a.u.
+
+Spearman of PLOTTED points (describes the scatter; seed 1234, 2000 bootstraps over points):
+  rho=-0.090976  p=2.775175e-41  95% CI [-0.103992, -0.077684]
+
+NOTE: the pre-registered H1(c) inferential statistic is the R-based Spearman from stats.json:
+  rho(R@peak, summed eth_bs)=-0.028090  p=3.361603e-05  CI [-0.056508, -0.000280]  n_sweeps=21794

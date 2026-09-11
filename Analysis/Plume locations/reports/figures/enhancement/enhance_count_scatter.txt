@@ -1,0 +1,4 @@
+Figure B - enhance_count_scatter
+Source result files:
+  data\enhancement_stats.json  (per_trial[].n_before / n_after; counts.trials_gaining/losing/tying)
+gain=57, lose=56, tie=1, total=114

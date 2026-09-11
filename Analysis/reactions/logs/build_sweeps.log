@@ -1,0 +1,135 @@
+2026-08-08 12:34:46,960 INFO === build_sweeps start (seed=1234, VERSION=reactions_common/1.0) ===
+2026-08-08 12:34:47,149 INFO self_check: PASS
+2026-08-08 12:34:47,607 INFO loaded 114 infrared trials
+2026-08-08 12:34:47,678 INFO dejump Q body=2.2985 head=2.8633 px
+2026-08-08 12:34:47,841 INFO PASS1: pooled v_com n=1469232, v_floor(10th pct)=2.8867 px/s
+2026-08-08 12:34:48,770 DEBUG trial 0 11-15-2019-2-41 PM-Mohammad-207_Trial1_anotherLoc.avi.dat: sweeps=878 rate=1.682/s binding=0.059 f_sweep=0.05466970387243736 f_occ=0.053
+2026-08-08 12:34:49,640 DEBUG trial 1 11-15-2019-3-17 PM-Mohammad-201_Trial1_anotherLoc.avi.dat: sweeps=827 rate=1.783/s binding=0.137 f_sweep=0.02539298669891173 f_occ=0.024
+2026-08-08 12:34:49,758 DEBUG trial 2 11-15-2019-3-48 PM-Mohammad-204_Trial1_anotherLoc.avi.dat: sweeps=87 rate=1.948/s binding=0.045 f_sweep=0.05747126436781609 f_occ=0.054
+2026-08-08 12:34:51,055 DEBUG trial 3 11-15-2019-3-52 PM-Mohammad-204_Trial1_anotherLoc.avi.dat: sweeps=1238 rate=1.644/s binding=0.145 f_sweep=0.0395799676898223 f_occ=0.040
+2026-08-08 12:34:51,534 DEBUG trial 4 11-15-2019-4-24 PM-Mohammad-211_Trial1_anotherLoc.avi.dat: sweeps=415 rate=1.443/s binding=0.031 f_sweep=0.05301204819277108 f_occ=0.054
+2026-08-08 12:34:51,928 DEBUG trial 5 11-15-2019-4-42 PM-Mohammad-205_Trial1_anotherLoc.avi.dat: sweeps=329 rate=1.630/s binding=0.029 f_sweep=0.0364741641337386 f_occ=0.029
+2026-08-08 12:34:52,461 DEBUG trial 6 11-15-2019-4-48 PM-Mohammad-205_Trial2_anotherLoc.avi.dat: sweeps=493 rate=1.692/s binding=0.068 f_sweep=0.04665314401622718 f_occ=0.052
+2026-08-08 12:34:53,098 DEBUG trial 7 11-19-2019-12-03 PM-Mohammad-211_Trial2_anotherLoc.avi.dat: sweeps=576 rate=1.755/s binding=0.238 f_sweep=0.036458333333333336 f_occ=0.032
+2026-08-08 12:34:53,458 DEBUG trial 8 11-19-2019-12-25 PM-Mohammad-207_Trial1_anotherLoc.avi.dat: sweeps=305 rate=1.728/s binding=0.073 f_sweep=0.06885245901639345 f_occ=0.068
+2026-08-08 12:34:54,239 DEBUG trial 9 11-20-2019-10-38 AM-Mohammad-205_Trial1_Loc5.avi.dat: sweeps=748 rate=1.338/s binding=0.134 f_sweep=0.33288770053475936 f_occ=0.308
+2026-08-08 12:34:54,314 DEBUG trial 10 11-20-2019-10-49 AM-Mohammad-205_Trial1_Loc5.avi.dat: sweeps=44 rate=0.704/s binding=0.598 f_sweep=0.22727272727272727 f_occ=0.088
+2026-08-08 12:34:55,167 DEBUG trial 11 11-20-2019-11-28 AM-Mohammad-204_Trial1_Loc6.avi.dat: sweeps=807 rate=1.779/s binding=0.105 f_sweep=0.16728624535315986 f_occ=0.174
+2026-08-08 12:34:55,760 DEBUG trial 12 11-20-2019-12-04 PM-Mohammad-201_Trial1_Loc1.avi.dat: sweeps=565 rate=1.588/s binding=0.103 f_sweep=0.16283185840707964 f_occ=0.177
+2026-08-08 12:34:56,139 DEBUG trial 13 11-22-2019-10-33 AM-Mohammad-205_Trial1_Loc5.avi.dat: sweeps=322 rate=1.677/s binding=0.060 f_sweep=0.2950310559006211 f_occ=0.328
+2026-08-08 12:34:56,250 DEBUG trial 14 11-22-2019-10-40 AM-Mohammad-205_Trial2_Loc6.avi.dat: sweeps=80 rate=1.741/s binding=0.041 f_sweep=0.3875 f_occ=0.358
+2026-08-08 12:34:56,408 DEBUG trial 15 11-22-2019-10-45 AM-Mohammad-205_Trial3_Loc1.avi.dat: sweeps=107 rate=1.866/s binding=0.085 f_sweep=0.5514018691588785 f_occ=0.525
+2026-08-08 12:34:56,609 DEBUG trial 16 11-22-2019-10-50 AM-Mohammad-205_Trial4_Loc2.avi.dat: sweeps=150 rate=1.878/s binding=0.080 f_sweep=0.4 f_occ=0.379
+2026-08-08 12:34:56,975 DEBUG trial 17 11-22-2019-10-52 AM-Mohammad-205_Trial4_Loc2.avi.dat: sweeps=318 rate=1.719/s binding=0.131 f_sweep=0.34591194968553457 f_occ=0.298
+2026-08-08 12:34:57,228 DEBUG trial 18 11-22-2019-10-58 AM-Mohammad-205_Trial5_Loc3.avi.dat: sweeps=204 rate=1.965/s binding=0.163 f_sweep=0.7647058823529411 f_occ=0.772
+2026-08-08 12:34:57,527 DEBUG trial 19 11-22-2019-11-02 AM-Mohammad-205_Trial6_Loc4.avi.dat: sweeps=251 rate=1.982/s binding=0.051 f_sweep=0.2151394422310757 f_occ=0.206
+2026-08-08 12:34:58,171 DEBUG trial 20 11-22-2019-11-14 AM-Mohammad-207_Trial1_Loc4.avi.dat: sweeps=586 rate=1.875/s binding=0.085 f_sweep=0.3122866894197952 f_occ=0.314
+2026-08-08 12:34:58,276 DEBUG trial 21 11-22-2019-11-23 AM-Mohammad-207_Trial2_Loc1.avi.dat: sweeps=71 rate=1.681/s binding=0.156 f_sweep=0.4647887323943662 f_occ=0.454
+2026-08-08 12:34:58,549 DEBUG trial 22 11-22-2019-11-26 AM-Mohammad-207_Trial3_Loc6.avi.dat: sweeps=223 rate=1.593/s binding=0.068 f_sweep=0.22869955156950672 f_occ=0.282
+2026-08-08 12:34:59,096 DEBUG trial 23 11-22-2019-11-31 AM-Mohammad-207_Trial4_Loc3.avi.dat: sweeps=493 rate=1.746/s binding=0.062 f_sweep=0.39148073022312374 f_occ=0.367
+2026-08-08 12:34:59,175 DEBUG trial 24 11-22-2019-11-39 AM-Mohammad-207_Trial5_Loc5.avi.dat: sweeps=43 rate=1.696/s binding=0.074 f_sweep=0.37209302325581395 f_occ=0.388
+2026-08-08 12:34:59,237 DEBUG trial 25 11-22-2019-11-43 AM-Mohammad-207_Trial6_Loc2.avi.dat: sweeps=23 rate=1.456/s binding=0.083 f_sweep=0.4782608695652174 f_occ=0.481
+2026-08-08 12:34:59,315 DEBUG trial 26 11-22-2019-11-52 AM-Mohammad-211_Trial1_Loc6.avi.dat: sweeps=43 rate=1.794/s binding=0.032 f_sweep=0.32558139534883723 f_occ=0.347
+2026-08-08 12:34:59,964 DEBUG trial 27 11-22-2019-2-37 PM-Mohammad-211_Trial4_Loc3.avi.dat: sweeps=585 rate=1.729/s binding=0.168 f_sweep=0.15555555555555556 f_occ=0.178
+2026-08-08 12:35:00,063 DEBUG trial 28 11-22-2019-2-51 PM-Mohammad-211_Trial5_Loc1.avi.dat: sweeps=64 rate=1.520/s binding=0.047 f_sweep=0.15625 f_occ=0.322
+2026-08-08 12:35:00,305 DEBUG trial 29 11-22-2019-2-56 PM-Mohammad-211_Trial6_Loc5.avi.dat: sweeps=194 rate=1.661/s binding=0.114 f_sweep=0.23195876288659795 f_occ=0.259
+2026-08-08 12:35:01,227 DEBUG trial 30 11-22-2019-3-11 PM-Mohammad-201_Trial1_Loc1.avi.dat: sweeps=862 rate=1.915/s binding=0.098 f_sweep=0.15081206496519722 f_occ=0.156
+2026-08-08 12:35:01,492 DEBUG trial 31 11-22-2019-3-22 PM-Mohammad-201_Trial2_Loc3.avi.dat: sweeps=222 rate=1.786/s binding=0.107 f_sweep=0.2972972972972973 f_occ=0.279
+2026-08-08 12:35:02,093 DEBUG trial 32 11-22-2019-3-29 PM-Mohammad-201_Trial3_Loc4.avi.dat: sweeps=551 rate=1.943/s binding=0.110 f_sweep=0.3448275862068966 f_occ=0.322
+2026-08-08 12:35:02,384 DEBUG trial 33 11-22-2019-3-56 PM-Mohammad-204_Trial1_Loc1.avi.dat: sweeps=241 rate=1.709/s binding=0.043 f_sweep=0.2074688796680498 f_occ=0.207
+2026-08-08 12:35:02,677 DEBUG trial 34 11-22-2019-4-08 PM-Mohammad-204_Trial3_Loc6.avi.dat: sweeps=248 rate=1.857/s binding=0.065 f_sweep=0.08870967741935484 f_occ=0.076
+2026-08-08 12:35:03,136 DEBUG trial 35 11-23-2019-1-31 PM-Mohammad-204_Trial1_Loc2.avi.dat: sweeps=409 rate=1.790/s binding=0.087 f_sweep=0.09046454767726161 f_occ=0.080
+2026-08-08 12:35:03,635 DEBUG trial 36 11-23-2019-1-41 PM-Mohammad-204_Trial2_Loc2.avi.dat: sweeps=483 rate=1.559/s binding=0.114 f_sweep=0.10973084886128365 f_occ=0.124
+2026-08-08 12:35:03,877 DEBUG trial 37 11-23-2019-1-52 PM-Mohammad-204_Trial3_Loc3.avi.dat: sweeps=200 rate=2.120/s binding=0.112 f_sweep=0.375 f_occ=0.361
+2026-08-08 12:35:04,342 DEBUG trial 38 11-23-2019-1-58 PM-Mohammad-204_Trial4_Loc6.avi.dat: sweeps=428 rate=1.960/s binding=0.104 f_sweep=0.3037383177570093 f_occ=0.293
+2026-08-08 12:35:04,790 DEBUG trial 39 11-23-2019-2-25 PM-Mohammad-205_Trial1_Loc4.avi.dat: sweeps=397 rate=1.737/s binding=0.052 f_sweep=0.3123425692695214 f_occ=0.305
+2026-08-08 12:35:04,959 DEBUG trial 40 11-23-2019-2-33 PM-Mohammad-205_Trial2_Loc6.avi.dat: sweeps=115 rate=1.624/s binding=0.105 f_sweep=0.30434782608695654 f_occ=0.376
+2026-08-08 12:35:05,128 DEBUG trial 41 11-23-2019-2-43 PM-Mohammad-205_Trial4_Loc3.avi.dat: sweeps=120 rate=1.968/s binding=0.129 f_sweep=0.5166666666666667 f_occ=0.499
+2026-08-08 12:35:05,200 DEBUG trial 42 11-23-2019-2-47 PM-Mohammad-205_Trial5_Loc2.avi.dat: sweeps=34 rate=1.473/s binding=0.106 f_sweep=0.2647058823529412 f_occ=0.317
+2026-08-08 12:35:05,278 DEBUG trial 43 11-23-2019-2-52 PM-Mohammad-205_Trial6_Loc1.avi.dat: sweeps=43 rate=1.564/s binding=0.137 f_sweep=0.4883720930232558 f_occ=0.553
+2026-08-08 12:35:05,675 DEBUG trial 44 11-23-2019-3-38 PM-Mohammad-211_Trial2_Loc2.avi.dat: sweeps=359 rate=1.818/s binding=0.101 f_sweep=0.22562674094707522 f_occ=0.249
+2026-08-08 12:35:05,889 DEBUG trial 45 11-23-2019-3-54 PM-Mohammad-207_Trial1_Loc3.avi.dat: sweeps=175 rate=1.404/s binding=0.076 f_sweep=0.2342857142857143 f_occ=0.257
+2026-08-08 12:35:05,943 DEBUG trial 46 11-23-2019-4-00 PM-Mohammad-207_Trial2_Loc1.avi.dat: sweeps=15 rate=1.281/s binding=0.073 f_sweep=0.4 f_occ=0.305
+2026-08-08 12:35:06,135 DEBUG trial 47 11-23-2019-4-04 PM-Mohammad-207_Trial3_Loc4.avi.dat: sweeps=148 rate=1.617/s binding=0.272 f_sweep=0.668918918918919 f_occ=0.670
+2026-08-08 12:35:07,045 DEBUG trial 48 11-23-2019-4-09 PM-Mohammad-207_Trial4_Loc6.avi.dat: sweeps=870 rate=1.826/s binding=0.117 f_sweep=0.21379310344827587 f_occ=0.200
+2026-08-08 12:35:07,156 DEBUG trial 49 11-23-2019-4-21 PM-Mohammad-207_Trial5_Loc2.avi.dat: sweeps=81 rate=1.663/s binding=0.075 f_sweep=0.5308641975308642 f_occ=0.520
+2026-08-08 12:35:07,714 DEBUG trial 50 11-23-2019-5-03 PM-Mohammad-201_Trial1_Loc1.avi.dat: sweeps=520 rate=1.892/s binding=0.100 f_sweep=0.019230769230769232 f_occ=0.016
+2026-08-08 12:35:08,282 DEBUG trial 51 11-23-2019-5-11 PM-Mohammad-201_Trial2_Loc1.avi.dat: sweeps=522 rate=1.914/s binding=0.116 f_sweep=0.09961685823754789 f_occ=0.104
+2026-08-08 12:35:08,776 DEBUG trial 52 11-23-2019-5-20 PM-Mohammad-201_Trial3_Loc2.avi.dat: sweeps=453 rate=1.868/s binding=0.109 f_sweep=0.23178807947019867 f_occ=0.253
+2026-08-08 12:35:08,909 DEBUG trial 53 11-24-2019-2-17 PM-Mohammad-207_Trial1_Loc4.avi.dat: sweeps=102 rate=1.617/s binding=0.058 f_sweep=0.5098039215686274 f_occ=0.447
+2026-08-08 12:35:08,976 DEBUG trial 54 11-24-2019-2-26 PM-Mohammad-207_Trial2_Loc6.avi.dat: sweeps=28 rate=1.522/s binding=0.023 f_sweep=0.5714285714285714 f_occ=0.484
+2026-08-08 12:35:09,042 DEBUG trial 55 11-24-2019-2-30 PM-Mohammad-207_Trial3_Loc2.avi.dat: sweeps=28 rate=1.396/s binding=0.050 f_sweep=0.42857142857142855 f_occ=0.483
+2026-08-08 12:35:09,289 DEBUG trial 56 11-24-2019-2-34 PM-Mohammad-207_Trial4_Loc5.avi.dat: sweeps=205 rate=1.916/s binding=0.081 f_sweep=0.3121951219512195 f_occ=0.364
+2026-08-08 12:35:09,489 DEBUG trial 57 11-24-2019-2-39 PM-Mohammad-207_Trial5_Loc1.avi.dat: sweeps=155 rate=2.084/s binding=0.094 f_sweep=0.0064516129032258064 f_occ=0.005
+2026-08-08 12:35:09,948 DEBUG trial 58 11-24-2019-2-43 PM-Mohammad-207_Trial6_Loc1.avi.dat: sweeps=432 rate=1.876/s binding=0.130 f_sweep=0.2777777777777778 f_occ=0.254
+2026-08-08 12:35:10,112 DEBUG trial 59 11-24-2019-3-02 PM-Mohammad-205_Trial1_Loc5.avi.dat: sweeps=111 rate=1.706/s binding=0.113 f_sweep=0.40540540540540543 f_occ=0.445
+2026-08-08 12:35:10,186 DEBUG trial 60 11-24-2019-3-10 PM-Mohammad-205_Trial2_Loc4.avi.dat: sweeps=36 rate=1.421/s binding=0.064 f_sweep=0.3888888888888889 f_occ=0.485
+2026-08-08 12:35:10,452 DEBUG trial 61 11-24-2019-3-15 PM-Mohammad-205_Trial3_Loc3.avi.dat: sweeps=218 rate=1.747/s binding=0.081 f_sweep=0.3577981651376147 f_occ=0.344
+2026-08-08 12:35:10,899 DEBUG trial 62 11-24-2019-4-19 PM-Mohammad-204_Trial1_Loc3.avi.dat: sweeps=395 rate=1.773/s binding=0.054 f_sweep=0.1468354430379747 f_occ=0.167
+2026-08-08 12:35:11,034 DEBUG trial 63 11-24-2019-4-27 PM-Mohammad-204_Trial2_Loc5.avi.dat: sweeps=105 rate=1.822/s binding=0.042 f_sweep=0.2 f_occ=0.180
+2026-08-08 12:35:11,213 DEBUG trial 64 11-24-2019-4-34 PM-Mohammad-204_Trial3_Loc2.avi.dat: sweeps=128 rate=1.779/s binding=0.070 f_sweep=0.3984375 f_occ=0.390
+2026-08-08 12:35:11,298 DEBUG trial 65 11-24-2019-4-40 PM-Mohammad-204_Trial4_Loc4.avi.dat: sweeps=47 rate=1.456/s binding=0.039 f_sweep=0.3191489361702128 f_occ=0.409
+2026-08-08 12:35:11,423 DEBUG trial 66 11-24-2019-4-45 PM-Mohammad-204_Trial5_Loc6.avi.dat: sweeps=95 rate=1.747/s binding=0.062 f_sweep=0.3263157894736842 f_occ=0.349
+2026-08-08 12:35:11,493 DEBUG trial 67 11-24-2019-4-51 PM-Mohammad-204_Trial6_Loc1.avi.dat: sweeps=33 rate=1.561/s binding=0.071 f_sweep=0.6060606060606061 f_occ=0.536
+2026-08-08 12:35:11,786 DEBUG trial 68 11-24-2019-5-04 PM-Mohammad-201_Trial1_Loc4.avi.dat: sweeps=244 rate=1.963/s binding=0.135 f_sweep=0.16393442622950818 f_occ=0.171
+2026-08-08 12:35:12,412 DEBUG trial 69 11-24-2019-5-11 PM-Mohammad-201_Trial2_Loc6.avi.dat: sweeps=581 rate=1.828/s binding=0.068 f_sweep=0.2857142857142857 f_occ=0.262
+2026-08-08 12:35:12,608 DEBUG trial 70 11-24-2019-5-19 PM-Mohammad-201_Trial3_Loc3.avi.dat: sweeps=144 rate=1.550/s binding=0.058 f_sweep=0.2708333333333333 f_occ=0.360
+2026-08-08 12:35:12,684 DEBUG trial 71 11-24-2019-5-50 PM-Mohammad-211_Trial1_Loc5.avi.dat: sweeps=39 rate=1.713/s binding=0.422 f_sweep=0.4358974358974359 f_occ=0.532
+2026-08-08 12:35:13,253 DEBUG trial 72 11-26-2019-10-07 AM-Mohammad-201_Trial4_Loc6.avi.dat: sweeps=536 rate=1.961/s binding=0.083 f_sweep=0.21641791044776118 f_occ=0.197
+2026-08-08 12:35:13,519 DEBUG trial 73 11-26-2019-10-19 AM-Mohammad-204_Trial1_Loc2.avi.dat: sweeps=220 rate=1.992/s binding=0.102 f_sweep=0.10454545454545454 f_occ=0.118
+2026-08-08 12:35:13,590 DEBUG trial 74 11-26-2019-10-24 AM-Mohammad-204_Trial2_Loc5.avi.dat: sweeps=29 rate=1.027/s binding=0.068 f_sweep=0.6551724137931034 f_occ=0.694
+2026-08-08 12:35:13,752 DEBUG trial 75 11-26-2019-10-37 AM-Mohammad-204_Trial3_Loc5.avi.dat: sweeps=113 rate=1.888/s binding=0.086 f_sweep=0.415929203539823 f_occ=0.447
+2026-08-08 12:35:13,879 DEBUG trial 76 11-26-2019-10-41 AM-Mohammad-204_Trial4_Loc1.avi.dat: sweeps=99 rate=1.886/s binding=0.094 f_sweep=0.8080808080808081 f_occ=0.708
+2026-08-08 12:35:13,944 DEBUG trial 77 11-26-2019-11-03 AM-Mohammad-207_Trial1_Loc1.avi.dat: sweeps=29 rate=1.502/s binding=0.085 f_sweep=0.6206896551724138 f_occ=0.512
+2026-08-08 12:35:14,007 DEBUG trial 78 11-26-2019-11-07 AM-Mohammad-207_Trial2_Loc3.avi.dat: sweeps=25 rate=1.490/s binding=0.041 f_sweep=0.56 f_occ=0.427
+2026-08-08 12:35:14,052 DEBUG trial 79 11-26-2019-11-10 AM-Mohammad-207_Trial3_Loc2.avi.dat: sweeps=4 rate=0.813/s binding=0.106 f_sweep=0.25 f_occ=0.178
+2026-08-08 12:35:14,118 DEBUG trial 80 11-26-2019-11-14 AM-Mohammad-207_Trial4_Loc6.avi.dat: sweeps=27 rate=1.292/s binding=0.068 f_sweep=0.7037037037037037 f_occ=0.594
+2026-08-08 12:35:14,712 DEBUG trial 81 11-26-2019-11-17 AM-Mohammad-207_Trial5_Loc5.avi.dat: sweeps=563 rate=1.922/s binding=0.079 f_sweep=0.3019538188277087 f_occ=0.303
+2026-08-08 12:35:14,775 DEBUG trial 82 11-26-2019-11-25 AM-Mohammad-207_Trial6_Loc4.avi.dat: sweeps=28 rate=1.471/s binding=0.309 f_sweep=0.7857142857142857 f_occ=0.573
+2026-08-08 12:35:14,889 DEBUG trial 83 11-26-2019-11-44 AM-Mohammad-211_Trial1_Loc3.avi.dat: sweeps=79 rate=1.459/s binding=0.116 f_sweep=0.6962025316455697 f_occ=0.587
+2026-08-08 12:35:14,949 DEBUG trial 84 11-26-2019-11-47 AM-Mohammad-211_Trial2_Loc6.avi.dat: sweeps=21 rate=1.462/s binding=0.054 f_sweep=0.14285714285714285 f_occ=0.090
+2026-08-08 12:35:15,278 DEBUG trial 85 11-26-2019-12-04 PM-Mohammad-204_Trial1_Loc6.avi.dat: sweeps=285 rate=1.950/s binding=0.095 f_sweep=0.28421052631578947 f_occ=0.284
+2026-08-08 12:35:15,395 DEBUG trial 86 11-26-2019-12-09 PM-Mohammad-204_Trial2_Loc2.avi.dat: sweeps=84 rate=1.522/s binding=0.105 f_sweep=0.35714285714285715 f_occ=0.361
+2026-08-08 12:35:15,577 DEBUG trial 87 11-26-2019-12-16 PM-Mohammad-204_Trial3_Loc4.avi.dat: sweeps=137 rate=1.850/s binding=0.063 f_sweep=0.39416058394160586 f_occ=0.377
+2026-08-08 12:35:15,710 DEBUG trial 88 11-26-2019-12-20 PM-Mohammad-204_Trial4_Loc3.avi.dat: sweeps=104 rate=1.700/s binding=0.078 f_sweep=0.8269230769230769 f_occ=0.723
+2026-08-08 12:35:16,422 DEBUG trial 89 11-26-2019-9-44 AM-Mohammad-201_Trial1_Loc5.avi.dat: sweeps=681 rate=1.915/s binding=0.104 f_sweep=0.16593245227606462 f_occ=0.200
+2026-08-08 12:35:17,191 DEBUG trial 90 11-26-2019-9-58 AM-Mohammad-201_Trial3_Loc1.avi.dat: sweeps=750 rate=1.892/s binding=0.083 f_sweep=0.16533333333333333 f_occ=0.154
+2026-08-08 12:35:17,315 DEBUG trial 91 11-27-2019-10-10 AM-Mohammad-204_Trial1_Loc4.avi.dat: sweeps=89 rate=1.250/s binding=0.046 f_sweep=0.33707865168539325 f_occ=0.471
+2026-08-08 12:35:17,395 DEBUG trial 92 11-27-2019-10-14 AM-Mohammad-204_Trial2_Loc1.avi.dat: sweeps=45 rate=1.597/s binding=0.097 f_sweep=0.3111111111111111 f_occ=0.358
+2026-08-08 12:35:17,458 DEBUG trial 93 11-27-2019-10-17 AM-Mohammad-204_Trial3_Loc3.avi.dat: sweeps=23 rate=1.450/s binding=0.077 f_sweep=0.6521739130434783 f_occ=0.472
+2026-08-08 12:35:17,509 DEBUG trial 94 11-27-2019-10-21 AM-Mohammad-204_Trial4_Loc6.avi.dat: sweeps=10 rate=1.077/s binding=0.118 f_sweep=0.6 f_occ=0.509
+2026-08-08 12:35:17,746 DEBUG trial 95 11-27-2019-10-25 AM-Mohammad-204_Trial5_Loc2.avi.dat: sweeps=198 rate=1.723/s binding=0.061 f_sweep=0.36363636363636365 f_occ=0.349
+2026-08-08 12:35:17,984 DEBUG trial 96 11-27-2019-10-29 AM-Mohammad-204_Trial6_Loc5.avi.dat: sweeps=200 rate=1.989/s binding=0.068 f_sweep=0.39 f_occ=0.349
+2026-08-08 12:35:18,067 DEBUG trial 97 11-27-2019-10-37 AM-Mohammad-211_Trial1_Loc1.avi.dat: sweeps=48 rate=1.527/s binding=0.059 f_sweep=0.4166666666666667 f_occ=0.482
+2026-08-08 12:35:18,169 DEBUG trial 98 11-27-2019-10-45 AM-Mohammad-211_Trial3_Loc6.avi.dat: sweeps=69 rate=1.637/s binding=0.115 f_sweep=0.21739130434782608 f_occ=0.293
+2026-08-08 12:35:18,229 DEBUG trial 99 11-27-2019-10-48 AM-Mohammad-211_Trial4_Loc3.avi.dat: sweeps=23 rate=1.528/s binding=0.058 f_sweep=0.4782608695652174 f_occ=0.477
+2026-08-08 12:35:18,301 DEBUG trial 100 11-27-2019-10-52 AM-Mohammad-211_Trial5_Loc2.avi.dat: sweeps=37 rate=1.925/s binding=0.059 f_sweep=0.7567567567567568 f_occ=0.688
+2026-08-08 12:35:18,490 DEBUG trial 101 11-27-2019-10-57 AM-Mohammad-211_Trial6_Loc5.avi.dat: sweeps=141 rate=1.484/s binding=0.063 f_sweep=0.3191489361702128 f_occ=0.300
+2026-08-08 12:35:18,603 DEBUG trial 102 11-27-2019-11-07 AM-Mohammad-205_Trial1_Loc6.avi.dat: sweeps=81 rate=1.776/s binding=0.060 f_sweep=0.18518518518518517 f_occ=0.166
+2026-08-08 12:35:18,677 DEBUG trial 103 11-27-2019-11-11 AM-Mohammad-205_Trial2_Loc3.avi.dat: sweeps=36 rate=1.254/s binding=0.083 f_sweep=0.75 f_occ=0.772
+2026-08-08 12:35:18,752 DEBUG trial 104 11-27-2019-11-15 AM-Mohammad-205_Trial3_Loc5.avi.dat: sweeps=38 rate=1.295/s binding=0.049 f_sweep=0.4473684210526316 f_occ=0.573
+2026-08-08 12:35:18,807 DEBUG trial 105 11-27-2019-11-19 AM-Mohammad-205_Trial4_Loc2.avi.dat: sweeps=15 rate=0.979/s binding=0.053 f_sweep=0.5333333333333333 f_occ=0.504
+2026-08-08 12:35:18,926 DEBUG trial 106 11-27-2019-11-22 AM-Mohammad-205_Trial5_Loc4.avi.dat: sweeps=88 rate=1.726/s binding=0.063 f_sweep=0.19318181818181818 f_occ=0.246
+2026-08-08 12:35:18,997 DEBUG trial 107 11-27-2019-11-26 AM-Mohammad-205_Trial6_Loc1.avi.dat: sweeps=15 rate=0.185/s binding=0.106 f_sweep=0.5333333333333333 f_occ=0.960
+2026-08-08 12:35:19,102 DEBUG trial 108 11-27-2019-11-34 AM-Mohammad-207_Trial1_Loc3.avi.dat: sweeps=69 rate=1.330/s binding=0.062 f_sweep=0.5362318840579711 f_occ=0.454
+2026-08-08 12:35:19,152 DEBUG trial 109 11-27-2019-11-38 AM-Mohammad-207_Trial2_Loc1.avi.dat: sweeps=9 rate=0.876/s binding=0.054 f_sweep=0.6666666666666666 f_occ=0.378
+2026-08-08 12:35:19,204 DEBUG trial 110 11-27-2019-11-42 AM-Mohammad-207_Trial3_Loc4.avi.dat: sweeps=10 rate=0.511/s binding=0.131 f_sweep=0.9 f_occ=0.865
+2026-08-08 12:35:19,310 DEBUG trial 111 11-27-2019-11-45 AM-Mohammad-207_Trial4_Loc2.avi.dat: sweeps=73 rate=1.636/s binding=0.077 f_sweep=0.6164383561643836 f_occ=0.519
+2026-08-08 12:35:19,468 DEBUG trial 112 11-27-2019-11-48 AM-Mohammad-207_Trial5_Loc5.avi.dat: sweeps=110 rate=1.921/s binding=0.097 f_sweep=0.33636363636363636 f_occ=0.308
+2026-08-08 12:35:19,560 DEBUG trial 113 11-27-2019-11-53 AM-Mohammad-207_Trial6_Loc6.avi.dat: sweeps=57 rate=1.502/s binding=0.158 f_sweep=0.10526315789473684 f_occ=0.109
+2026-08-08 12:35:19,560 INFO PASS2: processed 114/114 trials, 26989 total sweeps
+2026-08-08 12:35:19,572 INFO pooled trials (Loc1-6): 105; pooled sweeps: 21841
+2026-08-08 12:35:26,986 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\reactions\data\sweeps.h5 (build_complete=1)
+2026-08-08 12:35:27,651 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\reactions\data\sweeps.json
+2026-08-08 12:35:27,653 INFO wrote C:\Projects\Repos\Mouse Arena\Analysis\reactions\data\stats.json
+2026-08-08 12:35:27,653 INFO === build_sweeps DONE in 40.7s ===
+2026-08-08 12:35:27,653 INFO ---- SUMMARY ----
+2026-08-08 12:35:27,653 INFO v_floor=2.887 px/s, binding_frac(pooled mean)=0.0967
+2026-08-08 12:35:27,653 INFO sweep rate median=1.706/s, total pooled sweeps=21841, median count/trial=111
+2026-08-08 12:35:27,653 INFO H1b Wilcoxon stat=3150.0 p=0.12003184042556797 | median obs=0.03233 vs null=0.02951
+2026-08-08 12:35:27,653 INFO H1 amplitude: frac peri-eth mean>0.01=0.7862255666697257, above_floor=True
+2026-08-08 12:35:27,653 INFO H1c Spearman rho=-0.0281 CI=[-0.0565,-0.0003] p=3.361602893136958e-05
+2026-08-08 12:35:27,653 INFO H2 R-set p=0.9999999999899509 | bframe(headline) p=1.0 | survives=False
+2026-08-08 12:35:27,653 INFO H2 split: nose_driven=14432 com_dropout=18576 (of 21841)
+2026-08-08 12:35:27,654 INFO H3 f_sweep>f_occ p=0.1497829356108551 | median f_sweep=0.3364 f_occ=0.3492 | frac enriched=0.5428571428571428
+2026-08-08 12:35:27,654 INFO F3 example: 11-23-2019-1-52 PM-Mohammad-204_Trial3_Loc3.avi.dat rate=2.120/s count=200

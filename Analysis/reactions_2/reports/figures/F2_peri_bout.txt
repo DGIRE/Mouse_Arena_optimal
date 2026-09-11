@@ -1,0 +1,26 @@
+F2 - peri-bout odor & kinematics (onset-aligned)
+Built by code/build_F2.py from saved objects (no recompute).
+Sources:
+  curves : data/bouts.h5  /figure_curves/{F2A_eth,F2A_null,F2A_inc,F2B_vcom,F2B_omega}
+  numbers: data/stats.json  (H1 block, figure_curves_meta)
+  seed=1234; trial-level inference; grid -1..+1 s, 50 ms.
+
+Panel A - baseline-subtracted ethanol (a.u.) vs time-to-onset (s):
+  n(bouts)=106  n(trials)=62
+  null n(trials)=67   incidental n(events)=9061 n(trials)=105
+  H1 median peri-bout eth = 0.013688
+  H1 median matched-null eth = 0.029136
+  delta (obs - null) = -0.015448
+  Wilcoxon bout>null p_greater = 0.999763 (stat=231.0, n=46)
+  Wilcoxon bout>incidental p_greater = 0.994843 (stat=309.0, n=46)
+  frac bouts peri-odor>0.01 = 0.6049; above_floor=True
+  pre-onset shaded window (H2) = [-0.75,-0.25] s
+
+Curve summaries:
+  eth        grid[0]=-1.00 grid[-1]=+1.00 mean[min,max]=[0.0149,0.0350] mean@t=0=0.0350
+  null       grid[0]=-1.00 grid[-1]=+1.00 mean[min,max]=[0.0390,0.0418] mean@t=0=0.0409
+  incidental grid[0]=-1.00 grid[-1]=+1.00 mean[min,max]=[0.0349,0.0406] mean@t=0=0.0363
+  v_com      grid[0]=-1.00 grid[-1]=+1.00 mean[min,max]=[0.8377,28.6740] mean@t=0=1.5393
+  omega      grid[0]=-1.00 grid[-1]=+1.00 mean[min,max]=[107.9230,472.4440] mean@t=0=472.4440
+
+Panel B - COM speed (px/s, left) & head angular speed omega (deg/s, right).

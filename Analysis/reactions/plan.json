@@ -1,0 +1,64 @@
+{
+  "plan_version": "1.0",
+  "prepared_utc": "2026-08-08",
+  "request": "requests/requests draft 2 (agent-ready).md",
+  "interpreter": "$AR_PY (project venv, resolved from Analysis/.claude/settings.json)",
+  "seed": 1234,
+  "prior_lessons": ["Plume locations/learning/LESSONS.md (1-7)", "trajectories/learning/LESSONS.md (8-11)"],
+  "data": {
+    "aggregate": "C:/Projects/Repos/Mouse Arena/DATA/Mouse Arena Aggregate Data.h5",
+    "accessor": "C:/Projects/Repos/Mouse Arena/DATA/code/mouse_arena_aggregate_io.py",
+    "n_trials": 114, "pooled_groups": ["Loc1","Loc2","Loc3","Loc4","Loc5","Loc6"],
+    "pooled_n": 105, "anotherLoc_n": 9, "arena_extent": [0,580,0,280],
+    "nose_track": "head", "com_track": "body", "clock": "head",
+    "probed": {"ethanol": [-0.283,1.0], "ethdeconv": [-0.022,0.138],
+               "v_com_med_px_s": 14.2, "v_nose_med_px_s": 22.8, "bframe_med_px_s": 17.6,
+               "v_floor_px_s": 2.887, "v_floor_binding_frac": 0.097,
+               "R_med": 1.17, "R_p90": 4.74, "dejump_removed_body": 0.0041, "dejump_removed_head": 0.0101,
+               "default_sweeps_per_trial_median": 124},
+    "excluded": ["loc_attr(NaN)","duration_attr(NaN)","out_of_arena","nonfinite",
+                 "dejump_outliers","out_of_sensor_coverage","anotherLoc_from_pooled"]
+  },
+  "decisions": {
+    "D1": "nose=head, COM=body", "D2": "head clock; body & ethanol interp onto it",
+    "D3": "savgol win7 poly2 deriv1 delta=median_dt; speed px/s",
+    "D4": "R=v_nose/max(v_com,v_floor); v_floor=10th pctile pooled v_com",
+    "D5": "R local maxima height>=1.5 prominence>=0.5 refractory 0.30s",
+    "D6": "per-sweep record v_nose,v_com; classify nose-driven vs COM-dropout; H2 re-test numerator-only",
+    "D7": "body-frame nose speed ||d/dt(head-body)||; peaks height=med+1.5*robustSD prom=0.5*robustSD refractory 0.30s",
+    "D8": "baseline-sub ethanol = raw - rolling 10th-pctile W=20s, interp to head clock, raw a.u.",
+    "D9": "odor-reached = valid(count>=3) bin with max-field>cutoff(0.001) in Plume odor_fields.h5; fallback r=100px or eth>=thr",
+    "D10": "unit=trial; pooled Loc1-6; anotherLoc separate; CIs bootstrap over trials 2000 seed 1234",
+    "D11": "one point per sweep in scatters; Spearman rho + CI",
+    "D12": "Fig3 example = highest sweep-RATE pooled trial; COM track colored by R",
+    "D13": "peri +-1s (50ms) F1; ethanol sum [-0.5,+0.5]s; H2 during [-0.25,+0.25]s"
+  },
+  "odor_field": {"source": "Plume locations/data/odor_fields.h5", "cutoff": 0.001,
+                 "rule": "count>=3 AND max>cutoff"},
+  "hypotheses": {
+    "H1": {"tests": ["prevalence rate+count", "peri-sweep eth vs matched random-time null (Wilcoxon)",
+                     "spearman(R@peak, summed peri eth)"],
+           "amplitude_check": "peri eth vs 0.14 range & 4e-4 floor; frac sweeps >0.01",
+           "accept": "peri eth>null AND rho>0 CI excludes 0"},
+    "H2": {"primary": "per-trial mean v_com [-0.25,+0.25]s vs baseline; Wilcoxon during<baseline",
+           "circularity": "nose-driven vs COM-dropout split; re-run on numerator-only (D7); headline that",
+           "accept": "v_com lower during sweeps for numerator-only set"},
+    "H3": {"test": "f_sweep vs f_occ + within-trial permutation null (2000); Wilcoxon f_sweep>f_occ & f_sweep-null>0",
+           "accept": "significantly enriched beyond occupancy"}
+  },
+  "figures": {
+    "F1": "reports/figures/F1_peri_sweep_odor_and_com.{png,pdf,txt}",
+    "F2A": "reports/figures/F2A_nose_vs_com.{png,pdf,txt}",
+    "F2B": "reports/figures/F2B_nose_vs_summed_odor.{png,pdf,txt}",
+    "F3": "reports/figures/F3_example_trajectory_and_timeseries.{png,pdf,txt}"
+  },
+  "figure_report_map": {"H1": ["F1A","F2B"], "H2": ["F1B","F2A"], "H3": ["F3A","F3B"]},
+  "outputs": {"sweeps_h5": "data/sweeps.h5", "sweeps_json": "data/sweeps.json", "stats": "data/stats.json",
+    "reports": ["reports/H1 - nose sweeps and odor.docx", "reports/H2 - COM slowdown during sweeps.docx",
+                "reports/H3 - sweeps in odor-reached regions.docx"]},
+  "acceptance": {
+    "gate1": "accessor-only; advancing-ref clean ~0.5%; head-clock interp; R v_floor-guarded + binding frac; sweep params/counts reproduce; rates alongside counts; >=3 numbers/hyp re-derived; seed; zero placeholders",
+    "gate2": "H2 circularity control headlined (numerator-only); amplitude check above noise floor; counts exposure-normalized; velocity convention spot-check; direction before significance; honest nulls",
+    "reiteration_cap": 2
+  }
+}

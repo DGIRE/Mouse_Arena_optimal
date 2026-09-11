@@ -1,0 +1,117 @@
+{
+  "n_trials": 114,
+  "schema_version": "0.1",
+  "Fs": 500.0,
+  "groups": {
+    "Loc1": 20,
+    "Loc2": 18,
+    "Loc3": 17,
+    "Loc4": 14,
+    "Loc5": 17,
+    "Loc6": 19,
+    "anotherLoc": 9
+  },
+  "loc_sum_1_6": 105,
+  "endpoints": {
+    "Loc1": [
+      474.0,
+      61.0
+    ],
+    "Loc2": [
+      506.0,
+      114.0
+    ],
+    "Loc3": [
+      506.0,
+      191.0
+    ],
+    "Loc4": [
+      453.0,
+      164.0
+    ],
+    "Loc5": [
+      441.0,
+      129.0
+    ],
+    "Loc6": [
+      506.0,
+      61.0
+    ]
+  },
+  "median_dt_head_s": 0.01007080078125,
+  "median_dt_body_s": 0.01007080078125,
+  "median_dt_eth_s": 0.0019989013671875,
+  "ethanol_range": [
+    -0.28316113352775574,
+    1.0
+  ],
+  "ethdeconv_range": [
+    -0.02158886380493641,
+    0.13797065615653992
+  ],
+  "threshold_median": 0.2,
+  "dejump_Q_body_px": 2.2984694630266347,
+  "dejump_Q_head_px": 2.863285868836823,
+  "body_dejump_removed_frac": [
+    0.0,
+    0.004139836609451367,
+    0.051872950112204386
+  ],
+  "head_dejump_removed_frac": [
+    0.0,
+    0.010088423243970957,
+    0.2895377128953771
+  ],
+  "head_in_sensor_coverage_frac": [
+    0.5966156325543917,
+    0.9822423073967946
+  ],
+  "headbody_norm_median_px_first6": [
+    14.666696229064227,
+    13.506664060207243,
+    14.596958372344353,
+    14.422862167535161,
+    16.84095837475474,
+    15.512068888668963
+  ],
+  "theta_sanity_first6": [
+    {
+      "trial": 0,
+      "theta_median": 107.67254723939237,
+      "theta_median_near": 105.31253137052354,
+      "n": 51819
+    },
+    {
+      "trial": 1,
+      "theta_median": 98.35524103098192,
+      "theta_median_near": 95.2790362425922,
+      "n": 45992
+    },
+    {
+      "trial": 2,
+      "theta_median": 94.23036845194385,
+      "theta_median_near": 23.362462797959303,
+      "n": 4363
+    },
+    {
+      "trial": 3,
+      "theta_median": 108.61681078758006,
+      "theta_median_near": 65.61148693173635,
+      "n": 74635
+    },
+    {
+      "trial": 4,
+      "theta_median": 103.15956089107202,
+      "theta_median_near": 103.44129348795582,
+      "n": 28505
+    },
+    {
+      "trial": 5,
+      "theta_median": 96.40539078028033,
+      "theta_median_near": 91.47069673273377,
+      "n": 20024
+    }
+  ],
+  "loc_attr_all_nan": true,
+  "duration_attr_all_nan": true
+}

@@ -1,0 +1,96 @@
+{
+  "plan_version": "1.0",
+  "prepared_utc": "2026-08-07",
+  "request": "requests/Request draft 2 (agent-ready).docx",
+  "interpreter": "$AR_PY (project venv python.exe)",
+  "seed": 1234,
+  "data": {
+    "aggregate": "C:/Projects/Repos/Mouse Arena/DATA/Mouse Arena Aggregate Data.h5",
+    "accessor": "C:/Projects/Repos/Mouse Arena/DATA/code/mouse_arena_aggregate_io.py",
+    "block": "behavior",
+    "n_trials": 114,
+    "arena_extent": [0, 580, 0, 280],
+    "Fs_sensor_hz": 500,
+    "Fs_head_hz": 99,
+    "signal_task1": "ethdeconv",
+    "signal_task2_input": "ethanol",
+    "excluded": ["sensor/pulses", "sensor/frequency", "sensor/spatial", "calcium",
+                 "loc_attr(NaN)", "duration_attr(NaN)", "anotherLoc_from_6_fields"]
+  },
+  "groups_expected": {
+    "Loc1": {"n": 20, "endpoint": [474, 61]},
+    "Loc2": {"n": 18, "endpoint": [506, 114]},
+    "Loc3": {"n": 17, "endpoint": [506, 191]},
+    "Loc4": {"n": 14, "endpoint": [453, 164]},
+    "Loc5": {"n": 17, "endpoint": [441, 129]},
+    "Loc6": {"n": 19, "endpoint": [506, 61]},
+    "anotherLoc": {"n": 9, "endpoint_centroid": [400, 103], "role": "reported_separately"}
+  },
+  "shared": {
+    "group_regex": "_Loc(\\d+)",
+    "clean_head": {"box": [0, 580, 0, 280], "drop_nonfinite": true,
+                   "dejump_percentile": 99.5, "dejump_scope": "global_pooled"},
+    "align": "np.interp(head_time, sig_time, sig, left=nan, right=nan)",
+    "endpoint_spread_warn_px": 2
+  },
+  "task1": {
+    "grid": {"candidate_L_px": [40, 30, 25, 20, 15, 10], "coverage_target": 0.60,
+             "coverage_rule": ">=3 contributing trials in >=60% of visited bins",
+             "fallback_L_px": 40, "min_trials_mask": 3},
+    "observation_unit": "trial",
+    "per_bin_stats": ["max", "mean", "min", "count"],
+    "robustness_body_track": true,
+    "sparseness": {"cutoff_rule": "max(3*MAD, small_floor)", "mad_scale": 1.4826,
+                   "cutoff_robustness_multiples": [1, 3, 5], "top_k_frac": 0.05,
+                   "indices": ["gini", "normalized_entropy"]},
+    "distance": {"fits": ["ols_log_odor_vs_distance", "exp_decay_a_exp_negd_lambda_c"],
+                 "ci": 0.95, "targets": ["mean", "max"], "scope": ["per_location", "pooled"]},
+    "trajectory": {"metrics": ["path_length_px", "tortuosity", "n_encounters",
+                               "frac_path_above_threshold"],
+                   "association": "spearman_rho_with_ci", "unit": "trial",
+                   "animal_aware": true},
+    "hypotheses": {
+      "H1": "sparseness: concentration index vs uniform null",
+      "H2": "distance: mean/max bin odor decreases with distance (slope+CI)",
+      "H3": "trajectory: types differ in odor encountered (effect size+CI)"
+    },
+    "outputs": {
+      "h5": "data/odor_fields.h5",
+      "stats": "data/odor_field_stats.json",
+      "figures": "reports/figures/fields/field_{Loc1..6,anotherLoc}.{png,pdf}",
+      "report": "reports/Odor field report.docx"
+    }
+  },
+  "task2": {
+    "drift": {"method": "rolling_low_percentile", "percentile": 10, "window_s": 20,
+              "window_range_s": [10, 30], "justify": "measured drift timescale"},
+    "template": {"near_dist_rule": "head_endpoint_dist < 20th_pctile_per_trial",
+                 "peak_rule": "drift_corrected > 5*MAD_quiet", "half_window_s": 0.3,
+                 "scope": ["pooled_primary", "per_location_reported"]},
+    "enhancement": {"method": "normalized_cross_correlation_matched_filter"},
+    "detection": {"refractory_s": 0.2, "refractory_range_s": [0.1, 0.5],
+                  "prominence": true, "before_on": "drift_corrected_raw",
+                  "after_on": "enhanced", "fpr_calibration": "matched on quiet far-from-source baseline"},
+    "distal_rule": "> per-trial median head-endpoint distance",
+    "snr": "peak_amp / MAD_local_quiet_window",
+    "most_improved": "per-trial mean distal SNR gain (after-before); top 10 -> Figure A",
+    "hypotheses": {
+      "H4": "recovery: paired before/after counts (Wilcoxon), split by distance",
+      "H5": "no-fabrication guard: baseline FPR after <= before (HARD gate)"
+    },
+    "outputs": {
+      "h5": "data/enhanced_ethanol.h5",
+      "stats": "data/enhancement_stats.json",
+      "figures": "reports/figures/enhancement/{enhance_examples,enhance_count_scatter}.{png,pdf}",
+      "report": "reports/Signal enhancement report.docx"
+    }
+  },
+  "acceptance": {
+    "gate1_code_verifier": "static+tests pass; 1 headline number independently re-derived",
+    "figures": "9 non-empty png+pdf with .txt sidecars",
+    "h5": "fresh h5py read exposes documented groups/attrs; build_complete=1",
+    "reports": "zero placeholder tokens; every number from a saved result",
+    "gate2_auditor": "claims supported+directional; H5 guard holds (after FPR <= before FPR)",
+    "reiteration_cap": 2
+  }
+}

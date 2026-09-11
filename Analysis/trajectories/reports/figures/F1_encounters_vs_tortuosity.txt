@@ -1,0 +1,148 @@
+F1 - Encounters vs tortuosity scatter
+Source files:
+  data/stats.json  (H1.primary_n_encounters_vs_tortuosity)
+  data/trajectory_metrics.json  (per-trial n_encounters, tortuosity, end_loc, in_pooled)
+
+Plotted points: pooled Loc1-6 trials, one per trial.
+  n_pooled = 105
+  n_anotherLoc (distinct marker, EXCLUDED from OLS fit) = 9
+
+Exact numbers drawn (from stats.json):
+  Spearman rho(n_encounters, tortuosity) = 0.6122547508759427
+  95% CI (trial bootstrap) = [0.4537136112004512, 0.7356243720384018]
+  p = 3.925225984081509e-12
+  n = 105
+  direction = positive
+  prior_rho = 0.176, prior_p = 0.072
+  accept_H1 = False
+
+Red dashed OLS trend line (computed on POOLED points only, for display):
+  tortuosity = 0.019295 * n_encounters + 12.112892
+
+Per-location Spearman rho (from stats.json H1.per_location_rho...):
+  Loc1: rho=0.3968, p=0.0832, n=20
+  Loc2: rho=0.7420, p=0.0004227, n=18
+  Loc3: rho=0.5807, p=0.01451, n=17
+  Loc4: rho=0.6821, p=0.007207, n=14
+  Loc5: rho=0.3652, p=0.1495, n=17
+  Loc6: rho=0.7831, p=7.338e-05, n=19
+
+anotherLoc (separate): rho=0.1255, p=0.7476, n=9
+
+Pooled trials plotted (trial_index, end_loc, n_encounters, tortuosity):
+  9	Loc5	12	30.6381	11-20-2019-10-38 AM-Mohammad-205_Trial1_Loc5.avi.dat
+  10	Loc5	1	1.8092	11-20-2019-10-49 AM-Mohammad-205_Trial1_Loc5.avi.dat
+  11	Loc6	204	26.2377	11-20-2019-11-28 AM-Mohammad-204_Trial1_Loc6.avi.dat
+  12	Loc1	20	23.0805	11-20-2019-12-04 PM-Mohammad-201_Trial1_Loc1.avi.dat
+  13	Loc5	208	15.6156	11-22-2019-10-33 AM-Mohammad-205_Trial1_Loc5.avi.dat
+  14	Loc6	30	3.7662	11-22-2019-10-40 AM-Mohammad-205_Trial2_Loc6.avi.dat
+  15	Loc1	16	6.9992	11-22-2019-10-45 AM-Mohammad-205_Trial3_Loc1.avi.dat
+  16	Loc2	13	5.2524	11-22-2019-10-50 AM-Mohammad-205_Trial4_Loc2.avi.dat
+  17	Loc2	156	70.1084	11-22-2019-10-52 AM-Mohammad-205_Trial4_Loc2.avi.dat
+  18	Loc3	152	3.2649	11-22-2019-10-58 AM-Mohammad-205_Trial5_Loc3.avi.dat
+  19	Loc4	174	10.1958	11-22-2019-11-02 AM-Mohammad-205_Trial6_Loc4.avi.dat
+  20	Loc4	285	23.7285	11-22-2019-11-14 AM-Mohammad-207_Trial1_Loc4.avi.dat
+  21	Loc1	66	3.3431	11-22-2019-11-23 AM-Mohammad-207_Trial2_Loc1.avi.dat
+  22	Loc6	170	10.3142	11-22-2019-11-26 AM-Mohammad-207_Trial3_Loc6.avi.dat
+  23	Loc3	321	25.9311	11-22-2019-11-31 AM-Mohammad-207_Trial4_Loc3.avi.dat
+  24	Loc5	20	2.5320	11-22-2019-11-39 AM-Mohammad-207_Trial5_Loc5.avi.dat
+  25	Loc2	14	1.5534	11-22-2019-11-43 AM-Mohammad-207_Trial6_Loc2.avi.dat
+  26	Loc6	4	2.8831	11-22-2019-11-52 AM-Mohammad-211_Trial1_Loc6.avi.dat
+  27	Loc3	164	13.4447	11-22-2019-2-37 PM-Mohammad-211_Trial4_Loc3.avi.dat
+  28	Loc1	28	3.6994	11-22-2019-2-51 PM-Mohammad-211_Trial5_Loc1.avi.dat
+  29	Loc5	40	18.0483	11-22-2019-2-56 PM-Mohammad-211_Trial6_Loc5.avi.dat
+  30	Loc1	200	30.7161	11-22-2019-3-11 PM-Mohammad-201_Trial1_Loc1.avi.dat
+  31	Loc3	110	6.2424	11-22-2019-3-22 PM-Mohammad-201_Trial2_Loc3.avi.dat
+  32	Loc4	195	24.6146	11-22-2019-3-29 PM-Mohammad-201_Trial3_Loc4.avi.dat
+  33	Loc1	110	11.8766	11-22-2019-3-56 PM-Mohammad-204_Trial1_Loc1.avi.dat
+  34	Loc6	89	15.2536	11-22-2019-4-08 PM-Mohammad-204_Trial3_Loc6.avi.dat
+  35	Loc2	53	17.9833	11-23-2019-1-31 PM-Mohammad-204_Trial1_Loc2.avi.dat
+  36	Loc2	123	16.1343	11-23-2019-1-41 PM-Mohammad-204_Trial2_Loc2.avi.dat
+  37	Loc3	111	3.3333	11-23-2019-1-52 PM-Mohammad-204_Trial3_Loc3.avi.dat
+  38	Loc6	368	9.7333	11-23-2019-1-58 PM-Mohammad-204_Trial4_Loc6.avi.dat
+  39	Loc4	352	16.9707	11-23-2019-2-25 PM-Mohammad-205_Trial1_Loc4.avi.dat
+  40	Loc6	20	4.7879	11-23-2019-2-33 PM-Mohammad-205_Trial2_Loc6.avi.dat
+  41	Loc3	10	2.8230	11-23-2019-2-43 PM-Mohammad-205_Trial4_Loc3.avi.dat
+  42	Loc2	7	1.6454	11-23-2019-2-47 PM-Mohammad-205_Trial5_Loc2.avi.dat
+  43	Loc1	21	1.7277	11-23-2019-2-52 PM-Mohammad-205_Trial6_Loc1.avi.dat
+  44	Loc2	39	12.0395	11-23-2019-3-38 PM-Mohammad-211_Trial2_Loc2.avi.dat
+  45	Loc3	32	8.5996	11-23-2019-3-54 PM-Mohammad-207_Trial1_Loc3.avi.dat
+  46	Loc1	6	1.5562	11-23-2019-4-00 PM-Mohammad-207_Trial2_Loc1.avi.dat
+  47	Loc4	137	13.1716	11-23-2019-4-04 PM-Mohammad-207_Trial3_Loc4.avi.dat
+  48	Loc6	319	33.7617	11-23-2019-4-09 PM-Mohammad-207_Trial4_Loc6.avi.dat
+  49	Loc2	51	3.1125	11-23-2019-4-21 PM-Mohammad-207_Trial5_Loc2.avi.dat
+  50	Loc1	36	21.0241	11-23-2019-5-03 PM-Mohammad-201_Trial1_Loc1.avi.dat
+  51	Loc1	192	11.9009	11-23-2019-5-11 PM-Mohammad-201_Trial2_Loc1.avi.dat
+  52	Loc2	168	12.1564	11-23-2019-5-20 PM-Mohammad-201_Trial3_Loc2.avi.dat
+  53	Loc4	22	6.4345	11-24-2019-2-17 PM-Mohammad-207_Trial1_Loc4.avi.dat
+  54	Loc6	7	1.8736	11-24-2019-2-26 PM-Mohammad-207_Trial2_Loc6.avi.dat
+  55	Loc2	9	1.7392	11-24-2019-2-30 PM-Mohammad-207_Trial3_Loc2.avi.dat
+  56	Loc5	19	5.5116	11-24-2019-2-34 PM-Mohammad-207_Trial4_Loc5.avi.dat
+  57	Loc1	6	23.7614	11-24-2019-2-39 PM-Mohammad-207_Trial5_Loc1.avi.dat
+  58	Loc1	11	8.1774	11-24-2019-2-43 PM-Mohammad-207_Trial6_Loc1.avi.dat
+  59	Loc5	32	3.3622	11-24-2019-3-02 PM-Mohammad-205_Trial1_Loc5.avi.dat
+  60	Loc4	2	2.4194	11-24-2019-3-10 PM-Mohammad-205_Trial2_Loc4.avi.dat
+  61	Loc3	66	7.1862	11-24-2019-3-15 PM-Mohammad-205_Trial3_Loc3.avi.dat
+  62	Loc3	35	14.4085	11-24-2019-4-19 PM-Mohammad-204_Trial1_Loc3.avi.dat
+  63	Loc5	9	5.0701	11-24-2019-4-27 PM-Mohammad-204_Trial2_Loc5.avi.dat
+  64	Loc2	16	4.4887	11-24-2019-4-34 PM-Mohammad-204_Trial3_Loc2.avi.dat
+  65	Loc4	2	2.5329	11-24-2019-4-40 PM-Mohammad-204_Trial4_Loc4.avi.dat
+  66	Loc6	5	3.2059	11-24-2019-4-45 PM-Mohammad-204_Trial5_Loc6.avi.dat
+  67	Loc1	17	1.5541	11-24-2019-4-51 PM-Mohammad-204_Trial6_Loc1.avi.dat
+  68	Loc4	18	8.1367	11-24-2019-5-04 PM-Mohammad-201_Trial1_Loc4.avi.dat
+  69	Loc6	239	24.8157	11-24-2019-5-11 PM-Mohammad-201_Trial2_Loc6.avi.dat
+  70	Loc3	33	6.6058	11-24-2019-5-19 PM-Mohammad-201_Trial3_Loc3.avi.dat
+  71	Loc5	6	471.6282	11-24-2019-5-50 PM-Mohammad-211_Trial1_Loc5.avi.dat
+  72	Loc6	227	14.8730	11-26-2019-10-07 AM-Mohammad-201_Trial4_Loc6.avi.dat
+  73	Loc2	67	4.2399	11-26-2019-10-19 AM-Mohammad-204_Trial1_Loc2.avi.dat
+  74	Loc5	5	2.3142	11-26-2019-10-24 AM-Mohammad-204_Trial2_Loc5.avi.dat
+  75	Loc5	21	3.1761	11-26-2019-10-37 AM-Mohammad-204_Trial3_Loc5.avi.dat
+  76	Loc1	40	3.0711	11-26-2019-10-41 AM-Mohammad-204_Trial4_Loc1.avi.dat
+  77	Loc1	11	2.3094	11-26-2019-11-03 AM-Mohammad-207_Trial1_Loc1.avi.dat
+  78	Loc3	15	1.8770	11-26-2019-11-07 AM-Mohammad-207_Trial2_Loc3.avi.dat
+  79	Loc2	1	1.3102	11-26-2019-11-10 AM-Mohammad-207_Trial3_Loc2.avi.dat
+  80	Loc6	13	2.0437	11-26-2019-11-14 AM-Mohammad-207_Trial4_Loc6.avi.dat
+  81	Loc5	529	15.4778	11-26-2019-11-17 AM-Mohammad-207_Trial5_Loc5.avi.dat
+  82	Loc4	13	1.7312	11-26-2019-11-25 AM-Mohammad-207_Trial6_Loc4.avi.dat
+  83	Loc3	62	5.4055	11-26-2019-11-44 AM-Mohammad-211_Trial1_Loc3.avi.dat
+  84	Loc6	3	2.0142	11-26-2019-11-47 AM-Mohammad-211_Trial2_Loc6.avi.dat
+  85	Loc6	19	7.5899	11-26-2019-12-04 PM-Mohammad-204_Trial1_Loc6.avi.dat
+  86	Loc2	20	2.5586	11-26-2019-12-09 PM-Mohammad-204_Trial2_Loc2.avi.dat
+  87	Loc4	37	4.4064	11-26-2019-12-16 PM-Mohammad-204_Trial3_Loc4.avi.dat
+  88	Loc3	110	4.3998	11-26-2019-12-20 PM-Mohammad-204_Trial4_Loc3.avi.dat
+  89	Loc5	127	17.4220	11-26-2019-9-44 AM-Mohammad-201_Trial1_Loc5.avi.dat
+  90	Loc1	131	22.7114	11-26-2019-9-58 AM-Mohammad-201_Trial3_Loc1.avi.dat
+  91	Loc4	6	7.3497	11-27-2019-10-10 AM-Mohammad-204_Trial1_Loc4.avi.dat
+  92	Loc1	18	2.4525	11-27-2019-10-14 AM-Mohammad-204_Trial2_Loc1.avi.dat
+  93	Loc3	8	1.8806	11-27-2019-10-17 AM-Mohammad-204_Trial3_Loc3.avi.dat
+  94	Loc6	11	1.2300	11-27-2019-10-21 AM-Mohammad-204_Trial4_Loc6.avi.dat
+  95	Loc2	189	7.2320	11-27-2019-10-25 AM-Mohammad-204_Trial5_Loc2.avi.dat
+  96	Loc5	178	9.3983	11-27-2019-10-29 AM-Mohammad-204_Trial6_Loc5.avi.dat
+  97	Loc1	20	4.0551	11-27-2019-10-37 AM-Mohammad-211_Trial1_Loc1.avi.dat
+  98	Loc6	11	2.1650	11-27-2019-10-45 AM-Mohammad-211_Trial3_Loc6.avi.dat
+  99	Loc3	7	1.6798	11-27-2019-10-48 AM-Mohammad-211_Trial4_Loc3.avi.dat
+  100	Loc2	28	1.5767	11-27-2019-10-52 AM-Mohammad-211_Trial5_Loc2.avi.dat
+  101	Loc5	142	9.4129	11-27-2019-10-57 AM-Mohammad-211_Trial6_Loc5.avi.dat
+  102	Loc6	3	4.1047	11-27-2019-11-07 AM-Mohammad-205_Trial1_Loc6.avi.dat
+  103	Loc3	33	2.1569	11-27-2019-11-11 AM-Mohammad-205_Trial2_Loc3.avi.dat
+  104	Loc5	24	2.6509	11-27-2019-11-15 AM-Mohammad-205_Trial3_Loc5.avi.dat
+  105	Loc2	2	1.7331	11-27-2019-11-19 AM-Mohammad-205_Trial4_Loc2.avi.dat
+  106	Loc4	1	4.4724	11-27-2019-11-22 AM-Mohammad-205_Trial5_Loc4.avi.dat
+  107	Loc1	18	13.9837	11-27-2019-11-26 AM-Mohammad-205_Trial6_Loc1.avi.dat
+  108	Loc3	32	5.5279	11-27-2019-11-34 AM-Mohammad-207_Trial1_Loc3.avi.dat
+  109	Loc1	8	1.8045	11-27-2019-11-38 AM-Mohammad-207_Trial2_Loc1.avi.dat
+  110	Loc4	38	1.5280	11-27-2019-11-42 AM-Mohammad-207_Trial3_Loc4.avi.dat
+  111	Loc2	97	3.5627	11-27-2019-11-45 AM-Mohammad-207_Trial4_Loc2.avi.dat
+  112	Loc5	61	3.6263	11-27-2019-11-48 AM-Mohammad-207_Trial5_Loc5.avi.dat
+  113	Loc6	27	23.5881	11-27-2019-11-53 AM-Mohammad-207_Trial6_Loc6.avi.dat
+
+anotherLoc trials plotted (excluded from fit):
+  0	anotherLoc	6	66.1958	11-15-2019-2-41 PM-Mohammad-207_Trial1_anotherLoc.avi.dat
+  1	anotherLoc	8	602.5256	11-15-2019-3-17 PM-Mohammad-201_Trial1_anotherLoc.avi.dat
+  2	anotherLoc	2	5.7600	11-15-2019-3-48 PM-Mohammad-204_Trial1_anotherLoc.avi.dat
+  3	anotherLoc	56	133.3529	11-15-2019-3-52 PM-Mohammad-204_Trial1_anotherLoc.avi.dat
+  4	anotherLoc	11	213.4553	11-15-2019-4-24 PM-Mohammad-211_Trial1_anotherLoc.avi.dat
+  5	anotherLoc	1	48.3932	11-15-2019-4-42 PM-Mohammad-205_Trial1_anotherLoc.avi.dat
+  6	anotherLoc	6	15.4487	11-15-2019-4-48 PM-Mohammad-205_Trial2_anotherLoc.avi.dat
+  7	anotherLoc	122	15.3382	11-19-2019-12-03 PM-Mohammad-211_Trial2_anotherLoc.avi.dat
+  8	anotherLoc	143	31.3397	11-19-2019-12-25 PM-Mohammad-207_Trial1_anotherLoc.avi.dat

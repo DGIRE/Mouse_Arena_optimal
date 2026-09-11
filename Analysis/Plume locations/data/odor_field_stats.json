@@ -1,0 +1,4944 @@
+{
+  "_meta": {
+    "generator": "build_odor_fields.py",
+    "plume_common_version": "plume_common/1.0",
+    "schema_version": "1.0",
+    "aggregate_path": "C:\\Projects\\Repos\\Mouse Arena\\DATA\\Mouse Arena Aggregate Data.h5",
+    "aggregate_schema": "0.1",
+    "Fs": 500.0,
+    "seed": 1234,
+    "global_dejump_Q_head": 2.863285868836823,
+    "global_dejump_Q_body": 2.2984694630266347,
+    "cleaning_box": [
+      0.0,
+      580.0,
+      0.0,
+      280.0
+    ],
+    "global_MAD_ethdeconv": 0.00020145950617530913,
+    "cutoff": 0.001,
+    "cutoff_1xMAD": 0.00020145950617530913,
+    "cutoff_3xMAD": 0.0006043785185259274,
+    "cutoff_5xMAD": 0.0010072975308765457,
+    "small_floor": 0.001,
+    "min_trials": 3,
+    "L_scan_values": [
+      40,
+      30,
+      25,
+      20,
+      15,
+      10
+    ],
+    "coverage_target": 0.6,
+    "created_utc": "2026-08-08T01:22:53.570292+00:00",
+    "arena_extent": [
+      0.0,
+      580.0,
+      0.0,
+      280.0
+    ]
+  },
+  "locations": {
+    "Loc1": {
+      "group": "Loc1",
+      "n_trials": 20,
+      "chosen_L": 15,
+      "L_fallback_used": false,
+      "coverage_frac": 0.7192982456140351,
+      "L_scan": [
+        {
+          "L": 40,
+          "n_visited_bins": 101,
+          "coverage_frac": 0.9603960396039604
+        },
+        {
+          "L": 30,
+          "n_visited_bins": 172,
+          "coverage_frac": 0.9418604651162791
+        },
+        {
+          "L": 25,
+          "n_visited_bins": 243,
+          "coverage_frac": 0.8683127572016461
+        },
+        {
+          "L": 20,
+          "n_visited_bins": 363,
+          "coverage_frac": 0.8181818181818182
+        },
+        {
+          "L": 15,
+          "n_visited_bins": 627,
+          "coverage_frac": 0.7192982456140351
+        },
+        {
+          "L": 10,
+          "n_visited_bins": 1302,
+          "coverage_frac": 0.5422427035330261
+        }
+      ],
+      "samples_total": 245500,
+      "n_visited_bins": 627,
+      "endpoint": [
+        474.0,
+        61.0
+      ],
+      "grid_shape": [
+        19,
+        39
+      ],
+      "sparseness": {
+        "n_valid_bins": 451,
+        "cutoff": 0.001,
+        "frac_above_1xMAD": 0.9844789356984479,
+        "frac_above_3xMAD": 0.07538802660753881,
+        "frac_above_5xMAD": 0.011086474501108648,
+        "top5pct_mass_share": 0.10558129498079849,
+        "gini": 0.16534569960068357,
+        "normalized_entropy": 0.9917251555280654,
+        "gini_uniform_null": 0.0,
+        "gini_uniform_null_note": "Analytic floor only: Gini of a same-N constant field is 0 by construction (no sampling variability). Kept for reference; significance comes from the Monte-Carlo null below.",
+        "gini_mc_null": {
+          "observed_gini": 0.16534569960068357,
+          "null_gini_mean": 0.045263740913483105,
+          "null_gini_std": 0.001922470999849589,
+          "null_gini_ci95": [
+            0.041634373182854754,
+            0.04909556725977508
+          ],
+          "pvalue": 0.0,
+          "n_draws": 2000,
+          "seed": 1234,
+          "note": "Monte-Carlo null (H0=spatially uniform field): per-bin sample counts held fixed; observed total odor mass (sum of clip(mean,0)*n_samples over valid bins) redistributed each draw via a multinomial over the pooled samples with equal per-sample probability, giving each bin a synthetic mean = allocated mass / its sample count; Gini recomputed per draw. p = fraction(null Gini >= observed Gini)."
+        }
+      },
+      "distance": {
+        "mean": {
+          "label": "mean",
+          "ols_log": {
+            "intercept": -6.842739980548129,
+            "slope": 0.001428960412650001,
+            "slope_se": 0.0021892784173414247,
+            "slope_ci95": [
+              -0.00553830059785558,
+              0.008396221423155582
+            ],
+            "n": 5,
+            "dof": 3
+          },
+          "ols_n_bins": 5,
+          "exp_decay": {
+            "a": 1.717520448714514,
+            "lambda": null,
+            "lambda_se": null,
+            "lambda_ci95": [
+              null,
+              null
+            ],
+            "c": -1.7170052273201608,
+            "n": 451,
+            "degenerate": true,
+            "degenerate_reason": "lambda>arena_diagonal(644px)",
+            "lambda_raw": 4631794.212216537
+          },
+          "exp_n_bins": 451
+        },
+        "max": {
+          "label": "max",
+          "ols_log": {
+            "intercept": -5.515690205574166,
+            "slope": -0.0058496622698659614,
+            "slope_se": 0.001044370772854571,
+            "slope_ci95": [
+              -0.00793061645987442,
+              -0.003768708079857504
+            ],
+            "n": 76,
+            "dof": 74
+          },
+          "ols_n_bins": 76,
+          "exp_decay": {
+            "a": 0.0037303872719647666,
+            "lambda": 53.496417752002976,
+            "lambda_se": 10.466601351826629,
+            "lambda_ci95": [
+              32.92668531940739,
+              74.06615018459857
+            ],
+            "c": 0.0007220683931662024,
+            "n": 451,
+            "degenerate": false
+          },
+          "exp_n_bins": 451
+        }
+      },
+      "trajectory_summary": {
+        "path_length_px": {
+          "median": 2627.4957037996614,
+          "q1": 2153.9806970739573,
+          "q3": 6736.748936315216,
+          "iqr": 4582.768239241259,
+          "n": 20
+        },
+        "tortuosity": {
+          "median": 6.403415910793277,
+          "q1": 4.702811444459417,
+          "q3": 14.340710187834935,
+          "iqr": 9.637898743375517,
+          "n": 20
+        },
+        "n_encounters": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 1.0,
+          "iqr": 1.0,
+          "n": 20
+        },
+        "frac_path_above_threshold": {
+          "median": 0.029636593664128533,
+          "q1": 0.006349061099055588,
+          "q3": 0.06800373958864525,
+          "iqr": 0.061654678489589665,
+          "n": 20
+        },
+        "spearman_tortuosity_vs_nencounters": {
+          "rho": 0.014977239409456219,
+          "pvalue": 0.950028824257002,
+          "ci95": [
+            -0.43039609603356443,
+            0.45448580792958904
+          ],
+          "n": 20
+        },
+        "spearman_tortuosity_vs_frac_above": {
+          "rho": -0.6812030075187969,
+          "pvalue": 0.0009435725086737295,
+          "ci95": [
+            -0.8634421778369359,
+            -0.34168066033826894
+          ],
+          "n": 20
+        }
+      },
+      "trajectory_per_trial": [
+        {
+          "trial_index": 12,
+          "file_name": "11-20-2019-12-04 PM-Mohammad-201_Trial1_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 8804.557029173422,
+          "straight_line_px": 467.4045126732962,
+          "tortuosity": 18.837124568644423,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0016802112265541954,
+          "n_samples": 29163
+        },
+        {
+          "trial_index": 15,
+          "file_name": "11-22-2019-10-45 AM-Mohammad-205_Trial3_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 2387.0452616383336,
+          "straight_line_px": 469.36085383484647,
+          "tortuosity": 5.085735723666168,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.01477920227920228,
+          "n_samples": 5616
+        },
+        {
+          "trial_index": 21,
+          "file_name": "11-22-2019-11-23 AM-Mohammad-207_Trial2_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 3870.4818896648385,
+          "straight_line_px": 469.0351380344094,
+          "tortuosity": 8.252008380192812,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.06578276389597144,
+          "n_samples": 3922
+        },
+        {
+          "trial_index": 28,
+          "file_name": "11-22-2019-2-51 PM-Mohammad-211_Trial5_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 2345.2347338273644,
+          "straight_line_px": 468.71659265331016,
+          "tortuosity": 5.003524028350401,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.03350970017636684,
+          "n_samples": 3969
+        },
+        {
+          "trial_index": 30,
+          "file_name": "11-22-2019-3-11 PM-Mohammad-201_Trial1_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 15203.156320733695,
+          "straight_line_px": 467.62605285550967,
+          "tortuosity": 32.51135437792058,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.02576348715189022,
+          "n_samples": 44598
+        },
+        {
+          "trial_index": 33,
+          "file_name": "11-22-2019-3-56 PM-Mohammad-204_Trial1_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 6219.766264926053,
+          "straight_line_px": 468.08577375700196,
+          "tortuosity": 13.287663530135246,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.01949820788530466,
+          "n_samples": 13950
+        },
+        {
+          "trial_index": 43,
+          "file_name": "11-23-2019-2-52 PM-Mohammad-205_Trial6_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 867.1472914758499,
+          "straight_line_px": 468.7209233592299,
+          "tortuosity": 1.8500289794216507,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.11292719167904904,
+          "n_samples": 2692
+        },
+        {
+          "trial_index": 46,
+          "file_name": "11-23-2019-4-00 PM-Mohammad-207_Trial2_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 729.0359436278995,
+          "straight_line_px": 468.0850937069572,
+          "tortuosity": 1.5574859217463344,
+          "n_encounters": 3,
+          "frac_path_above_threshold": 0.07466666666666667,
+          "n_samples": 1125
+        },
+        {
+          "trial_index": 50,
+          "file_name": "11-23-2019-5-03 PM-Mohammad-201_Trial1_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 7393.499298370154,
+          "straight_line_px": 469.7117112291463,
+          "tortuosity": 15.740504487364753,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.001969644305410729,
+          "n_samples": 25893
+        },
+        {
+          "trial_index": 51,
+          "file_name": "11-23-2019-5-11 PM-Mohammad-201_Trial2_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 8867.88294236128,
+          "straight_line_px": 469.2981319889917,
+          "tortuosity": 18.896054209244742,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.003524462803653314,
+          "n_samples": 26387
+        },
+        {
+          "trial_index": 57,
+          "file_name": "11-24-2019-2-39 PM-Mohammad-207_Trial5_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 2204.8741149191305,
+          "straight_line_px": 468.8043918627202,
+          "tortuosity": 4.70318570642739,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0027151778441487917,
+          "n_samples": 7366
+        },
+        {
+          "trial_index": 58,
+          "file_name": "11-24-2019-2-43 PM-Mohammad-207_Trial6_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 6517.832148963571,
+          "straight_line_px": 469.7837315733446,
+          "tortuosity": 13.874112087991662,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.0063774889245898445,
+          "n_samples": 20541
+        },
+        {
+          "trial_index": 67,
+          "file_name": "11-24-2019-4-51 PM-Mohammad-204_Trial6_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 806.7987606639067,
+          "straight_line_px": 469.2759005525243,
+          "tortuosity": 1.7192418355896473,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.17612809315866085,
+          "n_samples": 2061
+        },
+        {
+          "trial_index": 76,
+          "file_name": "11-26-2019-10-41 AM-Mohammad-204_Trial4_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 4265.616517293396,
+          "straight_line_px": 468.73938513721123,
+          "tortuosity": 9.100187977685612,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.04051863857374392,
+          "n_samples": 4936
+        },
+        {
+          "trial_index": 77,
+          "file_name": "11-26-2019-11-03 AM-Mohammad-207_Trial1_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 2867.9461459609893,
+          "straight_line_px": 469.4531015196443,
+          "tortuosity": 6.109121734795866,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.047355473554735544,
+          "n_samples": 1626
+        },
+        {
+          "trial_index": 90,
+          "file_name": "11-26-2019-9-58 AM-Mohammad-201_Trial3_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 12159.062880953225,
+          "straight_line_px": 468.73051803150406,
+          "tortuosity": 25.940412269328696,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.00626377762245282,
+          "n_samples": 37198
+        },
+        {
+          "trial_index": 92,
+          "file_name": "11-27-2019-10-14 AM-Mohammad-204_Trial2_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 2007.3461988835418,
+          "straight_line_px": 468.7222939598256,
+          "tortuosity": 4.282591685420434,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.04234769687964339,
+          "n_samples": 2692
+        },
+        {
+          "trial_index": 97,
+          "file_name": "11-27-2019-10-37 AM-Mohammad-211_Trial1_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 2202.858863137429,
+          "straight_line_px": 468.5250392173381,
+          "tortuosity": 4.7016886585555,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.14679508468947194,
+          "n_samples": 3011
+        },
+        {
+          "trial_index": 107,
+          "file_name": "11-27-2019-11-26 AM-Mohammad-205_Trial6_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 678.1975974096832,
+          "straight_line_px": 101.25812981174468,
+          "tortuosity": 6.697710086790688,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.019454269833249115,
+          "n_samples": 7916
+        },
+        {
+          "trial_index": 109,
+          "file_name": "11-27-2019-11-38 AM-Mohammad-207_Trial2_Loc1.avi.dat",
+          "group": "Loc1",
+          "animal": "?",
+          "path_length_px": 2314.8455940273766,
+          "straight_line_px": 469.60258555122823,
+          "tortuosity": 4.929371483996767,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.22553699284009546,
+          "n_samples": 838
+        }
+      ],
+      "cleaning_provenance": [
+        {
+          "trial_index": 12,
+          "n_total": 35331,
+          "n_after_box": 29321,
+          "n_after_dejump": 29318,
+          "n_after_coverage": 29163
+        },
+        {
+          "trial_index": 15,
+          "n_total": 5690,
+          "n_after_box": 5686,
+          "n_after_dejump": 5648,
+          "n_after_coverage": 5616
+        },
+        {
+          "trial_index": 21,
+          "n_total": 4198,
+          "n_after_box": 4198,
+          "n_after_dejump": 3978,
+          "n_after_coverage": 3922
+        },
+        {
+          "trial_index": 28,
+          "n_total": 4159,
+          "n_after_box": 4103,
+          "n_after_dejump": 4006,
+          "n_after_coverage": 3969
+        },
+        {
+          "trial_index": 30,
+          "n_total": 44744,
+          "n_after_box": 44717,
+          "n_after_dejump": 44626,
+          "n_after_coverage": 44598
+        },
+        {
+          "trial_index": 33,
+          "n_total": 14024,
+          "n_after_box": 13985,
+          "n_after_dejump": 13984,
+          "n_after_coverage": 13950
+        },
+        {
+          "trial_index": 43,
+          "n_total": 2735,
+          "n_after_box": 2735,
+          "n_after_dejump": 2723,
+          "n_after_coverage": 2692
+        },
+        {
+          "trial_index": 46,
+          "n_total": 1159,
+          "n_after_box": 1159,
+          "n_after_dejump": 1159,
+          "n_after_coverage": 1125
+        },
+        {
+          "trial_index": 50,
+          "n_total": 27268,
+          "n_after_box": 25941,
+          "n_after_dejump": 25939,
+          "n_after_coverage": 25893
+        },
+        {
+          "trial_index": 51,
+          "n_total": 27032,
+          "n_after_box": 26612,
+          "n_after_dejump": 26420,
+          "n_after_coverage": 26387
+        },
+        {
+          "trial_index": 57,
+          "n_total": 7392,
+          "n_after_box": 7392,
+          "n_after_dejump": 7392,
+          "n_after_coverage": 7366
+        },
+        {
+          "trial_index": 58,
+          "n_total": 22861,
+          "n_after_box": 20781,
+          "n_after_dejump": 20578,
+          "n_after_coverage": 20541
+        },
+        {
+          "trial_index": 67,
+          "n_total": 2101,
+          "n_after_box": 2101,
+          "n_after_dejump": 2101,
+          "n_after_coverage": 2061
+        },
+        {
+          "trial_index": 76,
+          "n_total": 5191,
+          "n_after_box": 5191,
+          "n_after_dejump": 4964,
+          "n_after_coverage": 4936
+        },
+        {
+          "trial_index": 77,
+          "n_total": 1889,
+          "n_after_box": 1889,
+          "n_after_dejump": 1675,
+          "n_after_coverage": 1626
+        },
+        {
+          "trial_index": 90,
+          "n_total": 39347,
+          "n_after_box": 37339,
+          "n_after_dejump": 37223,
+          "n_after_coverage": 37198
+        },
+        {
+          "trial_index": 92,
+          "n_total": 2801,
+          "n_after_box": 2801,
+          "n_after_dejump": 2726,
+          "n_after_coverage": 2692
+        },
+        {
+          "trial_index": 97,
+          "n_total": 3119,
+          "n_after_box": 3119,
+          "n_after_dejump": 3051,
+          "n_after_coverage": 3011
+        },
+        {
+          "trial_index": 107,
+          "n_total": 7973,
+          "n_after_box": 7973,
+          "n_after_dejump": 7942,
+          "n_after_coverage": 7916
+        },
+        {
+          "trial_index": 109,
+          "n_total": 1023,
+          "n_after_box": 1023,
+          "n_after_dejump": 881,
+          "n_after_coverage": 838
+        }
+      ]
+    },
+    "Loc2": {
+      "group": "Loc2",
+      "n_trials": 18,
+      "chosen_L": 15,
+      "L_fallback_used": false,
+      "coverage_frac": 0.603648424543947,
+      "L_scan": [
+        {
+          "L": 40,
+          "n_visited_bins": 99,
+          "coverage_frac": 0.9393939393939394
+        },
+        {
+          "L": 30,
+          "n_visited_bins": 170,
+          "coverage_frac": 0.8705882352941177
+        },
+        {
+          "L": 25,
+          "n_visited_bins": 232,
+          "coverage_frac": 0.7974137931034483
+        },
+        {
+          "L": 20,
+          "n_visited_bins": 357,
+          "coverage_frac": 0.7338935574229691
+        },
+        {
+          "L": 15,
+          "n_visited_bins": 603,
+          "coverage_frac": 0.603648424543947
+        },
+        {
+          "L": 10,
+          "n_visited_bins": 1208,
+          "coverage_frac": 0.44867549668874174
+        }
+      ],
+      "samples_total": 165142,
+      "n_visited_bins": 603,
+      "endpoint": [
+        506.0,
+        114.0
+      ],
+      "grid_shape": [
+        19,
+        39
+      ],
+      "sparseness": {
+        "n_valid_bins": 364,
+        "cutoff": 0.001,
+        "frac_above_1xMAD": 0.9945054945054945,
+        "frac_above_3xMAD": 0.11538461538461539,
+        "frac_above_5xMAD": 0.013736263736263736,
+        "top5pct_mass_share": 0.10048325443202817,
+        "gini": 0.16244012646483766,
+        "normalized_entropy": 0.9921198961253009,
+        "gini_uniform_null": 0.0,
+        "gini_uniform_null_note": "Analytic floor only: Gini of a same-N constant field is 0 by construction (no sampling variability). Kept for reference; significance comes from the Monte-Carlo null below.",
+        "gini_mc_null": {
+          "observed_gini": 0.16244012646483766,
+          "null_gini_mean": 0.04985591901397538,
+          "null_gini_std": 0.0023047096324538756,
+          "null_gini_ci95": [
+            0.04551409601224977,
+            0.0543609349791362
+          ],
+          "pvalue": 0.0,
+          "n_draws": 2000,
+          "seed": 1234,
+          "note": "Monte-Carlo null (H0=spatially uniform field): per-bin sample counts held fixed; observed total odor mass (sum of clip(mean,0)*n_samples over valid bins) redistributed each draw via a multinomial over the pooled samples with equal per-sample probability, giving each bin a synthetic mean = allocated mass / its sample count; Gini recomputed per draw. p = fraction(null Gini >= observed Gini)."
+        }
+      },
+      "distance": {
+        "mean": {
+          "label": "mean",
+          "ols_log": {
+            "intercept": -6.701882003248289,
+            "slope": -0.0008639253527152697,
+            "slope_se": 0.0007332430339560671,
+            "slope_ci95": [
+              -0.003197431937003772,
+              0.0014695812315732323
+            ],
+            "n": 5,
+            "dof": 3
+          },
+          "ols_n_bins": 5,
+          "exp_decay": {
+            "a": 0.000694625312243121,
+            "lambda": null,
+            "lambda_se": null,
+            "lambda_ci95": [
+              null,
+              null
+            ],
+            "c": -9.69947640710178e-05,
+            "n": 364,
+            "degenerate": true,
+            "degenerate_reason": "lambda>arena_diagonal(644px)",
+            "lambda_raw": 1006.6518009519327
+          },
+          "exp_n_bins": 364
+        },
+        "max": {
+          "label": "max",
+          "ols_log": {
+            "intercept": -6.105428440191549,
+            "slope": -0.001855418926071907,
+            "slope_se": 0.0007519872655284796,
+            "slope_ci95": [
+              -0.0033563917901873906,
+              -0.0003544460619564233
+            ],
+            "n": 69,
+            "dof": 67
+          },
+          "ols_n_bins": 69,
+          "exp_decay": {
+            "a": 0.005337273848979861,
+            "lambda": 33.13692299956846,
+            "lambda_se": 7.1471581101245745,
+            "lambda_ci95": [
+              19.08162857720589,
+              47.19221742193103
+            ],
+            "c": 0.0007560531667717106,
+            "n": 364,
+            "degenerate": false
+          },
+          "exp_n_bins": 364
+        }
+      },
+      "trajectory_summary": {
+        "path_length_px": {
+          "median": 2038.518062530301,
+          "q1": 924.298157578977,
+          "q3": 5407.868810992055,
+          "iqr": 4483.570653413078,
+          "n": 18
+        },
+        "tortuosity": {
+          "median": 4.0773376681000855,
+          "q1": 1.8537846790351797,
+          "q3": 11.463827990623082,
+          "iqr": 9.610043311587903,
+          "n": 18
+        },
+        "n_encounters": {
+          "median": 1.0,
+          "q1": 0.0,
+          "q3": 1.75,
+          "iqr": 1.75,
+          "n": 18
+        },
+        "frac_path_above_threshold": {
+          "median": 0.027458007265970696,
+          "q1": 0.008440034167348058,
+          "q3": 0.12635352887172419,
+          "iqr": 0.11791349470437612,
+          "n": 18
+        },
+        "spearman_tortuosity_vs_nencounters": {
+          "rho": 0.052459298357642244,
+          "pvalue": 0.8362213772031648,
+          "ci95": [
+            -0.42481521204188744,
+            0.5069141935800202
+          ],
+          "n": 18
+        },
+        "spearman_tortuosity_vs_frac_above": {
+          "rho": -0.6821465428276574,
+          "pvalue": 0.0018170810177521768,
+          "ci95": [
+            -0.8714747389375933,
+            -0.3158740944719386
+          ],
+          "n": 18
+        }
+      },
+      "trajectory_per_trial": [
+        {
+          "trial_index": 16,
+          "file_name": "11-22-2019-10-50 AM-Mohammad-205_Trial4_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 3052.7596034871076,
+          "straight_line_px": 498.2644594181664,
+          "tortuosity": 6.126785777680948,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0015721210533211057,
+          "n_samples": 7633
+        },
+        {
+          "trial_index": 17,
+          "file_name": "11-22-2019-10-52 AM-Mohammad-205_Trial4_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 5865.163418366057,
+          "straight_line_px": 104.35633997069516,
+          "tortuosity": 56.20323039321889,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.004761904761904762,
+          "n_samples": 16800
+        },
+        {
+          "trial_index": 25,
+          "file_name": "11-22-2019-11-43 AM-Mohammad-207_Trial6_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 773.1100851911708,
+          "straight_line_px": 497.7995694509541,
+          "tortuosity": 1.5530549494927632,
+          "n_encounters": 4,
+          "frac_path_above_threshold": 0.1531413612565445,
+          "n_samples": 1528
+        },
+        {
+          "trial_index": 35,
+          "file_name": "11-23-2019-1-31 PM-Mohammad-204_Trial1_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 9272.34266144761,
+          "straight_line_px": 499.1529088578707,
+          "tortuosity": 18.576156718517343,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.006400787789266372,
+          "n_samples": 22341
+        },
+        {
+          "trial_index": 36,
+          "file_name": "11-23-2019-1-41 PM-Mohammad-204_Trial2_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 6303.308483570931,
+          "straight_line_px": 499.50272520645933,
+          "tortuosity": 12.619167354823912,
+          "n_encounters": 5,
+          "frac_path_above_threshold": 0.04204191741025109,
+          "n_samples": 24095
+        },
+        {
+          "trial_index": 42,
+          "file_name": "11-23-2019-2-47 PM-Mohammad-205_Trial5_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 891.7128240265597,
+          "straight_line_px": 498.3574387685546,
+          "tortuosity": 1.7893037299292442,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.1845474613686534,
+          "n_samples": 2265
+        },
+        {
+          "trial_index": 44,
+          "file_name": "11-23-2019-3-38 PM-Mohammad-211_Trial2_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 6298.170090509686,
+          "straight_line_px": 500.2260939980225,
+          "tortuosity": 12.590646841655133,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.004255777622151592,
+          "n_samples": 18563
+        },
+        {
+          "trial_index": 49,
+          "file_name": "11-23-2019-4-21 PM-Mohammad-207_Trial5_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 1726.4559207560096,
+          "straight_line_px": 499.6299961600767,
+          "tortuosity": 3.455468915046625,
+          "n_encounters": 8,
+          "frac_path_above_threshold": 0.28007304268431865,
+          "n_samples": 4381
+        },
+        {
+          "trial_index": 52,
+          "file_name": "11-23-2019-5-20 PM-Mohammad-201_Trial3_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 7116.909727337597,
+          "straight_line_px": 499.39001774972127,
+          "tortuosity": 14.251205419376987,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.003539364640883978,
+          "n_samples": 23168
+        },
+        {
+          "trial_index": 55,
+          "file_name": "11-24-2019-2-30 PM-Mohammad-207_Trial3_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 845.7174317409471,
+          "straight_line_px": 500.0693932273424,
+          "tortuosity": 1.6912001478092173,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.04501278772378517,
+          "n_samples": 1955
+        },
+        {
+          "trial_index": 64,
+          "file_name": "11-24-2019-4-34 PM-Mohammad-204_Trial3_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 3063.6803685677887,
+          "straight_line_px": 500.2880169376199,
+          "tortuosity": 6.123833201765042,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.01841881552847832,
+          "n_samples": 7058
+        },
+        {
+          "trial_index": 73,
+          "file_name": "11-26-2019-10-19 AM-Mohammad-204_Trial1_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 2169.439720121022,
+          "straight_line_px": 499.6912368607004,
+          "tortuosity": 4.341560467921113,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.014557773301593115,
+          "n_samples": 10922
+        },
+        {
+          "trial_index": 79,
+          "file_name": "11-26-2019-11-10 AM-Mohammad-207_Trial3_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 559.1488512852821,
+          "straight_line_px": 500.31363167689204,
+          "tortuosity": 1.117596675131943,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.02534562211981567,
+          "n_samples": 434
+        },
+        {
+          "trial_index": 86,
+          "file_name": "11-26-2019-12-09 PM-Mohammad-204_Trial2_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 1419.6875896811773,
+          "straight_line_px": 499.6373716057121,
+          "tortuosity": 2.8414359500744495,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.016333272160029364,
+          "n_samples": 5449
+        },
+        {
+          "trial_index": 95,
+          "file_name": "11-27-2019-10-25 AM-Mohammad-204_Trial5_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 4035.98498887005,
+          "straight_line_px": 499.2947583891852,
+          "tortuosity": 8.083371437526932,
+          "n_encounters": 5,
+          "frac_path_above_threshold": 0.02957039241212572,
+          "n_samples": 10754
+        },
+        {
+          "trial_index": 100,
+          "file_name": "11-27-2019-10-52 AM-Mohammad-211_Trial5_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 1022.0541582362289,
+          "straight_line_px": 499.23818680621065,
+          "tortuosity": 2.0472275263529864,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.255431902490726,
+          "n_samples": 1887
+        },
+        {
+          "trial_index": 105,
+          "file_name": "11-27-2019-11-19 AM-Mohammad-205_Trial4_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 751.1777164626566,
+          "straight_line_px": 499.4370097798116,
+          "tortuosity": 1.5040489626386133,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.3785953177257525,
+          "n_samples": 1495
+        },
+        {
+          "trial_index": 111,
+          "file_name": "11-27-2019-11-45 AM-Mohammad-207_Trial4_Loc2.avi.dat",
+          "group": "Loc2",
+          "animal": "?",
+          "path_length_px": 1907.5964049395795,
+          "straight_line_px": 500.27247298755515,
+          "tortuosity": 3.813114868279057,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.045990031717263256,
+          "n_samples": 4414
+        }
+      ],
+      "cleaning_provenance": [
+        {
+          "trial_index": 16,
+          "n_total": 7723,
+          "n_after_box": 7723,
+          "n_after_dejump": 7655,
+          "n_after_coverage": 7633
+        },
+        {
+          "trial_index": 17,
+          "n_total": 18274,
+          "n_after_box": 17361,
+          "n_after_dejump": 17254,
+          "n_after_coverage": 16800
+        },
+        {
+          "trial_index": 25,
+          "n_total": 1571,
+          "n_after_box": 1571,
+          "n_after_dejump": 1571,
+          "n_after_coverage": 1528
+        },
+        {
+          "trial_index": 35,
+          "n_total": 22670,
+          "n_after_box": 22660,
+          "n_after_dejump": 22581,
+          "n_after_coverage": 22341
+        },
+        {
+          "trial_index": 36,
+          "n_total": 30770,
+          "n_after_box": 24262,
+          "n_after_dejump": 24247,
+          "n_after_coverage": 24095
+        },
+        {
+          "trial_index": 42,
+          "n_total": 2295,
+          "n_after_box": 2295,
+          "n_after_dejump": 2295,
+          "n_after_coverage": 2265
+        },
+        {
+          "trial_index": 44,
+          "n_total": 19614,
+          "n_after_box": 18606,
+          "n_after_dejump": 18598,
+          "n_after_coverage": 18563
+        },
+        {
+          "trial_index": 49,
+          "n_total": 4841,
+          "n_after_box": 4451,
+          "n_after_dejump": 4437,
+          "n_after_coverage": 4381
+        },
+        {
+          "trial_index": 52,
+          "n_total": 24051,
+          "n_after_box": 23199,
+          "n_after_dejump": 23199,
+          "n_after_coverage": 23168
+        },
+        {
+          "trial_index": 55,
+          "n_total": 1996,
+          "n_after_box": 1996,
+          "n_after_dejump": 1996,
+          "n_after_coverage": 1955
+        },
+        {
+          "trial_index": 64,
+          "n_total": 7152,
+          "n_after_box": 7152,
+          "n_after_dejump": 7116,
+          "n_after_coverage": 7058
+        },
+        {
+          "trial_index": 73,
+          "n_total": 10946,
+          "n_after_box": 10946,
+          "n_after_dejump": 10946,
+          "n_after_coverage": 10922
+        },
+        {
+          "trial_index": 79,
+          "n_total": 489,
+          "n_after_box": 489,
+          "n_after_dejump": 489,
+          "n_after_coverage": 434
+        },
+        {
+          "trial_index": 86,
+          "n_total": 5477,
+          "n_after_box": 5477,
+          "n_after_dejump": 5477,
+          "n_after_coverage": 5449
+        },
+        {
+          "trial_index": 95,
+          "n_total": 11414,
+          "n_after_box": 10781,
+          "n_after_dejump": 10780,
+          "n_after_coverage": 10754
+        },
+        {
+          "trial_index": 100,
+          "n_total": 1908,
+          "n_after_box": 1908,
+          "n_after_dejump": 1908,
+          "n_after_coverage": 1887
+        },
+        {
+          "trial_index": 105,
+          "n_total": 1525,
+          "n_after_box": 1525,
+          "n_after_dejump": 1525,
+          "n_after_coverage": 1495
+        },
+        {
+          "trial_index": 111,
+          "n_total": 4438,
+          "n_after_box": 4438,
+          "n_after_dejump": 4438,
+          "n_after_coverage": 4414
+        }
+      ]
+    },
+    "Loc3": {
+      "group": "Loc3",
+      "n_trials": 17,
+      "chosen_L": 15,
+      "L_fallback_used": false,
+      "coverage_frac": 0.72859450726979,
+      "L_scan": [
+        {
+          "L": 40,
+          "n_visited_bins": 99,
+          "coverage_frac": 0.9595959595959596
+        },
+        {
+          "L": 30,
+          "n_visited_bins": 168,
+          "coverage_frac": 0.9523809523809523
+        },
+        {
+          "L": 25,
+          "n_visited_bins": 233,
+          "coverage_frac": 0.8798283261802575
+        },
+        {
+          "L": 20,
+          "n_visited_bins": 360,
+          "coverage_frac": 0.8111111111111111
+        },
+        {
+          "L": 15,
+          "n_visited_bins": 619,
+          "coverage_frac": 0.72859450726979
+        },
+        {
+          "L": 10,
+          "n_visited_bins": 1274,
+          "coverage_frac": 0.5525902668759811
+        }
+      ],
+      "samples_total": 175113,
+      "n_visited_bins": 619,
+      "endpoint": [
+        506.0,
+        191.0
+      ],
+      "grid_shape": [
+        19,
+        39
+      ],
+      "sparseness": {
+        "n_valid_bins": 451,
+        "cutoff": 0.001,
+        "frac_above_1xMAD": 0.9689578713968958,
+        "frac_above_3xMAD": 0.09534368070953436,
+        "frac_above_5xMAD": 0.011086474501108648,
+        "top5pct_mass_share": 0.10940387724837285,
+        "gini": 0.19934155124190675,
+        "normalized_entropy": 0.9889425631868034,
+        "gini_uniform_null": 0.0,
+        "gini_uniform_null_note": "Analytic floor only: Gini of a same-N constant field is 0 by construction (no sampling variability). Kept for reference; significance comes from the Monte-Carlo null below.",
+        "gini_mc_null": {
+          "observed_gini": 0.19934155124190675,
+          "null_gini_mean": 0.049841903428217475,
+          "null_gini_std": 0.0020075784560445163,
+          "null_gini_ci95": [
+            0.046090642317252066,
+            0.05366525952881668
+          ],
+          "pvalue": 0.0,
+          "n_draws": 2000,
+          "seed": 1234,
+          "note": "Monte-Carlo null (H0=spatially uniform field): per-bin sample counts held fixed; observed total odor mass (sum of clip(mean,0)*n_samples over valid bins) redistributed each draw via a multinomial over the pooled samples with equal per-sample probability, giving each bin a synthetic mean = allocated mass / its sample count; Gini recomputed per draw. p = fraction(null Gini >= observed Gini)."
+        }
+      },
+      "distance": {
+        "mean": {
+          "label": "mean",
+          "ols_log": {
+            "intercept": -6.658279900587875,
+            "slope": -0.003525149398182938,
+            "slope_se": 0.0013310122762196469,
+            "slope_ci95": [
+              -0.0077610244989254114,
+              0.0007107257025595354
+            ],
+            "n": 5,
+            "dof": 3
+          },
+          "ols_n_bins": 5,
+          "exp_decay": {
+            "a": 0.0007641154071148412,
+            "lambda": 49.97801380446692,
+            "lambda_se": 4.177911802910951,
+            "lambda_ci95": [
+              41.76727518702036,
+              58.18875242191348
+            ],
+            "c": 0.00034668687008185224,
+            "n": 451,
+            "degenerate": false
+          },
+          "exp_n_bins": 451
+        },
+        "max": {
+          "label": "max",
+          "ols_log": {
+            "intercept": -6.208894606038674,
+            "slope": -0.0025525225367532683,
+            "slope_se": 0.0008448933738787832,
+            "slope_ci95": [
+              -0.0042323969172766065,
+              -0.0008726481562299302
+            ],
+            "n": 87,
+            "dof": 85
+          },
+          "ols_n_bins": 87,
+          "exp_decay": {
+            "a": 0.02218497162980235,
+            "lambda": 24.228800358953425,
+            "lambda_se": 5.485858208731934,
+            "lambda_ci95": [
+              13.447589560561765,
+              35.01001115734508
+            ],
+            "c": 0.0006315417633281887,
+            "n": 451,
+            "degenerate": false
+          },
+          "exp_n_bins": 451
+        }
+      },
+      "trajectory_summary": {
+        "path_length_px": {
+          "median": 2876.3150543997617,
+          "q1": 1658.4051290331377,
+          "q3": 5008.653751270938,
+          "iqr": 3350.2486222378006,
+          "n": 17
+        },
+        "tortuosity": {
+          "median": 5.662567303724582,
+          "q1": 3.2652926918653606,
+          "q3": 9.846627014409009,
+          "iqr": 6.581334322543649,
+          "n": 17
+        },
+        "n_encounters": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 2.0,
+          "iqr": 2.0,
+          "n": 17
+        },
+        "frac_path_above_threshold": {
+          "median": 0.07102625298329356,
+          "q1": 0.03675898785667285,
+          "q3": 0.0934473854099419,
+          "iqr": 0.05668839755326904,
+          "n": 17
+        },
+        "spearman_tortuosity_vs_nencounters": {
+          "rho": 0.22106703426100635,
+          "pvalue": 0.3938376658409794,
+          "ci95": [
+            -0.29043815458151834,
+            0.6343130493576865
+          ],
+          "n": 17
+        },
+        "spearman_tortuosity_vs_frac_above": {
+          "rho": -0.5196078431372549,
+          "pvalue": 0.03253716699175946,
+          "ci95": [
+            -0.8003642154177736,
+            -0.051933236057427466
+          ],
+          "n": 17
+        }
+      },
+      "trajectory_per_trial": [
+        {
+          "trial_index": 18,
+          "file_name": "11-22-2019-10-58 AM-Mohammad-205_Trial5_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 2293.1722574075857,
+          "straight_line_px": 508.160021178791,
+          "tortuosity": 4.512697106883889,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.024216385118640757,
+          "n_samples": 10241
+        },
+        {
+          "trial_index": 23,
+          "file_name": "11-22-2019-11-31 AM-Mohammad-207_Trial4_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 15233.206060476385,
+          "straight_line_px": 506.6752057213654,
+          "tortuosity": 30.065031579330018,
+          "n_encounters": 4,
+          "frac_path_above_threshold": 0.014093836246550138,
+          "n_samples": 27175
+        },
+        {
+          "trial_index": 27,
+          "file_name": "11-22-2019-2-37 PM-Mohammad-211_Trial4_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 8707.02802790202,
+          "straight_line_px": 506.3866371315664,
+          "tortuosity": 17.194426924894962,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.03675898785667285,
+          "n_samples": 33434
+        },
+        {
+          "trial_index": 31,
+          "file_name": "11-22-2019-3-22 PM-Mohammad-201_Trial2_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 6836.720947426989,
+          "straight_line_px": 507.6776270940532,
+          "tortuosity": 13.46665793913429,
+          "n_encounters": 5,
+          "frac_path_above_threshold": 0.031808085295424254,
+          "n_samples": 11255
+        },
+        {
+          "trial_index": 37,
+          "file_name": "11-23-2019-1-52 PM-Mohammad-204_Trial3_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 2458.8995151532645,
+          "straight_line_px": 508.38975097275994,
+          "tortuosity": 4.836642576779671,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.06837881219903692,
+          "n_samples": 9345
+        },
+        {
+          "trial_index": 41,
+          "file_name": "11-23-2019-2-43 PM-Mohammad-205_Trial4_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 1658.4051290331377,
+          "straight_line_px": 507.88865977148964,
+          "tortuosity": 3.2652926918653606,
+          "n_encounters": 3,
+          "frac_path_above_threshold": 0.11184975901612099,
+          "n_samples": 6017
+        },
+        {
+          "trial_index": 45,
+          "file_name": "11-23-2019-3-54 PM-Mohammad-207_Trial1_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 5008.653751270938,
+          "straight_line_px": 508.6669520376421,
+          "tortuosity": 9.846627014409009,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.07102625298329356,
+          "n_samples": 10475
+        },
+        {
+          "trial_index": 61,
+          "file_name": "11-24-2019-3-15 PM-Mohammad-205_Trial3_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 4303.647286839021,
+          "straight_line_px": 507.72324620364253,
+          "tortuosity": 8.476364474186145,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0934473854099419,
+          "n_samples": 12392
+        },
+        {
+          "trial_index": 62,
+          "file_name": "11-24-2019-4-19 PM-Mohammad-204_Trial1_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 7992.952965169988,
+          "straight_line_px": 507.166961790519,
+          "tortuosity": 15.760003248144166,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.022638243600255077,
+          "n_samples": 21954
+        },
+        {
+          "trial_index": 70,
+          "file_name": "11-24-2019-5-19 PM-Mohammad-201_Trial3_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 3466.7957636540796,
+          "straight_line_px": 507.6313520925645,
+          "tortuosity": 6.829357070565499,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.047047265582360005,
+          "n_samples": 9161
+        },
+        {
+          "trial_index": 78,
+          "file_name": "11-26-2019-11-07 AM-Mohammad-207_Trial2_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 1017.4386987345588,
+          "straight_line_px": 508.55572030290006,
+          "tortuosity": 2.0006435049606046,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.09019370460048426,
+          "n_samples": 1652
+        },
+        {
+          "trial_index": 83,
+          "file_name": "11-26-2019-11-44 AM-Mohammad-211_Trial1_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 2487.8091793131434,
+          "straight_line_px": 508.37983483779203,
+          "tortuosity": 4.893603185710395,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.172349194454852,
+          "n_samples": 5338
+        },
+        {
+          "trial_index": 88,
+          "file_name": "11-26-2019-12-20 PM-Mohammad-204_Trial4_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 3588.4454263614807,
+          "straight_line_px": 508.0718090226242,
+          "tortuosity": 7.0628705679706165,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.11260330578512397,
+          "n_samples": 5808
+        },
+        {
+          "trial_index": 93,
+          "file_name": "11-27-2019-10-17 AM-Mohammad-204_Trial3_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 951.2755824155412,
+          "straight_line_px": 508.94044758472205,
+          "tortuosity": 1.8691294569531824,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.08534946236559139,
+          "n_samples": 1488
+        },
+        {
+          "trial_index": 99,
+          "file_name": "11-27-2019-10-48 AM-Mohammad-211_Trial4_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 903.9085189248798,
+          "straight_line_px": 507.1187000964469,
+          "tortuosity": 1.782439730092716,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.18724559023066487,
+          "n_samples": 1474
+        },
+        {
+          "trial_index": 103,
+          "file_name": "11-27-2019-11-11 AM-Mohammad-205_Trial2_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 893.4629427055822,
+          "straight_line_px": 508.73896558120106,
+          "tortuosity": 1.7562306077437162,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.04953998584571833,
+          "n_samples": 2826
+        },
+        {
+          "trial_index": 108,
+          "file_name": "11-27-2019-11-34 AM-Mohammad-207_Trial1_Loc3.avi.dat",
+          "group": "Loc3",
+          "animal": "?",
+          "path_length_px": 2876.3150543997617,
+          "straight_line_px": 507.95247104751434,
+          "tortuosity": 5.662567303724582,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.08054352107128791,
+          "n_samples": 5078
+        }
+      ],
+      "cleaning_provenance": [
+        {
+          "trial_index": 18,
+          "n_total": 10279,
+          "n_after_box": 10279,
+          "n_after_dejump": 10279,
+          "n_after_coverage": 10241
+        },
+        {
+          "trial_index": 23,
+          "n_total": 28071,
+          "n_after_box": 27683,
+          "n_after_dejump": 27270,
+          "n_after_coverage": 27175
+        },
+        {
+          "trial_index": 27,
+          "n_total": 33583,
+          "n_after_box": 33567,
+          "n_after_dejump": 33470,
+          "n_after_coverage": 33434
+        },
+        {
+          "trial_index": 31,
+          "n_total": 12349,
+          "n_after_box": 11694,
+          "n_after_dejump": 11308,
+          "n_after_coverage": 11255
+        },
+        {
+          "trial_index": 37,
+          "n_total": 9365,
+          "n_after_box": 9365,
+          "n_after_dejump": 9365,
+          "n_after_coverage": 9345
+        },
+        {
+          "trial_index": 41,
+          "n_total": 6045,
+          "n_after_box": 6045,
+          "n_after_dejump": 6045,
+          "n_after_coverage": 6017
+        },
+        {
+          "trial_index": 45,
+          "n_total": 12378,
+          "n_after_box": 10776,
+          "n_after_dejump": 10767,
+          "n_after_coverage": 10475
+        },
+        {
+          "trial_index": 61,
+          "n_total": 12406,
+          "n_after_box": 12406,
+          "n_after_dejump": 12406,
+          "n_after_coverage": 12392
+        },
+        {
+          "trial_index": 62,
+          "n_total": 22126,
+          "n_after_box": 21995,
+          "n_after_dejump": 21994,
+          "n_after_coverage": 21954
+        },
+        {
+          "trial_index": 70,
+          "n_total": 9217,
+          "n_after_box": 9217,
+          "n_after_dejump": 9217,
+          "n_after_coverage": 9161
+        },
+        {
+          "trial_index": 78,
+          "n_total": 1667,
+          "n_after_box": 1667,
+          "n_after_dejump": 1667,
+          "n_after_coverage": 1652
+        },
+        {
+          "trial_index": 83,
+          "n_total": 5367,
+          "n_after_box": 5367,
+          "n_after_dejump": 5367,
+          "n_after_coverage": 5338
+        },
+        {
+          "trial_index": 88,
+          "n_total": 6066,
+          "n_after_box": 6034,
+          "n_after_dejump": 5832,
+          "n_after_coverage": 5808
+        },
+        {
+          "trial_index": 93,
+          "n_total": 1658,
+          "n_after_box": 1608,
+          "n_after_dejump": 1578,
+          "n_after_coverage": 1488
+        },
+        {
+          "trial_index": 99,
+          "n_total": 1496,
+          "n_after_box": 1496,
+          "n_after_dejump": 1496,
+          "n_after_coverage": 1474
+        },
+        {
+          "trial_index": 103,
+          "n_total": 2853,
+          "n_after_box": 2853,
+          "n_after_dejump": 2853,
+          "n_after_coverage": 2826
+        },
+        {
+          "trial_index": 108,
+          "n_total": 5150,
+          "n_after_box": 5150,
+          "n_after_dejump": 5150,
+          "n_after_coverage": 5078
+        }
+      ]
+    },
+    "Loc4": {
+      "group": "Loc4",
+      "n_trials": 14,
+      "chosen_L": 15,
+      "L_fallback_used": false,
+      "coverage_frac": 0.6286701208981001,
+      "L_scan": [
+        {
+          "L": 40,
+          "n_visited_bins": 95,
+          "coverage_frac": 0.8947368421052632
+        },
+        {
+          "L": 30,
+          "n_visited_bins": 166,
+          "coverage_frac": 0.8614457831325302
+        },
+        {
+          "L": 25,
+          "n_visited_bins": 230,
+          "coverage_frac": 0.7608695652173914
+        },
+        {
+          "L": 20,
+          "n_visited_bins": 342,
+          "coverage_frac": 0.7368421052631579
+        },
+        {
+          "L": 15,
+          "n_visited_bins": 579,
+          "coverage_frac": 0.6286701208981001
+        },
+        {
+          "L": 10,
+          "n_visited_bins": 1150,
+          "coverage_frac": 0.4956521739130435
+        }
+      ],
+      "samples_total": 148399,
+      "n_visited_bins": 579,
+      "endpoint": [
+        453.0,
+        164.0
+      ],
+      "grid_shape": [
+        19,
+        39
+      ],
+      "sparseness": {
+        "n_valid_bins": 364,
+        "cutoff": 0.001,
+        "frac_above_1xMAD": 0.9697802197802198,
+        "frac_above_3xMAD": 0.1620879120879121,
+        "frac_above_5xMAD": 0.016483516483516484,
+        "top5pct_mass_share": 0.11302863584208699,
+        "gini": 0.20608039282370658,
+        "normalized_entropy": 0.9873678439334487,
+        "gini_uniform_null": 0.0,
+        "gini_uniform_null_note": "Analytic floor only: Gini of a same-N constant field is 0 by construction (no sampling variability). Kept for reference; significance comes from the Monte-Carlo null below.",
+        "gini_mc_null": {
+          "observed_gini": 0.20608039282370658,
+          "null_gini_mean": 0.04790020722199155,
+          "null_gini_std": 0.002254353458826983,
+          "null_gini_ci95": [
+            0.04355569202660291,
+            0.05237968464215882
+          ],
+          "pvalue": 0.0,
+          "n_draws": 2000,
+          "seed": 1234,
+          "note": "Monte-Carlo null (H0=spatially uniform field): per-bin sample counts held fixed; observed total odor mass (sum of clip(mean,0)*n_samples over valid bins) redistributed each draw via a multinomial over the pooled samples with equal per-sample probability, giving each bin a synthetic mean = allocated mass / its sample count; Gini recomputed per draw. p = fraction(null Gini >= observed Gini)."
+        }
+      },
+      "distance": {
+        "mean": {
+          "label": "mean",
+          "ols_log": {
+            "intercept": -6.710748974872507,
+            "slope": 0.0019152730619514573,
+            "slope_se": 0.004343087815485874,
+            "slope_ci95": [
+              -0.010143071844798474,
+              0.01397361796870139
+            ],
+            "n": 6,
+            "dof": 4
+          },
+          "ols_n_bins": 6,
+          "exp_decay": {
+            "a": 0.0004950039386478913,
+            "lambda": 88.15844413430102,
+            "lambda_se": 15.424584649745823,
+            "lambda_ci95": [
+              57.82511790107837,
+              118.49177036752367
+            ],
+            "c": 0.00035050340419732947,
+            "n": 364,
+            "degenerate": false
+          },
+          "exp_n_bins": 364
+        },
+        "max": {
+          "label": "max",
+          "ols_log": {
+            "intercept": -6.279781218057952,
+            "slope": -0.001152565357518356,
+            "slope_se": 0.0006125256341756681,
+            "slope_ci95": [
+              -0.0023679491041309368,
+              6.281838909422501e-05
+            ],
+            "n": 101,
+            "dof": 99
+          },
+          "ols_n_bins": 101,
+          "exp_decay": {
+            "a": 0.02597966793022207,
+            "lambda": 22.4547247736746,
+            "lambda_se": 5.686342331838832,
+            "lambda_ci95": [
+              11.272207970650433,
+              33.63724157669876
+            ],
+            "c": 0.000642042983434068,
+            "n": 364,
+            "degenerate": false
+          },
+          "exp_n_bins": 364
+        }
+      },
+      "trajectory_summary": {
+        "path_length_px": {
+          "median": 2906.7426079123125,
+          "q1": 1424.2575070789544,
+          "q3": 4500.827142716771,
+          "iqr": 3076.5696356378166,
+          "n": 14
+        },
+        "tortuosity": {
+          "median": 7.1014788721648205,
+          "q1": 4.1463698967036065,
+          "q3": 11.537715605999626,
+          "iqr": 7.3913457092960195,
+          "n": 14
+        },
+        "n_encounters": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.75,
+          "iqr": 0.75,
+          "n": 14
+        },
+        "frac_path_above_threshold": {
+          "median": 0.03241358848835484,
+          "q1": 0.01331943441466955,
+          "q3": 0.07443352443352444,
+          "iqr": 0.061114090018854886,
+          "n": 14
+        },
+        "spearman_tortuosity_vs_nencounters": {
+          "rho": 0.33149677206589795,
+          "pvalue": 0.24693849714183252,
+          "ci95": [
+            -0.24157165594870886,
+            0.7331295040704314
+          ],
+          "n": 14
+        },
+        "spearman_tortuosity_vs_frac_above": {
+          "rho": -0.367032967032967,
+          "pvalue": 0.19673887170748847,
+          "ci95": [
+            -0.7513034991172285,
+            0.20309784394499086
+          ],
+          "n": 14
+        }
+      },
+      "trajectory_per_trial": [
+        {
+          "trial_index": 19,
+          "file_name": "11-22-2019-11-02 AM-Mohammad-205_Trial6_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 4772.759395578698,
+          "straight_line_px": 449.86606316342375,
+          "tortuosity": 10.609289711735576,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.017292214519085185,
+          "n_samples": 12549
+        },
+        {
+          "trial_index": 20,
+          "file_name": "11-22-2019-11-14 AM-Mohammad-207_Trial1_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 13256.555468207058,
+          "straight_line_px": 449.69556108829113,
+          "tortuosity": 29.478955576357862,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.06867606546750932,
+          "n_samples": 30855
+        },
+        {
+          "trial_index": 32,
+          "file_name": "11-22-2019-3-29 PM-Mohammad-201_Trial3_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 8262.526264389737,
+          "straight_line_px": 450.86391628468675,
+          "tortuosity": 18.32598699065678,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.007444875859366651,
+          "n_samples": 28073
+        },
+        {
+          "trial_index": 39,
+          "file_name": "11-23-2019-2-25 PM-Mohammad-205_Trial1_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 10291.879254365052,
+          "straight_line_px": 450.78795407667684,
+          "tortuosity": 22.830865734745107,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.012056706266837433,
+          "n_samples": 22643
+        },
+        {
+          "trial_index": 47,
+          "file_name": "11-23-2019-4-04 PM-Mohammad-207_Trial3_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 2758.6948167877817,
+          "straight_line_px": 449.9764643026301,
+          "tortuosity": 6.130753574107891,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.14087250064918203,
+          "n_samples": 7702
+        },
+        {
+          "trial_index": 53,
+          "file_name": "11-24-2019-2-17 PM-Mohammad-207_Trial1_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 3411.4765766418145,
+          "straight_line_px": 451.27435025987717,
+          "tortuosity": 7.5596509632715305,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.08350798000967274,
+          "n_samples": 6203
+        },
+        {
+          "trial_index": 60,
+          "file_name": "11-24-2019-3-10 PM-Mohammad-205_Trial2_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 952.8468039123118,
+          "straight_line_px": 451.0842263553923,
+          "tortuosity": 2.112347868181938,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.28816946442845726,
+          "n_samples": 2502
+        },
+        {
+          "trial_index": 65,
+          "file_name": "11-24-2019-4-40 PM-Mohammad-204_Trial4_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 1121.2514925513658,
+          "straight_line_px": 451.99390112030187,
+          "tortuosity": 2.4806783670581773,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.07567567567567568,
+          "n_samples": 3145
+        },
+        {
+          "trial_index": 68,
+          "file_name": "11-24-2019-5-04 PM-Mohammad-201_Trial1_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 3685.0303841309924,
+          "straight_line_px": 451.7701528337454,
+          "tortuosity": 8.156869950386275,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.008054018874064432,
+          "n_samples": 12292
+        },
+        {
+          "trial_index": 82,
+          "file_name": "11-26-2019-11-25 AM-Mohammad-207_Trial6_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 1375.01455225172,
+          "straight_line_px": 116.06249645030182,
+          "tortuosity": 11.847190904087643,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0707070707070707,
+          "n_samples": 1287
+        },
+        {
+          "trial_index": 87,
+          "file_name": "11-26-2019-12-16 PM-Mohammad-204_Trial3_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 2994.9407034511587,
+          "straight_line_px": 450.82077377347014,
+          "tortuosity": 6.643306781058111,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.023809523809523808,
+          "n_samples": 7182
+        },
+        {
+          "trial_index": 91,
+          "file_name": "11-27-2019-10-10 AM-Mohammad-204_Trial1_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 2818.5445123734667,
+          "straight_line_px": 452.7574036312146,
+          "tortuosity": 6.225286411151129,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.005561100812776273,
+          "n_samples": 7013
+        },
+        {
+          "trial_index": 106,
+          "file_name": "11-27-2019-11-22 AM-Mohammad-205_Trial5_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 1571.986371560658,
+          "straight_line_px": 451.0839508324044,
+          "tortuosity": 3.484908670902178,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.017107618858165904,
+          "n_samples": 5027
+        },
+        {
+          "trial_index": 110,
+          "file_name": "11-27-2019-11-42 AM-Mohammad-207_Trial3_Loc4.avi.dat",
+          "group": "Loc4",
+          "animal": "?",
+          "path_length_px": 559.7344720724784,
+          "straight_line_px": 450.8134817005026,
+          "tortuosity": 1.241609878127685,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.04101765316718588,
+          "n_samples": 1926
+        }
+      ],
+      "cleaning_provenance": [
+        {
+          "trial_index": 19,
+          "n_total": 12602,
+          "n_after_box": 12602,
+          "n_after_dejump": 12602,
+          "n_after_coverage": 12549
+        },
+        {
+          "trial_index": 20,
+          "n_total": 31058,
+          "n_after_box": 31056,
+          "n_after_dejump": 30941,
+          "n_after_coverage": 30855
+        },
+        {
+          "trial_index": 32,
+          "n_total": 28162,
+          "n_after_box": 28099,
+          "n_after_dejump": 28098,
+          "n_after_coverage": 28073
+        },
+        {
+          "trial_index": 39,
+          "n_total": 22674,
+          "n_after_box": 22674,
+          "n_after_dejump": 22674,
+          "n_after_coverage": 22643
+        },
+        {
+          "trial_index": 47,
+          "n_total": 9073,
+          "n_after_box": 7704,
+          "n_after_dejump": 7702,
+          "n_after_coverage": 7702
+        },
+        {
+          "trial_index": 53,
+          "n_total": 6260,
+          "n_after_box": 6256,
+          "n_after_dejump": 6234,
+          "n_after_coverage": 6203
+        },
+        {
+          "trial_index": 60,
+          "n_total": 2516,
+          "n_after_box": 2516,
+          "n_after_dejump": 2516,
+          "n_after_coverage": 2502
+        },
+        {
+          "trial_index": 65,
+          "n_total": 3207,
+          "n_after_box": 3207,
+          "n_after_dejump": 3207,
+          "n_after_coverage": 3145
+        },
+        {
+          "trial_index": 68,
+          "n_total": 12329,
+          "n_after_box": 12329,
+          "n_after_dejump": 12329,
+          "n_after_coverage": 12292
+        },
+        {
+          "trial_index": 82,
+          "n_total": 1892,
+          "n_after_box": 1892,
+          "n_after_dejump": 1790,
+          "n_after_coverage": 1287
+        },
+        {
+          "trial_index": 87,
+          "n_total": 7366,
+          "n_after_box": 7223,
+          "n_after_dejump": 7222,
+          "n_after_coverage": 7182
+        },
+        {
+          "trial_index": 91,
+          "n_total": 7065,
+          "n_after_box": 7065,
+          "n_after_dejump": 7065,
+          "n_after_coverage": 7013
+        },
+        {
+          "trial_index": 106,
+          "n_total": 5070,
+          "n_after_box": 5070,
+          "n_after_dejump": 5070,
+          "n_after_coverage": 5027
+        },
+        {
+          "trial_index": 110,
+          "n_total": 1947,
+          "n_after_box": 1947,
+          "n_after_dejump": 1947,
+          "n_after_coverage": 1926
+        }
+      ]
+    },
+    "Loc5": {
+      "group": "Loc5",
+      "n_trials": 17,
+      "chosen_L": 15,
+      "L_fallback_used": false,
+      "coverage_frac": 0.6510500807754442,
+      "L_scan": [
+        {
+          "L": 40,
+          "n_visited_bins": 103,
+          "coverage_frac": 0.8446601941747572
+        },
+        {
+          "L": 30,
+          "n_visited_bins": 172,
+          "coverage_frac": 0.8662790697674418
+        },
+        {
+          "L": 25,
+          "n_visited_bins": 239,
+          "coverage_frac": 0.7949790794979079
+        },
+        {
+          "L": 20,
+          "n_visited_bins": 367,
+          "coverage_frac": 0.7356948228882834
+        },
+        {
+          "L": 15,
+          "n_visited_bins": 619,
+          "coverage_frac": 0.6510500807754442
+        },
+        {
+          "L": 10,
+          "n_visited_bins": 1216,
+          "coverage_frac": 0.5287828947368421
+        }
+      ],
+      "samples_total": 200843,
+      "n_visited_bins": 619,
+      "endpoint": [
+        441.0,
+        129.0
+      ],
+      "grid_shape": [
+        19,
+        39
+      ],
+      "sparseness": {
+        "n_valid_bins": 403,
+        "cutoff": 0.001,
+        "frac_above_1xMAD": 0.9801488833746899,
+        "frac_above_3xMAD": 0.062034739454094295,
+        "frac_above_5xMAD": 0.007444168734491315,
+        "top5pct_mass_share": 0.099680441689035,
+        "gini": 0.19503554097100015,
+        "normalized_entropy": 0.9895064411079134,
+        "gini_uniform_null": 0.0,
+        "gini_uniform_null_note": "Analytic floor only: Gini of a same-N constant field is 0 by construction (no sampling variability). Kept for reference; significance comes from the Monte-Carlo null below.",
+        "gini_mc_null": {
+          "observed_gini": 0.19503554097100015,
+          "null_gini_mean": 0.04905685321691529,
+          "null_gini_std": 0.002188611867409822,
+          "null_gini_ci95": [
+            0.04481106393502016,
+            0.05330929350689176
+          ],
+          "pvalue": 0.0,
+          "n_draws": 2000,
+          "seed": 1234,
+          "note": "Monte-Carlo null (H0=spatially uniform field): per-bin sample counts held fixed; observed total odor mass (sum of clip(mean,0)*n_samples over valid bins) redistributed each draw via a multinomial over the pooled samples with equal per-sample probability, giving each bin a synthetic mean = allocated mass / its sample count; Gini recomputed per draw. p = fraction(null Gini >= observed Gini)."
+        }
+      },
+      "distance": {
+        "mean": {
+          "label": "mean",
+          "ols_log": {
+            "intercept": -7.158909885043618,
+            "slope": 0.014528840645088312,
+            "slope_se": 0.001438063843718242,
+            "slope_ci95": [
+              -0.0037434929768859985,
+              0.032801174267062624
+            ],
+            "n": 3,
+            "dof": 1
+          },
+          "ols_n_bins": 3,
+          "exp_decay": {
+            "a": 0.0003311481053683285,
+            "lambda": 139.4267394440542,
+            "lambda_se": 34.88867156145111,
+            "lambda_ci95": [
+              70.83866938251872,
+              208.01480950558965
+            ],
+            "c": 0.00029663799693427503,
+            "n": 403,
+            "degenerate": false
+          },
+          "exp_n_bins": 403
+        },
+        "max": {
+          "label": "max",
+          "ols_log": {
+            "intercept": -5.821115235149123,
+            "slope": -0.0033303181961861026,
+            "slope_se": 0.0008880502447601718,
+            "slope_ci95": [
+              -0.005114019607302457,
+              -0.0015466167850697488
+            ],
+            "n": 52,
+            "dof": 50
+          },
+          "ols_n_bins": 52,
+          "exp_decay": {
+            "a": 0.015406192704471643,
+            "lambda": 14.337938847764665,
+            "lambda_se": 0.9713385145745419,
+            "lambda_ci95": [
+              12.428372472508402,
+              16.24750522302093
+            ],
+            "c": 0.0007859164113333539,
+            "n": 403,
+            "degenerate": false
+          },
+          "exp_n_bins": 403
+        }
+      },
+      "trajectory_summary": {
+        "path_length_px": {
+          "median": 3140.183562608443,
+          "q1": 1709.1967240697757,
+          "q3": 10278.864521935358,
+          "iqr": 8569.667797865583,
+          "n": 17
+        },
+        "tortuosity": {
+          "median": 7.226431339917745,
+          "q1": 3.9185930861886047,
+          "q3": 23.73076295129428,
+          "iqr": 19.812169865105677,
+          "n": 17
+        },
+        "n_encounters": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 1.0,
+          "iqr": 1.0,
+          "n": 17
+        },
+        "frac_path_above_threshold": {
+          "median": 0.018379888268156425,
+          "q1": 0.008370138196324263,
+          "q3": 0.056256817827645314,
+          "iqr": 0.04788667963132105,
+          "n": 17
+        },
+        "spearman_tortuosity_vs_nencounters": {
+          "rho": 0.6034317224811696,
+          "pvalue": 0.01032804948793187,
+          "ci95": [
+            0.17294821726109078,
+            0.8403457246321646
+          ],
+          "n": 17
+        },
+        "spearman_tortuosity_vs_frac_above": {
+          "rho": -0.5245098039215687,
+          "pvalue": 0.030654016087948873,
+          "ci95": [
+            -0.8027731398274927,
+            -0.05865116653391431
+          ],
+          "n": 17
+        }
+      },
+      "trajectory_per_trial": [
+        {
+          "trial_index": 9,
+          "file_name": "11-20-2019-10-38 AM-Mohammad-205_Trial1_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 10278.864521935358,
+          "straight_line_px": 433.14513498921224,
+          "tortuosity": 23.73076295129428,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.00034246575342465754,
+          "n_samples": 43800
+        },
+        {
+          "trial_index": 10,
+          "file_name": "11-20-2019-10-49 AM-Mohammad-205_Trial1_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 19850.15287957962,
+          "straight_line_px": 430.80651070998994,
+          "tortuosity": 46.07672443683734,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.002663825253063399,
+          "n_samples": 1877
+        },
+        {
+          "trial_index": 13,
+          "file_name": "11-22-2019-10-33 AM-Mohammad-205_Trial1_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 14643.773568939285,
+          "straight_line_px": 434.6019993102897,
+          "tortuosity": 33.694676030434394,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.018379888268156425,
+          "n_samples": 17900
+        },
+        {
+          "trial_index": 24,
+          "file_name": "11-22-2019-11-39 AM-Mohammad-207_Trial5_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 1083.8964390309636,
+          "straight_line_px": 435.5703086885453,
+          "tortuosity": 2.4884534538050986,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.12904547316673495,
+          "n_samples": 2441
+        },
+        {
+          "trial_index": 29,
+          "file_name": "11-22-2019-2-56 PM-Mohammad-211_Trial6_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 3743.2828267874056,
+          "straight_line_px": 434.1902551335318,
+          "tortuosity": 8.621296269388147,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.010978394519585455,
+          "n_samples": 11386
+        },
+        {
+          "trial_index": 56,
+          "file_name": "11-24-2019-2-34 PM-Mohammad-207_Trial4_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 3140.183562608443,
+          "straight_line_px": 434.5413960086399,
+          "tortuosity": 7.226431339917745,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.047938095687458715,
+          "n_samples": 10597
+        },
+        {
+          "trial_index": 59,
+          "file_name": "11-24-2019-3-02 PM-Mohammad-205_Trial1_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 1709.1967240697757,
+          "straight_line_px": 436.1761189478888,
+          "tortuosity": 3.9185930861886047,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.056256817827645314,
+          "n_samples": 6417
+        },
+        {
+          "trial_index": 63,
+          "file_name": "11-24-2019-4-27 PM-Mohammad-204_Trial2_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 2494.235001006673,
+          "straight_line_px": 435.0846586030519,
+          "tortuosity": 5.732757870652204,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.033654688869412794,
+          "n_samples": 5705
+        },
+        {
+          "trial_index": 71,
+          "file_name": "11-24-2019-5-50 PM-Mohammad-211_Trial1_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 967.8628991490033,
+          "straight_line_px": 436.0336817563388,
+          "tortuosity": 2.2196975592584094,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0,
+          "n_samples": 2264
+        },
+        {
+          "trial_index": 74,
+          "file_name": "11-26-2019-10-24 AM-Mohammad-204_Trial2_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 879.4136320074557,
+          "straight_line_px": 436.09818721979246,
+          "tortuosity": 2.0165496160712846,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.45434543454345433,
+          "n_samples": 2727
+        },
+        {
+          "trial_index": 75,
+          "file_name": "11-26-2019-10-37 AM-Mohammad-204_Trial3_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 2221.556153655737,
+          "straight_line_px": 435.78495056561667,
+          "tortuosity": 5.09782669358435,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.1375086266390614,
+          "n_samples": 5796
+        },
+        {
+          "trial_index": 81,
+          "file_name": "11-26-2019-11-17 AM-Mohammad-207_Trial5_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 11437.44147152776,
+          "straight_line_px": 435.2242011808633,
+          "tortuosity": 26.27942435300094,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.008370138196324263,
+          "n_samples": 28076
+        },
+        {
+          "trial_index": 89,
+          "file_name": "11-26-2019-9-44 AM-Mohammad-201_Trial1_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 10591.688632337464,
+          "straight_line_px": 436.09715940772736,
+          "tortuosity": 24.28745155488345,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.025155055531515938,
+          "n_samples": 34665
+        },
+        {
+          "trial_index": 96,
+          "file_name": "11-27-2019-10-29 AM-Mohammad-204_Trial6_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 3846.2878530306966,
+          "straight_line_px": 436.1031557859242,
+          "tortuosity": 8.819674432529848,
+          "n_encounters": 3,
+          "frac_path_above_threshold": 0.016153457849570924,
+          "n_samples": 9905
+        },
+        {
+          "trial_index": 101,
+          "file_name": "11-27-2019-10-57 AM-Mohammad-211_Trial6_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 4990.782970931047,
+          "straight_line_px": 435.208675665059,
+          "tortuosity": 11.46756314842401,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.004698601879440752,
+          "n_samples": 8726
+        },
+        {
+          "trial_index": 104,
+          "file_name": "11-27-2019-11-15 AM-Mohammad-205_Trial3_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 1077.9794112834368,
+          "straight_line_px": 435.05627736709846,
+          "tortuosity": 2.4777930290012637,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.06180939226519337,
+          "n_samples": 2896
+        },
+        {
+          "trial_index": 112,
+          "file_name": "11-27-2019-11-48 AM-Mohammad-207_Trial5_Loc5.avi.dat",
+          "group": "Loc5",
+          "animal": "?",
+          "path_length_px": 2023.986521958339,
+          "straight_line_px": 435.55423462436835,
+          "tortuosity": 4.646921923980075,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.01712268314210062,
+          "n_samples": 5665
+        }
+      ],
+      "cleaning_provenance": [
+        {
+          "trial_index": 9,
+          "n_total": 55227,
+          "n_after_box": 43816,
+          "n_after_dejump": 43810,
+          "n_after_coverage": 43800
+        },
+        {
+          "trial_index": 10,
+          "n_total": 6205,
+          "n_after_box": 6165,
+          "n_after_dejump": 4380,
+          "n_after_coverage": 1877
+        },
+        {
+          "trial_index": 13,
+          "n_total": 18394,
+          "n_after_box": 18347,
+          "n_after_dejump": 17921,
+          "n_after_coverage": 17900
+        },
+        {
+          "trial_index": 24,
+          "n_total": 2500,
+          "n_after_box": 2500,
+          "n_after_dejump": 2500,
+          "n_after_coverage": 2441
+        },
+        {
+          "trial_index": 29,
+          "n_total": 11614,
+          "n_after_box": 11411,
+          "n_after_dejump": 11409,
+          "n_after_coverage": 11386
+        },
+        {
+          "trial_index": 56,
+          "n_total": 10612,
+          "n_after_box": 10612,
+          "n_after_dejump": 10612,
+          "n_after_coverage": 10597
+        },
+        {
+          "trial_index": 59,
+          "n_total": 6470,
+          "n_after_box": 6470,
+          "n_after_dejump": 6470,
+          "n_after_coverage": 6417
+        },
+        {
+          "trial_index": 63,
+          "n_total": 5729,
+          "n_after_box": 5729,
+          "n_after_dejump": 5729,
+          "n_after_coverage": 5705
+        },
+        {
+          "trial_index": 71,
+          "n_total": 2264,
+          "n_after_box": 2264,
+          "n_after_dejump": 2264,
+          "n_after_coverage": 2264
+        },
+        {
+          "trial_index": 74,
+          "n_total": 2805,
+          "n_after_box": 2777,
+          "n_after_dejump": 2774,
+          "n_after_coverage": 2727
+        },
+        {
+          "trial_index": 75,
+          "n_total": 5943,
+          "n_after_box": 5846,
+          "n_after_dejump": 5822,
+          "n_after_coverage": 5796
+        },
+        {
+          "trial_index": 81,
+          "n_total": 29053,
+          "n_after_box": 28382,
+          "n_after_dejump": 28100,
+          "n_after_coverage": 28076
+        },
+        {
+          "trial_index": 89,
+          "n_total": 35290,
+          "n_after_box": 34740,
+          "n_after_dejump": 34728,
+          "n_after_coverage": 34665
+        },
+        {
+          "trial_index": 96,
+          "n_total": 9980,
+          "n_after_box": 9980,
+          "n_after_dejump": 9947,
+          "n_after_coverage": 9905
+        },
+        {
+          "trial_index": 101,
+          "n_total": 9435,
+          "n_after_box": 8794,
+          "n_after_dejump": 8747,
+          "n_after_coverage": 8726
+        },
+        {
+          "trial_index": 104,
+          "n_total": 2921,
+          "n_after_box": 2921,
+          "n_after_dejump": 2921,
+          "n_after_coverage": 2896
+        },
+        {
+          "trial_index": 112,
+          "n_total": 5686,
+          "n_after_box": 5686,
+          "n_after_dejump": 5686,
+          "n_after_coverage": 5665
+        }
+      ]
+    },
+    "Loc6": {
+      "group": "Loc6",
+      "n_trials": 19,
+      "chosen_L": 10,
+      "L_fallback_used": false,
+      "coverage_frac": 0.6793279766252739,
+      "L_scan": [
+        {
+          "L": 40,
+          "n_visited_bins": 102,
+          "coverage_frac": 0.9607843137254902
+        },
+        {
+          "L": 30,
+          "n_visited_bins": 175,
+          "coverage_frac": 0.9714285714285714
+        },
+        {
+          "L": 25,
+          "n_visited_bins": 243,
+          "coverage_frac": 0.9423868312757202
+        },
+        {
+          "L": 20,
+          "n_visited_bins": 373,
+          "coverage_frac": 0.9302949061662198
+        },
+        {
+          "L": 15,
+          "n_visited_bins": 650,
+          "coverage_frac": 0.8338461538461538
+        },
+        {
+          "L": 10,
+          "n_visited_bins": 1369,
+          "coverage_frac": 0.6793279766252739
+        }
+      ],
+      "samples_total": 241701,
+      "n_visited_bins": 1369,
+      "endpoint": [
+        506.0,
+        61.0
+      ],
+      "grid_shape": [
+        28,
+        58
+      ],
+      "sparseness": {
+        "n_valid_bins": 930,
+        "cutoff": 0.001,
+        "frac_above_1xMAD": 0.9838709677419355,
+        "frac_above_3xMAD": 0.0935483870967742,
+        "frac_above_5xMAD": 0.007526881720430108,
+        "top5pct_mass_share": 0.09778480933886331,
+        "gini": 0.16313366438678759,
+        "normalized_entropy": 0.9931050216918489,
+        "gini_uniform_null": 0.0,
+        "gini_uniform_null_note": "Analytic floor only: Gini of a same-N constant field is 0 by construction (no sampling variability). Kept for reference; significance comes from the Monte-Carlo null below.",
+        "gini_mc_null": {
+          "observed_gini": 0.16313366438678759,
+          "null_gini_mean": 0.06070838563822808,
+          "null_gini_std": 0.0017274493973326206,
+          "null_gini_ci95": [
+            0.05742332585775613,
+            0.06411895362128295
+          ],
+          "pvalue": 0.0,
+          "n_draws": 2000,
+          "seed": 1234,
+          "note": "Monte-Carlo null (H0=spatially uniform field): per-bin sample counts held fixed; observed total odor mass (sum of clip(mean,0)*n_samples over valid bins) redistributed each draw via a multinomial over the pooled samples with equal per-sample probability, giving each bin a synthetic mean = allocated mass / its sample count; Gini recomputed per draw. p = fraction(null Gini >= observed Gini)."
+        }
+      },
+      "distance": {
+        "mean": {
+          "label": "mean",
+          "ols_log": {
+            "intercept": -6.6470474472750025,
+            "slope": -0.0018855347283439517,
+            "slope_se": 0.0019904332618847897,
+            "slope_ci95": [
+              -0.006755949465763,
+              0.002984880009075097
+            ],
+            "n": 8,
+            "dof": 6
+          },
+          "ols_n_bins": 8,
+          "exp_decay": {
+            "a": 0.00022445275857853648,
+            "lambda": 339.25271469050574,
+            "lambda_se": 176.966632618947,
+            "lambda_ci95": [
+              -8.048966076965826,
+              686.5543954579773
+            ],
+            "c": 0.0003332326363322785,
+            "n": 930,
+            "degenerate": false
+          },
+          "exp_n_bins": 930
+        },
+        "max": {
+          "label": "max",
+          "ols_log": {
+            "intercept": -5.901693549290017,
+            "slope": -0.003939652577596038,
+            "slope_se": 0.0005839437159248722,
+            "slope_ci95": [
+              -0.005092131172425317,
+              -0.0027871739827667595
+            ],
+            "n": 177,
+            "dof": 175
+          },
+          "ols_n_bins": 177,
+          "exp_decay": {
+            "a": 0.0032247670316118715,
+            "lambda": 53.828440550527176,
+            "lambda_se": 10.781640948648667,
+            "lambda_ci95": [
+              32.66918602055103,
+              74.98769508050333
+            ],
+            "c": 0.0007233847614913556,
+            "n": 930,
+            "degenerate": false
+          },
+          "exp_n_bins": 930
+        }
+      },
+      "trajectory_summary": {
+        "path_length_px": {
+          "median": 2768.7883219030196,
+          "q1": 1639.345947708769,
+          "q3": 6313.807720564238,
+          "iqr": 4674.461772855469,
+          "n": 19
+        },
+        "tortuosity": {
+          "median": 5.535974736470828,
+          "q1": 3.2696593989367457,
+          "q3": 12.604449693002302,
+          "iqr": 9.334790294065556,
+          "n": 19
+        },
+        "n_encounters": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 1.0,
+          "iqr": 1.0,
+          "n": 19
+        },
+        "frac_path_above_threshold": {
+          "median": 0.020867708434436572,
+          "q1": 0.007013070839200669,
+          "q3": 0.039910321136266275,
+          "iqr": 0.032897250297065604,
+          "n": 19
+        },
+        "spearman_tortuosity_vs_nencounters": {
+          "rho": 0.15914047399635087,
+          "pvalue": 0.5152067996666233,
+          "ci95": [
+            -0.3180591044538979,
+            0.5720035792674828
+          ],
+          "n": 19
+        },
+        "spearman_tortuosity_vs_frac_above": {
+          "rho": -0.27017543859649124,
+          "pvalue": 0.2632762699286859,
+          "ci95": [
+            -0.6452073368172052,
+            0.20977686624182915
+          ],
+          "n": 19
+        }
+      },
+      "trajectory_per_trial": [
+        {
+          "trial_index": 11,
+          "file_name": "11-20-2019-11-28 AM-Mohammad-204_Trial1_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 11955.336630387763,
+          "straight_line_px": 438.4379472792505,
+          "tortuosity": 27.268024368276574,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.0071433708080638585,
+          "n_samples": 41717
+        },
+        {
+          "trial_index": 14,
+          "file_name": "11-22-2019-10-40 AM-Mohammad-205_Trial2_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 2768.7883219030196,
+          "straight_line_px": 500.1446815973218,
+          "tortuosity": 5.535974736470828,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.023297896403528612,
+          "n_samples": 4421
+        },
+        {
+          "trial_index": 22,
+          "file_name": "11-22-2019-11-26 AM-Mohammad-207_Trial3_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 5222.5285002578985,
+          "straight_line_px": 500.32081111868496,
+          "tortuosity": 10.438359516928074,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.022849360671861996,
+          "n_samples": 13217
+        },
+        {
+          "trial_index": 26,
+          "file_name": "11-22-2019-11-52 AM-Mohammad-211_Trial1_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 1401.9043589829867,
+          "straight_line_px": 500.05773871743935,
+          "tortuosity": 2.8034849787119107,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.009009009009009009,
+          "n_samples": 2331
+        },
+        {
+          "trial_index": 34,
+          "file_name": "11-22-2019-4-08 PM-Mohammad-204_Trial3_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 4724.663575264257,
+          "straight_line_px": 500.3177230808975,
+          "tortuosity": 9.443326424997172,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.01254938415059261,
+          "n_samples": 12909
+        },
+        {
+          "trial_index": 38,
+          "file_name": "11-23-2019-1-58 PM-Mohammad-204_Trial4_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 6200.062882628635,
+          "straight_line_px": 500.90138160572053,
+          "tortuosity": 12.377811502043233,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0442123336671913,
+          "n_samples": 20967
+        },
+        {
+          "trial_index": 40,
+          "file_name": "11-23-2019-2-33 PM-Mohammad-205_Trial2_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 2807.050354307142,
+          "straight_line_px": 500.7394031790589,
+          "tortuosity": 5.605810799960896,
+          "n_encounters": 2,
+          "frac_path_above_threshold": 0.11497057557054687,
+          "n_samples": 6967
+        },
+        {
+          "trial_index": 48,
+          "file_name": "11-23-2019-4-09 PM-Mohammad-207_Trial4_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 15574.180844615337,
+          "straight_line_px": 501.60552167865956,
+          "tortuosity": 31.048663085875138,
+          "n_encounters": 4,
+          "frac_path_above_threshold": 0.030867922841368828,
+          "n_samples": 44739
+        },
+        {
+          "trial_index": 54,
+          "file_name": "11-24-2019-2-26 PM-Mohammad-207_Trial2_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 1482.131890420574,
+          "straight_line_px": 501.62203936009314,
+          "tortuosity": 2.9546785709640933,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.08966304968589378,
+          "n_samples": 1751
+        },
+        {
+          "trial_index": 66,
+          "file_name": "11-24-2019-4-45 PM-Mohammad-204_Trial5_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 2199.7312865841427,
+          "straight_line_px": 501.16468153973955,
+          "tortuosity": 4.389238443191684,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.014629451395572667,
+          "n_samples": 5195
+        },
+        {
+          "trial_index": 69,
+          "file_name": "11-24-2019-5-11 PM-Mohammad-201_Trial2_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 11416.006180319551,
+          "straight_line_px": 501.5556407027464,
+          "tortuosity": 22.76119587514598,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.020867708434436572,
+          "n_samples": 30909
+        },
+        {
+          "trial_index": 72,
+          "file_name": "11-26-2019-10-07 AM-Mohammad-201_Trial4_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 9121.661264732587,
+          "straight_line_px": 501.74597097532194,
+          "tortuosity": 18.17983958496247,
+          "n_encounters": 3,
+          "frac_path_above_threshold": 0.005500758725341426,
+          "n_samples": 26360
+        },
+        {
+          "trial_index": 80,
+          "file_name": "11-26-2019-11-14 AM-Mohammad-207_Trial4_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 1081.589979801777,
+          "straight_line_px": 501.5915412643572,
+          "tortuosity": 2.1563162270947056,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.12930186823992135,
+          "n_samples": 2034
+        },
+        {
+          "trial_index": 84,
+          "file_name": "11-26-2019-11-47 AM-Mohammad-211_Trial2_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 1310.8937666506713,
+          "straight_line_px": 501.69044476869396,
+          "tortuosity": 2.6129534264003436,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.03560830860534125,
+          "n_samples": 1348
+        },
+        {
+          "trial_index": 85,
+          "file_name": "11-26-2019-12-04 PM-Mohammad-204_Trial1_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 6427.55255849984,
+          "straight_line_px": 500.93590010665946,
+          "tortuosity": 12.831087883961368,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.003962637984715539,
+          "n_samples": 14132
+        },
+        {
+          "trial_index": 94,
+          "file_name": "11-27-2019-10-21 AM-Mohammad-204_Trial4_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 538.1109466971575,
+          "straight_line_px": 501.2835452762188,
+          "tortuosity": 1.0734662084322875,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.05992949471210341,
+          "n_samples": 851
+        },
+        {
+          "trial_index": 98,
+          "file_name": "11-27-2019-10-45 AM-Mohammad-211_Trial3_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 1933.9480135667686,
+          "straight_line_px": 501.4993228090268,
+          "tortuosity": 3.8563322533203594,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0004921259842519685,
+          "n_samples": 4064
+        },
+        {
+          "trial_index": 102,
+          "file_name": "11-27-2019-11-07 AM-Mohammad-205_Trial1_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 2248.8881063845183,
+          "straight_line_px": 501.32760041785946,
+          "tortuosity": 4.485865339371016,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.006882770870337478,
+          "n_samples": 4504
+        },
+        {
+          "trial_index": 113,
+          "file_name": "11-27-2019-11-53 AM-Mohammad-207_Trial6_Loc6.avi.dat",
+          "group": "Loc6",
+          "animal": "?",
+          "path_length_px": 1796.560004996964,
+          "straight_line_px": 501.1827941645125,
+          "tortuosity": 3.5846402269093978,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0027397260273972603,
+          "n_samples": 3285
+        }
+      ],
+      "cleaning_provenance": [
+        {
+          "trial_index": 11,
+          "n_total": 45083,
+          "n_after_box": 42341,
+          "n_after_dejump": 42320,
+          "n_after_coverage": 41717
+        },
+        {
+          "trial_index": 14,
+          "n_total": 4569,
+          "n_after_box": 4569,
+          "n_after_dejump": 4453,
+          "n_after_coverage": 4421
+        },
+        {
+          "trial_index": 22,
+          "n_total": 13865,
+          "n_after_box": 13337,
+          "n_after_dejump": 13253,
+          "n_after_coverage": 13217
+        },
+        {
+          "trial_index": 26,
+          "n_total": 2384,
+          "n_after_box": 2384,
+          "n_after_dejump": 2384,
+          "n_after_coverage": 2331
+        },
+        {
+          "trial_index": 34,
+          "n_total": 13276,
+          "n_after_box": 12952,
+          "n_after_dejump": 12949,
+          "n_after_coverage": 12909
+        },
+        {
+          "trial_index": 38,
+          "n_total": 21700,
+          "n_after_box": 21088,
+          "n_after_dejump": 20995,
+          "n_after_coverage": 20967
+        },
+        {
+          "trial_index": 40,
+          "n_total": 7040,
+          "n_after_box": 7040,
+          "n_after_dejump": 6996,
+          "n_after_coverage": 6967
+        },
+        {
+          "trial_index": 48,
+          "n_total": 47320,
+          "n_after_box": 45102,
+          "n_after_dejump": 44890,
+          "n_after_coverage": 44739
+        },
+        {
+          "trial_index": 54,
+          "n_total": 1832,
+          "n_after_box": 1832,
+          "n_after_dejump": 1780,
+          "n_after_coverage": 1751
+        },
+        {
+          "trial_index": 66,
+          "n_total": 5410,
+          "n_after_box": 5275,
+          "n_after_dejump": 5219,
+          "n_after_coverage": 5195
+        },
+        {
+          "trial_index": 69,
+          "n_total": 31589,
+          "n_after_box": 30980,
+          "n_after_dejump": 30975,
+          "n_after_coverage": 30909
+        },
+        {
+          "trial_index": 72,
+          "n_total": 27101,
+          "n_after_box": 26515,
+          "n_after_dejump": 26384,
+          "n_after_coverage": 26360
+        },
+        {
+          "trial_index": 80,
+          "n_total": 2060,
+          "n_after_box": 2060,
+          "n_after_dejump": 2060,
+          "n_after_coverage": 2034
+        },
+        {
+          "trial_index": 84,
+          "n_total": 1421,
+          "n_after_box": 1421,
+          "n_after_dejump": 1383,
+          "n_after_coverage": 1348
+        },
+        {
+          "trial_index": 85,
+          "n_total": 14486,
+          "n_after_box": 14465,
+          "n_after_dejump": 14169,
+          "n_after_coverage": 14132
+        },
+        {
+          "trial_index": 94,
+          "n_total": 923,
+          "n_after_box": 923,
+          "n_after_dejump": 923,
+          "n_after_coverage": 851
+        },
+        {
+          "trial_index": 98,
+          "n_total": 4174,
+          "n_after_box": 4174,
+          "n_after_dejump": 4090,
+          "n_after_coverage": 4064
+        },
+        {
+          "trial_index": 102,
+          "n_total": 4523,
+          "n_after_box": 4523,
+          "n_after_dejump": 4523,
+          "n_after_coverage": 4504
+        },
+        {
+          "trial_index": 113,
+          "n_total": 3773,
+          "n_after_box": 3773,
+          "n_after_dejump": 3773,
+          "n_after_coverage": 3285
+        }
+      ]
+    },
+    "anotherLoc": {
+      "group": "anotherLoc",
+      "n_trials": 9,
+      "chosen_L": 15,
+      "L_fallback_used": false,
+      "coverage_frac": 0.6791862284820032,
+      "L_scan": [
+        {
+          "L": 40,
+          "n_visited_bins": 105,
+          "coverage_frac": 0.9809523809523809
+        },
+        {
+          "L": 30,
+          "n_visited_bins": 183,
+          "coverage_frac": 0.9453551912568307
+        },
+        {
+          "L": 25,
+          "n_visited_bins": 258,
+          "coverage_frac": 0.8449612403100775
+        },
+        {
+          "L": 20,
+          "n_visited_bins": 369,
+          "coverage_frac": 0.7831978319783198
+        },
+        {
+          "L": 15,
+          "n_visited_bins": 639,
+          "coverage_frac": 0.6791862284820032
+        },
+        {
+          "L": 10,
+          "n_visited_bins": 1318,
+          "coverage_frac": 0.5493171471927162
+        }
+      ],
+      "samples_total": 283153,
+      "n_visited_bins": 639,
+      "endpoint": [
+        431.0,
+        96.0
+      ],
+      "grid_shape": [
+        19,
+        39
+      ],
+      "sparseness": {
+        "n_valid_bins": 434,
+        "cutoff": 0.001,
+        "frac_above_1xMAD": 0.9216589861751152,
+        "frac_above_3xMAD": 0.013824884792626729,
+        "frac_above_5xMAD": 0.0,
+        "top5pct_mass_share": 0.09931580019221346,
+        "gini": 0.14968891553737929,
+        "normalized_entropy": 0.992997684013944,
+        "gini_uniform_null": 0.0,
+        "gini_uniform_null_note": "Analytic floor only: Gini of a same-N constant field is 0 by construction (no sampling variability). Kept for reference; significance comes from the Monte-Carlo null below.",
+        "gini_mc_null": {
+          "observed_gini": 0.14968891553737929,
+          "null_gini_mean": 0.040255645586527,
+          "null_gini_std": 0.0017566618983062621,
+          "null_gini_ci95": [
+            0.03694344835636015,
+            0.04369611506352888
+          ],
+          "pvalue": 0.0,
+          "n_draws": 2000,
+          "seed": 1234,
+          "note": "Monte-Carlo null (H0=spatially uniform field): per-bin sample counts held fixed; observed total odor mass (sum of clip(mean,0)*n_samples over valid bins) redistributed each draw via a multinomial over the pooled samples with equal per-sample probability, giving each bin a synthetic mean = allocated mass / its sample count; Gini recomputed per draw. p = fraction(null Gini >= observed Gini)."
+        }
+      },
+      "distance": {
+        "mean": {
+          "label": "mean",
+          "ols_log": null,
+          "ols_n_bins": 0,
+          "exp_decay": {
+            "a": 0.09385517554894048,
+            "lambda": null,
+            "lambda_se": null,
+            "lambda_ci95": [
+              null,
+              null
+            ],
+            "c": -0.09350655619532258,
+            "n": 434,
+            "degenerate": true,
+            "degenerate_reason": "lambda>arena_diagonal(644px)",
+            "lambda_raw": 366017.28611223237
+          },
+          "exp_n_bins": 434
+        },
+        "max": {
+          "label": "max",
+          "ols_log": {
+            "intercept": -5.363773087613947,
+            "slope": -0.004372362294509678,
+            "slope_se": 0.0009560989349789341,
+            "slope_ci95": [
+              -0.006345653511186787,
+              -0.00239907107783257
+            ],
+            "n": 26,
+            "dof": 24
+          },
+          "ols_n_bins": 26,
+          "exp_decay": {
+            "a": 0.007792747324995456,
+            "lambda": 22.670923945128735,
+            "lambda_se": 3.985847564748136,
+            "lambda_ci95": [
+              14.836807039199487,
+              30.505040851057984
+            ],
+            "c": 0.0006320757761849028,
+            "n": 434,
+            "degenerate": false
+          },
+          "exp_n_bins": 434
+        }
+      },
+      "trajectory_summary": {
+        "path_length_px": {
+          "median": 11466.679429083728,
+          "q1": 6354.015628082085,
+          "q3": 13215.423254573743,
+          "iqr": 6861.407626491658,
+          "n": 9
+        },
+        "tortuosity": {
+          "median": 29.105966124209576,
+          "q1": 24.845395347719844,
+          "q3": 42.025777612097635,
+          "iqr": 17.18038226437779,
+          "n": 9
+        },
+        "n_encounters": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "iqr": 0.0,
+          "n": 9
+        },
+        "frac_path_above_threshold": {
+          "median": 0.0009795689896445563,
+          "q1": 0.0004610419548178884,
+          "q3": 0.001745355579221394,
+          "iqr": 0.0012843136244035055,
+          "n": 9
+        },
+        "spearman_tortuosity_vs_nencounters": {
+          "rho": 0.27386127875258304,
+          "pvalue": 0.4757972385180242,
+          "ci95": [
+            -0.4770193897548786,
+            0.7936382651798476
+          ],
+          "n": 9
+        },
+        "spearman_tortuosity_vs_frac_above": {
+          "rho": 0.016666666666666666,
+          "pvalue": 0.9660548039946862,
+          "ci95": [
+            -0.6547017351691841,
+            0.6733354299971751
+          ],
+          "n": 9
+        }
+      },
+      "trajectory_per_trial": [
+        {
+          "trial_index": 0,
+          "file_name": "11-15-2019-2-41 PM-Mohammad-207_Trial1_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 19214.722930636726,
+          "straight_line_px": 405.2657969399039,
+          "tortuosity": 47.41264393818569,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.00027907775535614615,
+          "n_samples": 46582
+        },
+        {
+          "trial_index": 1,
+          "file_name": "11-15-2019-3-17 PM-Mohammad-201_Trial1_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 14447.55656540965,
+          "straight_line_px": 343.7784470941174,
+          "tortuosity": 42.025777612097635,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0009795689896445563,
+          "n_samples": 42876
+        },
+        {
+          "trial_index": 2,
+          "file_name": "11-15-2019-3-48 PM-Mohammad-204_Trial1_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 2124.5699427613395,
+          "straight_line_px": 431.1051601737877,
+          "tortuosity": 4.928194183305252,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0004610419548178884,
+          "n_samples": 4338
+        },
+        {
+          "trial_index": 3,
+          "file_name": "11-15-2019-3-52 PM-Mohammad-204_Trial1_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 13215.423254573743,
+          "straight_line_px": 83.5453652989774,
+          "tortuosity": 158.18260183890177,
+          "n_encounters": 3,
+          "frac_path_above_threshold": 0.001745355579221394,
+          "n_samples": 67608
+        },
+        {
+          "trial_index": 4,
+          "file_name": "11-15-2019-4-24 PM-Mohammad-211_Trial1_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 12728.058756985138,
+          "straight_line_px": 421.05546034909645,
+          "tortuosity": 30.228936459896097,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0010177925211097708,
+          "n_samples": 26528
+        },
+        {
+          "trial_index": 5,
+          "file_name": "11-15-2019-4-42 PM-Mohammad-205_Trial1_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 11466.679429083728,
+          "straight_line_px": 403.5905962122551,
+          "tortuosity": 28.411661561740672,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0003515644618552559,
+          "n_samples": 19911
+        },
+        {
+          "trial_index": 6,
+          "file_name": "11-15-2019-4-48 PM-Mohammad-205_Trial2_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 10045.463289201954,
+          "straight_line_px": 404.31891497849983,
+          "tortuosity": 24.845395347719844,
+          "n_encounters": 1,
+          "frac_path_above_threshold": 0.0009625009625009625,
+          "n_samples": 25974
+        },
+        {
+          "trial_index": 7,
+          "file_name": "11-19-2019-12-03 PM-Mohammad-211_Trial2_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 5151.803077386452,
+          "straight_line_px": 321.247703978241,
+          "tortuosity": 16.036855714727217,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.0036211699164345403,
+          "n_samples": 32310
+        },
+        {
+          "trial_index": 8,
+          "file_name": "11-19-2019-12-25 PM-Mohammad-207_Trial1_anotherLoc.avi.dat",
+          "group": "anotherLoc",
+          "animal": "?",
+          "path_length_px": 6354.015628082085,
+          "straight_line_px": 218.30629503814964,
+          "tortuosity": 29.105966124209576,
+          "n_encounters": 0,
+          "frac_path_above_threshold": 0.007048044167743451,
+          "n_samples": 17026
+        }
+      ],
+      "cleaning_provenance": [
+        {
+          "trial_index": 0,
+          "n_total": 51849,
+          "n_after_box": 46596,
+          "n_after_dejump": 46582,
+          "n_after_coverage": 46582
+        },
+        {
+          "trial_index": 1,
+          "n_total": 46038,
+          "n_after_box": 42898,
+          "n_after_dejump": 42876,
+          "n_after_coverage": 42876
+        },
+        {
+          "trial_index": 2,
+          "n_total": 4363,
+          "n_after_box": 4363,
+          "n_after_dejump": 4363,
+          "n_after_coverage": 4338
+        },
+        {
+          "trial_index": 3,
+          "n_total": 74650,
+          "n_after_box": 67612,
+          "n_after_dejump": 67609,
+          "n_after_coverage": 67608
+        },
+        {
+          "trial_index": 4,
+          "n_total": 28524,
+          "n_after_box": 26553,
+          "n_after_dejump": 26537,
+          "n_after_coverage": 26528
+        },
+        {
+          "trial_index": 5,
+          "n_total": 20024,
+          "n_after_box": 20000,
+          "n_after_dejump": 19999,
+          "n_after_coverage": 19911
+        },
+        {
+          "trial_index": 6,
+          "n_total": 28917,
+          "n_after_box": 26063,
+          "n_after_dejump": 26035,
+          "n_after_coverage": 25974
+        },
+        {
+          "trial_index": 7,
+          "n_total": 32625,
+          "n_after_box": 32425,
+          "n_after_dejump": 32424,
+          "n_after_coverage": 32310
+        },
+        {
+          "trial_index": 8,
+          "n_total": 17539,
+          "n_after_box": 17163,
+          "n_after_dejump": 17161,
+          "n_after_coverage": 17026
+        }
+      ]
+    }
+  },
+  "pooled": {
+    "group": "pooled_Loc1-6",
+    "n_trials": 105,
+    "chosen_L": 10,
+    "L_fallback_used": false,
+    "coverage_frac": 0.9416157501697217,
+    "L_scan": [
+      {
+        "L": 40,
+        "n_visited_bins": 105,
+        "coverage_frac": 0.9714285714285714
+      },
+      {
+        "L": 30,
+        "n_visited_bins": 181,
+        "coverage_frac": 0.9447513812154696
+      },
+      {
+        "L": 25,
+        "n_visited_bins": 254,
+        "coverage_frac": 0.9448818897637795
+      },
+      {
+        "L": 20,
+        "n_visited_bins": 383,
+        "coverage_frac": 0.95822454308094
+      },
+      {
+        "L": 15,
+        "n_visited_bins": 672,
+        "coverage_frac": 0.9538690476190477
+      },
+      {
+        "L": 10,
+        "n_visited_bins": 1473,
+        "coverage_frac": 0.9416157501697217
+      }
+    ],
+    "samples_total": 1176698,
+    "n_visited_bins": 1473,
+    "endpoint_centroid": [
+      482.3142857142857,
+      115.87619047619047
+    ],
+    "grid_shape": [
+      28,
+      58
+    ],
+    "sparseness": {
+      "n_valid_bins": 1387,
+      "cutoff": 0.001,
+      "frac_above_1xMAD": 0.9971160778658976,
+      "frac_above_3xMAD": 0.0973323720259553,
+      "frac_above_5xMAD": 0.005767844268204758,
+      "top5pct_mass_share": 0.09379856704190596,
+      "gini": 0.15483672047420813,
+      "normalized_entropy": 0.9943103436926154,
+      "gini_uniform_null": 0.0,
+      "gini_uniform_null_note": "Analytic floor only: Gini of a same-N constant field is 0 by construction (no sampling variability). Kept for reference; significance comes from the Monte-Carlo null below.",
+      "gini_mc_null": {
+        "observed_gini": 0.15483672047420813,
+        "null_gini_mean": 0.036893191457190666,
+        "null_gini_std": 0.0008881333295719595,
+        "null_gini_ci95": [
+          0.03520234476120164,
+          0.0386595732833292
+        ],
+        "pvalue": 0.0,
+        "n_draws": 2000,
+        "seed": 1234,
+        "note": "Monte-Carlo null (H0=spatially uniform field): per-bin sample counts held fixed; observed total odor mass (sum of clip(mean,0)*n_samples over valid bins) redistributed each draw via a multinomial over the pooled samples with equal per-sample probability, giving each bin a synthetic mean = allocated mass / its sample count; Gini recomputed per draw. p = fraction(null Gini >= observed Gini)."
+      }
+    },
+    "distance": {
+      "mean": {
+        "label": "mean",
+        "ols_log": {
+          "intercept": -6.642792498142945,
+          "slope": -0.0018849240584557206,
+          "slope_se": 0.0017239358459292672,
+          "slope_ci95": [
+            -0.006103243110473689,
+            0.002333394993562247
+          ],
+          "n": 8,
+          "dof": 6
+        },
+        "ols_n_bins": 8,
+        "exp_decay": {
+          "a": 0.00035766880188315477,
+          "lambda": 268.67581056517577,
+          "lambda_se": 51.27786073630058,
+          "lambda_ci95": [
+            168.08508092676215,
+            369.2665402035894
+          ],
+          "c": 0.0002817464887420554,
+          "n": 1387,
+          "degenerate": false
+        },
+        "exp_n_bins": 1387
+      },
+      "max": {
+        "label": "max",
+        "ols_log": {
+          "intercept": -5.876126432712891,
+          "slope": -0.002997900929530921,
+          "slope_se": 0.0003013043964761886,
+          "slope_ci95": [
+            -0.0035896689292128203,
+            -0.0024061329298490216
+          ],
+          "n": 588,
+          "dof": 586
+        },
+        "ols_n_bins": 588,
+        "exp_decay": {
+          "a": 0.00853817053021547,
+          "lambda": 66.44652709566762,
+          "lambda_se": 12.753750062781794,
+          "lambda_ci95": [
+            41.42775669417564,
+            91.4652974971596
+          ],
+          "c": 0.0006975668135535941,
+          "n": 1387,
+          "degenerate": false
+        },
+        "exp_n_bins": 1387
+      },
+      "note": "distance measured to centroid of the 6 endpoints"
+    },
+    "trajectory_summary": {
+      "path_length_px": {
+        "median": 2807.050354307142,
+        "q1": 1419.6875896811773,
+        "q3": 6298.170090509686,
+        "iqr": 4878.482500828509,
+        "n": 105
+      },
+      "tortuosity": {
+        "median": 6.123833201765042,
+        "q1": 3.2652926918653606,
+        "q3": 12.831087883961368,
+        "iqr": 9.565795192096008,
+        "n": 105
+      },
+      "n_encounters": {
+        "median": 0.0,
+        "q1": 0.0,
+        "q3": 1.0,
+        "iqr": 1.0,
+        "n": 105
+      },
+      "frac_path_above_threshold": {
+        "median": 0.030867922841368828,
+        "q1": 0.010978394519585455,
+        "q3": 0.07567567567567568,
+        "iqr": 0.06469728115609022,
+        "n": 105
+      },
+      "spearman_tortuosity_vs_nencounters": {
+        "rho": 0.17625350794854924,
+        "pvalue": 0.07208994706219793,
+        "ci95": [
+          -0.015950576477982197,
+          0.35589599344674266
+        ],
+        "n": 105
+      },
+      "spearman_tortuosity_vs_frac_above": {
+        "rho": -0.5315778561061579,
+        "pvalue": 5.388253557882872e-09,
+        "ci95": [
+          -0.6563689519081632,
+          -0.37847336843780144
+        ],
+        "n": 105
+      }
+    },
+    "trajectory_per_trial": [
+      {
+        "trial_index": 12,
+        "file_name": "11-20-2019-12-04 PM-Mohammad-201_Trial1_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 8804.557029173422,
+        "straight_line_px": 467.4045126732962,
+        "tortuosity": 18.837124568644423,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0016802112265541954,
+        "n_samples": 29163
+      },
+      {
+        "trial_index": 15,
+        "file_name": "11-22-2019-10-45 AM-Mohammad-205_Trial3_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 2387.0452616383336,
+        "straight_line_px": 469.36085383484647,
+        "tortuosity": 5.085735723666168,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.01477920227920228,
+        "n_samples": 5616
+      },
+      {
+        "trial_index": 21,
+        "file_name": "11-22-2019-11-23 AM-Mohammad-207_Trial2_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 3870.4818896648385,
+        "straight_line_px": 469.0351380344094,
+        "tortuosity": 8.252008380192812,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.06578276389597144,
+        "n_samples": 3922
+      },
+      {
+        "trial_index": 28,
+        "file_name": "11-22-2019-2-51 PM-Mohammad-211_Trial5_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 2345.2347338273644,
+        "straight_line_px": 468.71659265331016,
+        "tortuosity": 5.003524028350401,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.03350970017636684,
+        "n_samples": 3969
+      },
+      {
+        "trial_index": 30,
+        "file_name": "11-22-2019-3-11 PM-Mohammad-201_Trial1_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 15203.156320733695,
+        "straight_line_px": 467.62605285550967,
+        "tortuosity": 32.51135437792058,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.02576348715189022,
+        "n_samples": 44598
+      },
+      {
+        "trial_index": 33,
+        "file_name": "11-22-2019-3-56 PM-Mohammad-204_Trial1_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 6219.766264926053,
+        "straight_line_px": 468.08577375700196,
+        "tortuosity": 13.287663530135246,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.01949820788530466,
+        "n_samples": 13950
+      },
+      {
+        "trial_index": 43,
+        "file_name": "11-23-2019-2-52 PM-Mohammad-205_Trial6_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 867.1472914758499,
+        "straight_line_px": 468.7209233592299,
+        "tortuosity": 1.8500289794216507,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.11292719167904904,
+        "n_samples": 2692
+      },
+      {
+        "trial_index": 46,
+        "file_name": "11-23-2019-4-00 PM-Mohammad-207_Trial2_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 729.0359436278995,
+        "straight_line_px": 468.0850937069572,
+        "tortuosity": 1.5574859217463344,
+        "n_encounters": 3,
+        "frac_path_above_threshold": 0.07466666666666667,
+        "n_samples": 1125
+      },
+      {
+        "trial_index": 50,
+        "file_name": "11-23-2019-5-03 PM-Mohammad-201_Trial1_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 7393.499298370154,
+        "straight_line_px": 469.7117112291463,
+        "tortuosity": 15.740504487364753,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.001969644305410729,
+        "n_samples": 25893
+      },
+      {
+        "trial_index": 51,
+        "file_name": "11-23-2019-5-11 PM-Mohammad-201_Trial2_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 8867.88294236128,
+        "straight_line_px": 469.2981319889917,
+        "tortuosity": 18.896054209244742,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.003524462803653314,
+        "n_samples": 26387
+      },
+      {
+        "trial_index": 57,
+        "file_name": "11-24-2019-2-39 PM-Mohammad-207_Trial5_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 2204.8741149191305,
+        "straight_line_px": 468.8043918627202,
+        "tortuosity": 4.70318570642739,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0027151778441487917,
+        "n_samples": 7366
+      },
+      {
+        "trial_index": 58,
+        "file_name": "11-24-2019-2-43 PM-Mohammad-207_Trial6_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 6517.832148963571,
+        "straight_line_px": 469.7837315733446,
+        "tortuosity": 13.874112087991662,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.0063774889245898445,
+        "n_samples": 20541
+      },
+      {
+        "trial_index": 67,
+        "file_name": "11-24-2019-4-51 PM-Mohammad-204_Trial6_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 806.7987606639067,
+        "straight_line_px": 469.2759005525243,
+        "tortuosity": 1.7192418355896473,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.17612809315866085,
+        "n_samples": 2061
+      },
+      {
+        "trial_index": 76,
+        "file_name": "11-26-2019-10-41 AM-Mohammad-204_Trial4_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 4265.616517293396,
+        "straight_line_px": 468.73938513721123,
+        "tortuosity": 9.100187977685612,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.04051863857374392,
+        "n_samples": 4936
+      },
+      {
+        "trial_index": 77,
+        "file_name": "11-26-2019-11-03 AM-Mohammad-207_Trial1_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 2867.9461459609893,
+        "straight_line_px": 469.4531015196443,
+        "tortuosity": 6.109121734795866,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.047355473554735544,
+        "n_samples": 1626
+      },
+      {
+        "trial_index": 90,
+        "file_name": "11-26-2019-9-58 AM-Mohammad-201_Trial3_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 12159.062880953225,
+        "straight_line_px": 468.73051803150406,
+        "tortuosity": 25.940412269328696,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.00626377762245282,
+        "n_samples": 37198
+      },
+      {
+        "trial_index": 92,
+        "file_name": "11-27-2019-10-14 AM-Mohammad-204_Trial2_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 2007.3461988835418,
+        "straight_line_px": 468.7222939598256,
+        "tortuosity": 4.282591685420434,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.04234769687964339,
+        "n_samples": 2692
+      },
+      {
+        "trial_index": 97,
+        "file_name": "11-27-2019-10-37 AM-Mohammad-211_Trial1_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 2202.858863137429,
+        "straight_line_px": 468.5250392173381,
+        "tortuosity": 4.7016886585555,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.14679508468947194,
+        "n_samples": 3011
+      },
+      {
+        "trial_index": 107,
+        "file_name": "11-27-2019-11-26 AM-Mohammad-205_Trial6_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 678.1975974096832,
+        "straight_line_px": 101.25812981174468,
+        "tortuosity": 6.697710086790688,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.019454269833249115,
+        "n_samples": 7916
+      },
+      {
+        "trial_index": 109,
+        "file_name": "11-27-2019-11-38 AM-Mohammad-207_Trial2_Loc1.avi.dat",
+        "group": "Loc1",
+        "animal": "?",
+        "path_length_px": 2314.8455940273766,
+        "straight_line_px": 469.60258555122823,
+        "tortuosity": 4.929371483996767,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.22553699284009546,
+        "n_samples": 838
+      },
+      {
+        "trial_index": 16,
+        "file_name": "11-22-2019-10-50 AM-Mohammad-205_Trial4_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 3052.7596034871076,
+        "straight_line_px": 498.2644594181664,
+        "tortuosity": 6.126785777680948,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0015721210533211057,
+        "n_samples": 7633
+      },
+      {
+        "trial_index": 17,
+        "file_name": "11-22-2019-10-52 AM-Mohammad-205_Trial4_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 5865.163418366057,
+        "straight_line_px": 104.35633997069516,
+        "tortuosity": 56.20323039321889,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.004761904761904762,
+        "n_samples": 16800
+      },
+      {
+        "trial_index": 25,
+        "file_name": "11-22-2019-11-43 AM-Mohammad-207_Trial6_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 773.1100851911708,
+        "straight_line_px": 497.7995694509541,
+        "tortuosity": 1.5530549494927632,
+        "n_encounters": 4,
+        "frac_path_above_threshold": 0.1531413612565445,
+        "n_samples": 1528
+      },
+      {
+        "trial_index": 35,
+        "file_name": "11-23-2019-1-31 PM-Mohammad-204_Trial1_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 9272.34266144761,
+        "straight_line_px": 499.1529088578707,
+        "tortuosity": 18.576156718517343,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.006400787789266372,
+        "n_samples": 22341
+      },
+      {
+        "trial_index": 36,
+        "file_name": "11-23-2019-1-41 PM-Mohammad-204_Trial2_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 6303.308483570931,
+        "straight_line_px": 499.50272520645933,
+        "tortuosity": 12.619167354823912,
+        "n_encounters": 5,
+        "frac_path_above_threshold": 0.04204191741025109,
+        "n_samples": 24095
+      },
+      {
+        "trial_index": 42,
+        "file_name": "11-23-2019-2-47 PM-Mohammad-205_Trial5_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 891.7128240265597,
+        "straight_line_px": 498.3574387685546,
+        "tortuosity": 1.7893037299292442,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.1845474613686534,
+        "n_samples": 2265
+      },
+      {
+        "trial_index": 44,
+        "file_name": "11-23-2019-3-38 PM-Mohammad-211_Trial2_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 6298.170090509686,
+        "straight_line_px": 500.2260939980225,
+        "tortuosity": 12.590646841655133,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.004255777622151592,
+        "n_samples": 18563
+      },
+      {
+        "trial_index": 49,
+        "file_name": "11-23-2019-4-21 PM-Mohammad-207_Trial5_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 1726.4559207560096,
+        "straight_line_px": 499.6299961600767,
+        "tortuosity": 3.455468915046625,
+        "n_encounters": 8,
+        "frac_path_above_threshold": 0.28007304268431865,
+        "n_samples": 4381
+      },
+      {
+        "trial_index": 52,
+        "file_name": "11-23-2019-5-20 PM-Mohammad-201_Trial3_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 7116.909727337597,
+        "straight_line_px": 499.39001774972127,
+        "tortuosity": 14.251205419376987,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.003539364640883978,
+        "n_samples": 23168
+      },
+      {
+        "trial_index": 55,
+        "file_name": "11-24-2019-2-30 PM-Mohammad-207_Trial3_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 845.7174317409471,
+        "straight_line_px": 500.0693932273424,
+        "tortuosity": 1.6912001478092173,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.04501278772378517,
+        "n_samples": 1955
+      },
+      {
+        "trial_index": 64,
+        "file_name": "11-24-2019-4-34 PM-Mohammad-204_Trial3_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 3063.6803685677887,
+        "straight_line_px": 500.2880169376199,
+        "tortuosity": 6.123833201765042,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.01841881552847832,
+        "n_samples": 7058
+      },
+      {
+        "trial_index": 73,
+        "file_name": "11-26-2019-10-19 AM-Mohammad-204_Trial1_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 2169.439720121022,
+        "straight_line_px": 499.6912368607004,
+        "tortuosity": 4.341560467921113,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.014557773301593115,
+        "n_samples": 10922
+      },
+      {
+        "trial_index": 79,
+        "file_name": "11-26-2019-11-10 AM-Mohammad-207_Trial3_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 559.1488512852821,
+        "straight_line_px": 500.31363167689204,
+        "tortuosity": 1.117596675131943,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.02534562211981567,
+        "n_samples": 434
+      },
+      {
+        "trial_index": 86,
+        "file_name": "11-26-2019-12-09 PM-Mohammad-204_Trial2_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 1419.6875896811773,
+        "straight_line_px": 499.6373716057121,
+        "tortuosity": 2.8414359500744495,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.016333272160029364,
+        "n_samples": 5449
+      },
+      {
+        "trial_index": 95,
+        "file_name": "11-27-2019-10-25 AM-Mohammad-204_Trial5_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 4035.98498887005,
+        "straight_line_px": 499.2947583891852,
+        "tortuosity": 8.083371437526932,
+        "n_encounters": 5,
+        "frac_path_above_threshold": 0.02957039241212572,
+        "n_samples": 10754
+      },
+      {
+        "trial_index": 100,
+        "file_name": "11-27-2019-10-52 AM-Mohammad-211_Trial5_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 1022.0541582362289,
+        "straight_line_px": 499.23818680621065,
+        "tortuosity": 2.0472275263529864,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.255431902490726,
+        "n_samples": 1887
+      },
+      {
+        "trial_index": 105,
+        "file_name": "11-27-2019-11-19 AM-Mohammad-205_Trial4_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 751.1777164626566,
+        "straight_line_px": 499.4370097798116,
+        "tortuosity": 1.5040489626386133,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.3785953177257525,
+        "n_samples": 1495
+      },
+      {
+        "trial_index": 111,
+        "file_name": "11-27-2019-11-45 AM-Mohammad-207_Trial4_Loc2.avi.dat",
+        "group": "Loc2",
+        "animal": "?",
+        "path_length_px": 1907.5964049395795,
+        "straight_line_px": 500.27247298755515,
+        "tortuosity": 3.813114868279057,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.045990031717263256,
+        "n_samples": 4414
+      },
+      {
+        "trial_index": 18,
+        "file_name": "11-22-2019-10-58 AM-Mohammad-205_Trial5_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 2293.1722574075857,
+        "straight_line_px": 508.160021178791,
+        "tortuosity": 4.512697106883889,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.024216385118640757,
+        "n_samples": 10241
+      },
+      {
+        "trial_index": 23,
+        "file_name": "11-22-2019-11-31 AM-Mohammad-207_Trial4_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 15233.206060476385,
+        "straight_line_px": 506.6752057213654,
+        "tortuosity": 30.065031579330018,
+        "n_encounters": 4,
+        "frac_path_above_threshold": 0.014093836246550138,
+        "n_samples": 27175
+      },
+      {
+        "trial_index": 27,
+        "file_name": "11-22-2019-2-37 PM-Mohammad-211_Trial4_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 8707.02802790202,
+        "straight_line_px": 506.3866371315664,
+        "tortuosity": 17.194426924894962,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.03675898785667285,
+        "n_samples": 33434
+      },
+      {
+        "trial_index": 31,
+        "file_name": "11-22-2019-3-22 PM-Mohammad-201_Trial2_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 6836.720947426989,
+        "straight_line_px": 507.6776270940532,
+        "tortuosity": 13.46665793913429,
+        "n_encounters": 5,
+        "frac_path_above_threshold": 0.031808085295424254,
+        "n_samples": 11255
+      },
+      {
+        "trial_index": 37,
+        "file_name": "11-23-2019-1-52 PM-Mohammad-204_Trial3_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 2458.8995151532645,
+        "straight_line_px": 508.38975097275994,
+        "tortuosity": 4.836642576779671,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.06837881219903692,
+        "n_samples": 9345
+      },
+      {
+        "trial_index": 41,
+        "file_name": "11-23-2019-2-43 PM-Mohammad-205_Trial4_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 1658.4051290331377,
+        "straight_line_px": 507.88865977148964,
+        "tortuosity": 3.2652926918653606,
+        "n_encounters": 3,
+        "frac_path_above_threshold": 0.11184975901612099,
+        "n_samples": 6017
+      },
+      {
+        "trial_index": 45,
+        "file_name": "11-23-2019-3-54 PM-Mohammad-207_Trial1_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 5008.653751270938,
+        "straight_line_px": 508.6669520376421,
+        "tortuosity": 9.846627014409009,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.07102625298329356,
+        "n_samples": 10475
+      },
+      {
+        "trial_index": 61,
+        "file_name": "11-24-2019-3-15 PM-Mohammad-205_Trial3_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 4303.647286839021,
+        "straight_line_px": 507.72324620364253,
+        "tortuosity": 8.476364474186145,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0934473854099419,
+        "n_samples": 12392
+      },
+      {
+        "trial_index": 62,
+        "file_name": "11-24-2019-4-19 PM-Mohammad-204_Trial1_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 7992.952965169988,
+        "straight_line_px": 507.166961790519,
+        "tortuosity": 15.760003248144166,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.022638243600255077,
+        "n_samples": 21954
+      },
+      {
+        "trial_index": 70,
+        "file_name": "11-24-2019-5-19 PM-Mohammad-201_Trial3_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 3466.7957636540796,
+        "straight_line_px": 507.6313520925645,
+        "tortuosity": 6.829357070565499,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.047047265582360005,
+        "n_samples": 9161
+      },
+      {
+        "trial_index": 78,
+        "file_name": "11-26-2019-11-07 AM-Mohammad-207_Trial2_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 1017.4386987345588,
+        "straight_line_px": 508.55572030290006,
+        "tortuosity": 2.0006435049606046,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.09019370460048426,
+        "n_samples": 1652
+      },
+      {
+        "trial_index": 83,
+        "file_name": "11-26-2019-11-44 AM-Mohammad-211_Trial1_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 2487.8091793131434,
+        "straight_line_px": 508.37983483779203,
+        "tortuosity": 4.893603185710395,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.172349194454852,
+        "n_samples": 5338
+      },
+      {
+        "trial_index": 88,
+        "file_name": "11-26-2019-12-20 PM-Mohammad-204_Trial4_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 3588.4454263614807,
+        "straight_line_px": 508.0718090226242,
+        "tortuosity": 7.0628705679706165,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.11260330578512397,
+        "n_samples": 5808
+      },
+      {
+        "trial_index": 93,
+        "file_name": "11-27-2019-10-17 AM-Mohammad-204_Trial3_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 951.2755824155412,
+        "straight_line_px": 508.94044758472205,
+        "tortuosity": 1.8691294569531824,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.08534946236559139,
+        "n_samples": 1488
+      },
+      {
+        "trial_index": 99,
+        "file_name": "11-27-2019-10-48 AM-Mohammad-211_Trial4_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 903.9085189248798,
+        "straight_line_px": 507.1187000964469,
+        "tortuosity": 1.782439730092716,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.18724559023066487,
+        "n_samples": 1474
+      },
+      {
+        "trial_index": 103,
+        "file_name": "11-27-2019-11-11 AM-Mohammad-205_Trial2_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 893.4629427055822,
+        "straight_line_px": 508.73896558120106,
+        "tortuosity": 1.7562306077437162,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.04953998584571833,
+        "n_samples": 2826
+      },
+      {
+        "trial_index": 108,
+        "file_name": "11-27-2019-11-34 AM-Mohammad-207_Trial1_Loc3.avi.dat",
+        "group": "Loc3",
+        "animal": "?",
+        "path_length_px": 2876.3150543997617,
+        "straight_line_px": 507.95247104751434,
+        "tortuosity": 5.662567303724582,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.08054352107128791,
+        "n_samples": 5078
+      },
+      {
+        "trial_index": 19,
+        "file_name": "11-22-2019-11-02 AM-Mohammad-205_Trial6_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 4772.759395578698,
+        "straight_line_px": 449.86606316342375,
+        "tortuosity": 10.609289711735576,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.017292214519085185,
+        "n_samples": 12549
+      },
+      {
+        "trial_index": 20,
+        "file_name": "11-22-2019-11-14 AM-Mohammad-207_Trial1_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 13256.555468207058,
+        "straight_line_px": 449.69556108829113,
+        "tortuosity": 29.478955576357862,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.06867606546750932,
+        "n_samples": 30855
+      },
+      {
+        "trial_index": 32,
+        "file_name": "11-22-2019-3-29 PM-Mohammad-201_Trial3_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 8262.526264389737,
+        "straight_line_px": 450.86391628468675,
+        "tortuosity": 18.32598699065678,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.007444875859366651,
+        "n_samples": 28073
+      },
+      {
+        "trial_index": 39,
+        "file_name": "11-23-2019-2-25 PM-Mohammad-205_Trial1_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 10291.879254365052,
+        "straight_line_px": 450.78795407667684,
+        "tortuosity": 22.830865734745107,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.012056706266837433,
+        "n_samples": 22643
+      },
+      {
+        "trial_index": 47,
+        "file_name": "11-23-2019-4-04 PM-Mohammad-207_Trial3_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 2758.6948167877817,
+        "straight_line_px": 449.9764643026301,
+        "tortuosity": 6.130753574107891,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.14087250064918203,
+        "n_samples": 7702
+      },
+      {
+        "trial_index": 53,
+        "file_name": "11-24-2019-2-17 PM-Mohammad-207_Trial1_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 3411.4765766418145,
+        "straight_line_px": 451.27435025987717,
+        "tortuosity": 7.5596509632715305,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.08350798000967274,
+        "n_samples": 6203
+      },
+      {
+        "trial_index": 60,
+        "file_name": "11-24-2019-3-10 PM-Mohammad-205_Trial2_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 952.8468039123118,
+        "straight_line_px": 451.0842263553923,
+        "tortuosity": 2.112347868181938,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.28816946442845726,
+        "n_samples": 2502
+      },
+      {
+        "trial_index": 65,
+        "file_name": "11-24-2019-4-40 PM-Mohammad-204_Trial4_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 1121.2514925513658,
+        "straight_line_px": 451.99390112030187,
+        "tortuosity": 2.4806783670581773,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.07567567567567568,
+        "n_samples": 3145
+      },
+      {
+        "trial_index": 68,
+        "file_name": "11-24-2019-5-04 PM-Mohammad-201_Trial1_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 3685.0303841309924,
+        "straight_line_px": 451.7701528337454,
+        "tortuosity": 8.156869950386275,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.008054018874064432,
+        "n_samples": 12292
+      },
+      {
+        "trial_index": 82,
+        "file_name": "11-26-2019-11-25 AM-Mohammad-207_Trial6_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 1375.01455225172,
+        "straight_line_px": 116.06249645030182,
+        "tortuosity": 11.847190904087643,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0707070707070707,
+        "n_samples": 1287
+      },
+      {
+        "trial_index": 87,
+        "file_name": "11-26-2019-12-16 PM-Mohammad-204_Trial3_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 2994.9407034511587,
+        "straight_line_px": 450.82077377347014,
+        "tortuosity": 6.643306781058111,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.023809523809523808,
+        "n_samples": 7182
+      },
+      {
+        "trial_index": 91,
+        "file_name": "11-27-2019-10-10 AM-Mohammad-204_Trial1_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 2818.5445123734667,
+        "straight_line_px": 452.7574036312146,
+        "tortuosity": 6.225286411151129,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.005561100812776273,
+        "n_samples": 7013
+      },
+      {
+        "trial_index": 106,
+        "file_name": "11-27-2019-11-22 AM-Mohammad-205_Trial5_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 1571.986371560658,
+        "straight_line_px": 451.0839508324044,
+        "tortuosity": 3.484908670902178,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.017107618858165904,
+        "n_samples": 5027
+      },
+      {
+        "trial_index": 110,
+        "file_name": "11-27-2019-11-42 AM-Mohammad-207_Trial3_Loc4.avi.dat",
+        "group": "Loc4",
+        "animal": "?",
+        "path_length_px": 559.7344720724784,
+        "straight_line_px": 450.8134817005026,
+        "tortuosity": 1.241609878127685,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.04101765316718588,
+        "n_samples": 1926
+      },
+      {
+        "trial_index": 9,
+        "file_name": "11-20-2019-10-38 AM-Mohammad-205_Trial1_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 10278.864521935358,
+        "straight_line_px": 433.14513498921224,
+        "tortuosity": 23.73076295129428,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.00034246575342465754,
+        "n_samples": 43800
+      },
+      {
+        "trial_index": 10,
+        "file_name": "11-20-2019-10-49 AM-Mohammad-205_Trial1_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 19850.15287957962,
+        "straight_line_px": 430.80651070998994,
+        "tortuosity": 46.07672443683734,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.002663825253063399,
+        "n_samples": 1877
+      },
+      {
+        "trial_index": 13,
+        "file_name": "11-22-2019-10-33 AM-Mohammad-205_Trial1_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 14643.773568939285,
+        "straight_line_px": 434.6019993102897,
+        "tortuosity": 33.694676030434394,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.018379888268156425,
+        "n_samples": 17900
+      },
+      {
+        "trial_index": 24,
+        "file_name": "11-22-2019-11-39 AM-Mohammad-207_Trial5_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 1083.8964390309636,
+        "straight_line_px": 435.5703086885453,
+        "tortuosity": 2.4884534538050986,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.12904547316673495,
+        "n_samples": 2441
+      },
+      {
+        "trial_index": 29,
+        "file_name": "11-22-2019-2-56 PM-Mohammad-211_Trial6_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 3743.2828267874056,
+        "straight_line_px": 434.1902551335318,
+        "tortuosity": 8.621296269388147,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.010978394519585455,
+        "n_samples": 11386
+      },
+      {
+        "trial_index": 56,
+        "file_name": "11-24-2019-2-34 PM-Mohammad-207_Trial4_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 3140.183562608443,
+        "straight_line_px": 434.5413960086399,
+        "tortuosity": 7.226431339917745,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.047938095687458715,
+        "n_samples": 10597
+      },
+      {
+        "trial_index": 59,
+        "file_name": "11-24-2019-3-02 PM-Mohammad-205_Trial1_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 1709.1967240697757,
+        "straight_line_px": 436.1761189478888,
+        "tortuosity": 3.9185930861886047,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.056256817827645314,
+        "n_samples": 6417
+      },
+      {
+        "trial_index": 63,
+        "file_name": "11-24-2019-4-27 PM-Mohammad-204_Trial2_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 2494.235001006673,
+        "straight_line_px": 435.0846586030519,
+        "tortuosity": 5.732757870652204,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.033654688869412794,
+        "n_samples": 5705
+      },
+      {
+        "trial_index": 71,
+        "file_name": "11-24-2019-5-50 PM-Mohammad-211_Trial1_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 967.8628991490033,
+        "straight_line_px": 436.0336817563388,
+        "tortuosity": 2.2196975592584094,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0,
+        "n_samples": 2264
+      },
+      {
+        "trial_index": 74,
+        "file_name": "11-26-2019-10-24 AM-Mohammad-204_Trial2_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 879.4136320074557,
+        "straight_line_px": 436.09818721979246,
+        "tortuosity": 2.0165496160712846,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.45434543454345433,
+        "n_samples": 2727
+      },
+      {
+        "trial_index": 75,
+        "file_name": "11-26-2019-10-37 AM-Mohammad-204_Trial3_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 2221.556153655737,
+        "straight_line_px": 435.78495056561667,
+        "tortuosity": 5.09782669358435,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.1375086266390614,
+        "n_samples": 5796
+      },
+      {
+        "trial_index": 81,
+        "file_name": "11-26-2019-11-17 AM-Mohammad-207_Trial5_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 11437.44147152776,
+        "straight_line_px": 435.2242011808633,
+        "tortuosity": 26.27942435300094,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.008370138196324263,
+        "n_samples": 28076
+      },
+      {
+        "trial_index": 89,
+        "file_name": "11-26-2019-9-44 AM-Mohammad-201_Trial1_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 10591.688632337464,
+        "straight_line_px": 436.09715940772736,
+        "tortuosity": 24.28745155488345,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.025155055531515938,
+        "n_samples": 34665
+      },
+      {
+        "trial_index": 96,
+        "file_name": "11-27-2019-10-29 AM-Mohammad-204_Trial6_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 3846.2878530306966,
+        "straight_line_px": 436.1031557859242,
+        "tortuosity": 8.819674432529848,
+        "n_encounters": 3,
+        "frac_path_above_threshold": 0.016153457849570924,
+        "n_samples": 9905
+      },
+      {
+        "trial_index": 101,
+        "file_name": "11-27-2019-10-57 AM-Mohammad-211_Trial6_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 4990.782970931047,
+        "straight_line_px": 435.208675665059,
+        "tortuosity": 11.46756314842401,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.004698601879440752,
+        "n_samples": 8726
+      },
+      {
+        "trial_index": 104,
+        "file_name": "11-27-2019-11-15 AM-Mohammad-205_Trial3_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 1077.9794112834368,
+        "straight_line_px": 435.05627736709846,
+        "tortuosity": 2.4777930290012637,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.06180939226519337,
+        "n_samples": 2896
+      },
+      {
+        "trial_index": 112,
+        "file_name": "11-27-2019-11-48 AM-Mohammad-207_Trial5_Loc5.avi.dat",
+        "group": "Loc5",
+        "animal": "?",
+        "path_length_px": 2023.986521958339,
+        "straight_line_px": 435.55423462436835,
+        "tortuosity": 4.646921923980075,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.01712268314210062,
+        "n_samples": 5665
+      },
+      {
+        "trial_index": 11,
+        "file_name": "11-20-2019-11-28 AM-Mohammad-204_Trial1_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 11955.336630387763,
+        "straight_line_px": 438.4379472792505,
+        "tortuosity": 27.268024368276574,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.0071433708080638585,
+        "n_samples": 41717
+      },
+      {
+        "trial_index": 14,
+        "file_name": "11-22-2019-10-40 AM-Mohammad-205_Trial2_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 2768.7883219030196,
+        "straight_line_px": 500.1446815973218,
+        "tortuosity": 5.535974736470828,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.023297896403528612,
+        "n_samples": 4421
+      },
+      {
+        "trial_index": 22,
+        "file_name": "11-22-2019-11-26 AM-Mohammad-207_Trial3_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 5222.5285002578985,
+        "straight_line_px": 500.32081111868496,
+        "tortuosity": 10.438359516928074,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.022849360671861996,
+        "n_samples": 13217
+      },
+      {
+        "trial_index": 26,
+        "file_name": "11-22-2019-11-52 AM-Mohammad-211_Trial1_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 1401.9043589829867,
+        "straight_line_px": 500.05773871743935,
+        "tortuosity": 2.8034849787119107,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.009009009009009009,
+        "n_samples": 2331
+      },
+      {
+        "trial_index": 34,
+        "file_name": "11-22-2019-4-08 PM-Mohammad-204_Trial3_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 4724.663575264257,
+        "straight_line_px": 500.3177230808975,
+        "tortuosity": 9.443326424997172,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.01254938415059261,
+        "n_samples": 12909
+      },
+      {
+        "trial_index": 38,
+        "file_name": "11-23-2019-1-58 PM-Mohammad-204_Trial4_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 6200.062882628635,
+        "straight_line_px": 500.90138160572053,
+        "tortuosity": 12.377811502043233,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0442123336671913,
+        "n_samples": 20967
+      },
+      {
+        "trial_index": 40,
+        "file_name": "11-23-2019-2-33 PM-Mohammad-205_Trial2_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 2807.050354307142,
+        "straight_line_px": 500.7394031790589,
+        "tortuosity": 5.605810799960896,
+        "n_encounters": 2,
+        "frac_path_above_threshold": 0.11497057557054687,
+        "n_samples": 6967
+      },
+      {
+        "trial_index": 48,
+        "file_name": "11-23-2019-4-09 PM-Mohammad-207_Trial4_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 15574.180844615337,
+        "straight_line_px": 501.60552167865956,
+        "tortuosity": 31.048663085875138,
+        "n_encounters": 4,
+        "frac_path_above_threshold": 0.030867922841368828,
+        "n_samples": 44739
+      },
+      {
+        "trial_index": 54,
+        "file_name": "11-24-2019-2-26 PM-Mohammad-207_Trial2_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 1482.131890420574,
+        "straight_line_px": 501.62203936009314,
+        "tortuosity": 2.9546785709640933,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.08966304968589378,
+        "n_samples": 1751
+      },
+      {
+        "trial_index": 66,
+        "file_name": "11-24-2019-4-45 PM-Mohammad-204_Trial5_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 2199.7312865841427,
+        "straight_line_px": 501.16468153973955,
+        "tortuosity": 4.389238443191684,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.014629451395572667,
+        "n_samples": 5195
+      },
+      {
+        "trial_index": 69,
+        "file_name": "11-24-2019-5-11 PM-Mohammad-201_Trial2_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 11416.006180319551,
+        "straight_line_px": 501.5556407027464,
+        "tortuosity": 22.76119587514598,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.020867708434436572,
+        "n_samples": 30909
+      },
+      {
+        "trial_index": 72,
+        "file_name": "11-26-2019-10-07 AM-Mohammad-201_Trial4_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 9121.661264732587,
+        "straight_line_px": 501.74597097532194,
+        "tortuosity": 18.17983958496247,
+        "n_encounters": 3,
+        "frac_path_above_threshold": 0.005500758725341426,
+        "n_samples": 26360
+      },
+      {
+        "trial_index": 80,
+        "file_name": "11-26-2019-11-14 AM-Mohammad-207_Trial4_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 1081.589979801777,
+        "straight_line_px": 501.5915412643572,
+        "tortuosity": 2.1563162270947056,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.12930186823992135,
+        "n_samples": 2034
+      },
+      {
+        "trial_index": 84,
+        "file_name": "11-26-2019-11-47 AM-Mohammad-211_Trial2_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 1310.8937666506713,
+        "straight_line_px": 501.69044476869396,
+        "tortuosity": 2.6129534264003436,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.03560830860534125,
+        "n_samples": 1348
+      },
+      {
+        "trial_index": 85,
+        "file_name": "11-26-2019-12-04 PM-Mohammad-204_Trial1_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 6427.55255849984,
+        "straight_line_px": 500.93590010665946,
+        "tortuosity": 12.831087883961368,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.003962637984715539,
+        "n_samples": 14132
+      },
+      {
+        "trial_index": 94,
+        "file_name": "11-27-2019-10-21 AM-Mohammad-204_Trial4_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 538.1109466971575,
+        "straight_line_px": 501.2835452762188,
+        "tortuosity": 1.0734662084322875,
+        "n_encounters": 1,
+        "frac_path_above_threshold": 0.05992949471210341,
+        "n_samples": 851
+      },
+      {
+        "trial_index": 98,
+        "file_name": "11-27-2019-10-45 AM-Mohammad-211_Trial3_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 1933.9480135667686,
+        "straight_line_px": 501.4993228090268,
+        "tortuosity": 3.8563322533203594,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0004921259842519685,
+        "n_samples": 4064
+      },
+      {
+        "trial_index": 102,
+        "file_name": "11-27-2019-11-07 AM-Mohammad-205_Trial1_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 2248.8881063845183,
+        "straight_line_px": 501.32760041785946,
+        "tortuosity": 4.485865339371016,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.006882770870337478,
+        "n_samples": 4504
+      },
+      {
+        "trial_index": 113,
+        "file_name": "11-27-2019-11-53 AM-Mohammad-207_Trial6_Loc6.avi.dat",
+        "group": "Loc6",
+        "animal": "?",
+        "path_length_px": 1796.560004996964,
+        "straight_line_px": 501.1827941645125,
+        "tortuosity": 3.5846402269093978,
+        "n_encounters": 0,
+        "frac_path_above_threshold": 0.0027397260273972603,
+        "n_samples": 3285
+      }
+    ]
+  },
+  "robustness_head_vs_body": {
+    "pearson_r": 0.5999596547681495,
+    "n_common_valid_bins": 1310,
+    "grid_L": 10,
+    "track_body_clock": "body_time",
+    "note": "Pooled Loc1-6 mean field, head track vs body track (ethdeconv aligned to body clock), same grid; nan-aware Pearson over bins valid in both."
+  }
+}

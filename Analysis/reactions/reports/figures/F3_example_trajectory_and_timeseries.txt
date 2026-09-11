@@ -1,0 +1,34 @@
+F3 — Example trajectory + peri-sweep time series (H3, illustrative)
+======================================================================
+SOURCE OBJECTS (read-only; no recompute):
+  stats.json        : C:\Projects\Repos\Mouse Arena\Analysis\reactions\data\stats.json
+  sweeps.h5         : C:\Projects\Repos\Mouse Arena\Analysis\reactions\data\sweeps.h5  (group /trials/037)
+  odor_fields.h5    : C:\Projects\Repos\Mouse Arena\Analysis\Plume locations\data\odor_fields.h5  (group Loc3/endpoint)
+
+EXAMPLE TRIAL (stats.json F3_example):
+  trial_index       : 37  (h5 group key /trials/037)
+  file_name         : 11-23-2019-1-52 PM-Mohammad-204_Trial3_Loc3.avi.dat
+  end_loc           : Loc3
+  sweep_rate (/s)   : 2.120199
+  sweep_count       : 200
+
+PER-FRAME ARRAYS (from /trials/037):
+  n_frames          : 9365
+  head_t range (s)  : [15.6647, 109.9955]  (duration 94.3308)
+  body_h x range px : [8.020, 553.968]
+  body_h y range px : [12.213, 171.087]
+  R range           : [0.0028, 37.5425]  (color vmin=0.0028, vmax=99pct 13.9214)
+  eth_bs range (a.u.): [-0.10269, 0.91342]
+  n sweep peaks     : 200  (sweep_times_R; same events in both F3B panels)
+  sweep peaks range : [0.0604, 94.1696] s
+
+ARENA BOX (equal aspect):
+  x: [0.0, 580.0]   y: [0.0, 280.0]
+  source endpoint (x): (506.0, 191.0) px
+
+PANELS:
+  F3A: body_h (COM) trajectory, line colored by R(t); red x = odor source endpoint.
+  F3B(i): baseline-subtracted ethanol (a.u.) vs time; black v = sweep-peak times.
+  F3B(ii): R(t) vs time; black v = sweep-peak times; red dots = R at peaks.
+
+NOTE: F3 is illustrative for H3. H3 is NOT supported (null): median f_sweep ~0.336 ~= f_occ ~0.349.

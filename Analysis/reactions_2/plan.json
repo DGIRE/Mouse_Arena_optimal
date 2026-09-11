@@ -1,0 +1,62 @@
+{
+  "plan_version": "1.0",
+  "prepared_utc": "2026-08-08",
+  "request": "requests/Selective sampling-bout request (agent-ready).md",
+  "redesign_of": "Analysis/reactions v1 (R>=1.5 sweep, 1.7/s -> too frequent/circular)",
+  "interpreter": "$AR_PY (project venv, resolved from Analysis/.claude/settings.json)",
+  "seed": 1234,
+  "prior_lessons": ["Plume (1-7)", "trajectories (8-11)", "reactions (12-15)"],
+  "data": {
+    "aggregate": "C:/Projects/Repos/Mouse Arena/DATA/Mouse Arena Aggregate Data.h5",
+    "accessor": "C:/Projects/Repos/Mouse Arena/DATA/code/mouse_arena_aggregate_io.py",
+    "n_trials": 114, "pooled_groups": ["Loc1","Loc2","Loc3","Loc4","Loc5","Loc6"],
+    "pooled_n": 105, "anotherLoc_n": 9, "arena_extent": [0,580,0,280],
+    "nose_track": "head", "com_track": "body", "clock": "head",
+    "probed": {"ethanol": [-0.283,1.0], "v_com_med_px_s": 14.2, "v_pause_25pct_px_s": 5.891,
+               "omega_med_deg_s": 41.2, "omega_min_90pct_deg_s": 156.6, "omega_p99_deg_s": 461.5,
+               "default_bout_rate_median_per_s": 0.00697, "default_bout_count_median": 1,
+               "frac_trials_ge1_bout": 0.649, "dejump_removed_body": 0.0041, "dejump_removed_head": 0.0101},
+    "excluded": ["loc_attr(NaN)","duration_attr(NaN)","out_of_arena","nonfinite",
+                 "dejump_outliers","out_of_sensor_coverage","anotherLoc_from_pooled"]
+  },
+  "decisions": {
+    "D1": "head clock; body & ethanol interp onto it; clean both first",
+    "D2": "translation-invariant kinematic: phi=atan2(head-body) unwrapped deg; omega=|dphi/dt| deg/s smoothed; NOT v_nose/v_com",
+    "D3": "pause: v_com<v_pause(25th pct=5.89) sustained >= tau_pause=0.30s",
+    "D4": "head cast within pause: cumulative |dphi| >= 40 deg AND peak omega >= omega_min(90th pct=156.6)",
+    "D5": "bout = pause with >=1 cast; merge onsets < t_merge=0.50s; onset=pause start; peak=max omega time",
+    "D6": "RARITY GATE: pooled median rate << 1.7/s, target 0.05-0.3/s; tighten if >0.5/s. PROBED median 0.007/s -> PASSES at defaults; keep defaults",
+    "D7": "incidental = high-omega events while moving (v_com>=v_pause); contrast class",
+    "D8": "baseline-sub ethanol = raw - rolling 10th-pct W=20s -> head clock, raw scale",
+    "D9": "odor-reached = Plume odor_fields.h5 valid bin (count>=3) with max>0.001; in-odor at bout onset; fallback r=100px",
+    "D10": "unit=trial; trial-level Wilcoxon/bootstrap 2000 seed 1234; NEVER point-bootstrap; only >=1-bout trials for bout tests; pooled Loc1-6; anotherLoc separate",
+    "D11": "onset-aligned H1/H2; peak-omega-aligned kinematics; peri +-1s 50ms; pre-onset [-0.75,-0.25]s; peri-odor [-0.5,+0.5]s",
+    "D12": "Fig3 example = trial with most bouts (rate within gate)"
+  },
+  "odor_field": {"source": "Plume locations/data/odor_fields.h5", "cutoff": 0.001, "rule": "count>=3 AND max>cutoff"},
+  "deliverable_A": {"rarity": "median rate + count dist + %trials>=1 vs v1 1.7/s",
+                    "selectivity": "bouts vs incidental: v_com (bouts<<incidental, DEFINITIONAL), excursion/peak omega (bouts>=incidental)",
+                    "sanity": "example trial bouts coincide with visible head casts during pauses"},
+  "hypotheses": {
+    "H1": {"test": "peri-bout eth [-0.5,+0.5]s vs matched random-time null (trial Wilcoxon); AND bouts>incidental",
+           "amplitude_check": "peri eth vs 0.14 & 4e-4; frac bouts peri>0.01", "accept": "bout>null AND bout>incidental"},
+    "H2": {"test": "pre-onset [-0.75,-0.25]s eth > baseline/null; onset-aligned slope [-1,0]s>0; controls: incidental + odor-reached-vs-absent",
+           "accept": "pre>baseline/null AND slope>0 AND survives controls", "note": "non-circular replacement for v1 COM-slows"},
+    "H3": {"test": "f_bout vs f_occ + within-trial permutation null (2000); trial Wilcoxon f_bout>f_occ & f_bout-null>0",
+           "accept": "significantly enriched beyond occupancy"}
+  },
+  "figures": {
+    "F1": "reports/figures/F1_bout_definition.{png,pdf,txt}",
+    "F2": "reports/figures/F2_peri_bout.{png,pdf,txt}",
+    "F3": "reports/figures/F3_spatial.{png,pdf,txt}"
+  },
+  "report_map": {"A": "F1", "H1": "F2A", "H2": ["F2A","F2B"], "H3": ["F3A","F3B"]},
+  "outputs": {"bouts_h5": "data/bouts.h5", "bouts_json": "data/bouts.json", "stats": "data/stats.json",
+    "reports": ["reports/Sampling-bout definition and selectivity.docx", "reports/H1 - sampling bouts and odor.docx",
+                "reports/H2 - odor precedes sampling.docx", "reports/H3 - sampling bouts in odor-reached regions.docx"]},
+  "acceptance": {
+    "gate1": "accessor-only; advancing-ref clean ~0.5%; head-clock interp; translation-invariant kinematic (no v_com denominator); D6 gate passes (median rate<<1.7/s) final params; rates alongside counts; trial-level inference only; >=3 numbers/deliverable re-derived; seed; zero placeholders",
+    "gate2": "events rare & not denominator-biased (low-COM definitional); rarity gate satisfied; amplitude check before odor claims; magnitude+trial-CIs not N-driven p; H2 precedence non-circular + controls; kinematic spot-check; direction before significance; honest nulls",
+    "reiteration_cap": 2
+  }
+}

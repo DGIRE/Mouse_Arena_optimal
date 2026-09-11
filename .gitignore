@@ -3,6 +3,9 @@
 # exceed GitHub's limits; move them to new machines out-of-band (zip/drive/rsync).
 /Golden Fixtures/
 
+#Data folder - backup on server
+/DATA/
+
 # Python
 __pycache__/
 *.py[cod]

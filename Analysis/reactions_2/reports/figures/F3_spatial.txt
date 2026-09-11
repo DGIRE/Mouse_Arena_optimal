@@ -1,0 +1,34 @@
+F3_spatial -- Sampling-bout locations vs odor-reached regions (H3)
+Built by make_F3.py from saved objects (no science recomputed). seed 1234.
+
+SOURCES:
+  stats.json      : C:\Projects\Repos\Mouse Arena\Analysis\reactions_2\data\stats.json
+  bouts.h5        : C:\Projects\Repos\Mouse Arena\Analysis\reactions_2\data\bouts.h5  (/trials/047, /trials/<idx> attrs)
+  odor_fields.h5  : C:\Projects\Repos\Mouse Arena\Analysis\Plume locations\data\odor_fields.h5  (Loc4 group: max,count,x_edges,y_edges)
+
+HONEST FRAMING: H3 NOT supported (accept_H3 = False).
+  Bout-onset locations are NOT enriched in odor-reached bins; direction is NEGATIVE.
+
+PANEL A (example trial):
+  trial_index = 47   end_loc = Loc4
+  file_name = 11-23-2019-4-04 PM-Mohammad-207_Trial3_Loc4.avi.dat
+  bout_count = 6   bout_rate = 0.065565 /s
+  trial f_bout = 0.666667   trial f_occ = 0.669956
+  source endpoint (px) = (453.0, 164.0)
+  bout onset times (s) = [ 9.0181, 12.7807, 25.9952, 26.7518, 36.1633, 38.786 ]
+  onset head positions (px) x = [12.8, 34.6, 33.3, 21.7, 15.7, 15.7]
+                            y = [104.3,  79.7,  82.8, 104.1,  95.9,  95.1]
+  onsets in odor-reached bin = 4/6
+  odor-reached bins (count>=3 AND max>0.001) = 101
+  arena box = x(0.0, 580.0) y(0.0, 280.0) (equal aspect)
+
+PANEL B (per-trial scatter, pooled Loc1-6, only >=1-bout trials):
+  n trials plotted = 67   (matches Wilcoxon n = 67)
+  n_pooled_trials (all) = 105
+  median f_bout = 0.000000   median f_occ = 0.307624
+  median (f_bout - null) = -0.201500
+  Wilcoxon f_bout > f_occ : stat = 740.0, p = 0.993656, n = 67
+  Wilcoxon f_bout > null  : p = 0.992955
+  fraction trials enriched = 0.253731  (25.37%)
+  odor_cutoff = 0.001  (above ~4e-4 noise floor)
+  point size proportional to n_bout (range 1-6)
